@@ -4,10 +4,17 @@ abstract class iRoom {
   Armor[] armor;
   Item[] items;
   
-  public abstract boolean fight();
-  public abstract Item[] getItems();
-  public abstract Weapon[] getWeapons();
-  public abstract Armor[] getArmor();
+  public abstract Item[] getItems() {
+    return items;  
+  }
+  
+  public abstract Weapon[] getWeapons() {
+    return weapons;
+  }
+  
+  public abstract Armor[] getArmor() {
+    return armor;
+  }
   
   public abstract void enter();
   public abstract void exit(); 
