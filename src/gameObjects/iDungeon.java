@@ -1,4 +1,4 @@
-abstract class iDungeon {
+interface iDungeon {
   
   iRoom[][] rooms;
   int x = 0;

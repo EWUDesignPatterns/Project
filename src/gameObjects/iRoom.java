@@ -1,4 +1,4 @@
-abstract class iRoom {
+interface iRoom {
   String description;
   Weapon[] weapons;
   Armor[] armor;
