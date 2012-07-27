@@ -1,4 +1,7 @@
-package gameObjects;
+package gameObjects.Class;
+
+import gameObjects.GameCharacter;
+
 
 
 public abstract class GameCharacterClass extends GameCharacter

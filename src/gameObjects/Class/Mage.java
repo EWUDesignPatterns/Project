@@ -1,4 +1,7 @@
-package gameObjects;
+package gameObjects.Class;
+
+import gameObjects.GameCharacter;
+
 
 
 public class Mage extends GameCharacterClass
@@ -17,23 +20,22 @@ public class Mage extends GameCharacterClass
 	}
 	
 	
-	@Override
-	int getMaxHP()
+	public int getMaxHP()
 	{
-		return character.maxHp - 5;
+		return character.getMaxHP() - 5;
 	}
 	
-	int getMaxMP()
+	public int getMaxMP()
 	{
-		return character.maxMp + 8;
+		return character.getMaxMP() + 8;
 	}
 	
-	int getArmorType()
+	public int getArmorType()
 	{
 		return 0;
 	}
 	
-	int getWeaponType()
+	public int getWeaponType()
 	{
 		return 1;
 	}

@@ -1,4 +1,8 @@
-package gameObjects;
+package gameObjects.Race;
+
+import gameObjects.GameCharacter;
+import gameObjects.iPlayerCharacter;
+
 
 public class Elf extends GameCharacter implements iPlayerCharacter
 {

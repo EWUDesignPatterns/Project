@@ -1,4 +1,8 @@
-package gameObjects;
+package gameObjects.Race;
+
+import gameObjects.GameCharacter;
+
+
 
 
 public class Ork extends GameCharacter

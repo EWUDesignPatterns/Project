@@ -4,14 +4,21 @@ package gameObjects;
 public abstract class GameCharacter 
 {
 
-	int maxHp;
-	int maxMp;
+	//Maximum HP/MP
+	protected int maxHp;
+	protected int maxMp;
 	
-	int armorType;
-	int weaponSize;
+	//current hp/mp
+	protected int hp;
+	protected int mp;
 	
-	int hp;
-	int mp;
+	
+	
+	//what stuff the character can equip
+	protected int armorType;
+	protected int weaponSize;
+	
+	
 	
 	
 	public int getHP()
@@ -19,23 +26,23 @@ public abstract class GameCharacter
 		return this.hp;
 	}
 	
-	int getMaxHP()
+	public int getMaxHP()
 	{
 		return this.maxHp;
 	}
 	
 	
-	int getMaxMP()
+	public int getMaxMP()
 	{
 		return this.maxMp;
 	}
 	
-	int getArmorType()
+	public int getArmorType()
 	{
 		return this.armorType;
 	}
 	
-	int getWeaponSize()
+	public int getWeaponSize()
 	{
 		return this.weaponSize;
 	}
@@ -45,7 +52,7 @@ public abstract class GameCharacter
 		
 	}
 	
-	void doDamage(int DamageToDeal)
+	public void doDamage(int DamageToDeal)
 	{
 		if(this.hp > DamageToDeal)
 			this.hp -= DamageToDeal;
