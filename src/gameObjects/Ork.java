@@ -1,28 +1,25 @@
 package gameObjects;
 
 
-public class Ork extends GameCharacter implements iPlayerCharacter
+public class Ork extends GameCharacter
 {
 
-	@Override
-	public void attack() 
+	public Ork()
 	{
-		// TODO Auto-generated method stub
+		this.hp = 10;
+		this.maxHp = 10;
+		this.mp = 3;
+		this.maxMp = 3;
+		this.weaponSize = 3;//large weapons
+		this.armorType = 3; //heavy armor
+	}
+	
+	@Override
+	public void attack(GameCharacter foe) 
+	{
+		foe.doDamage(5);
 		
 	}
 
-	@Override
-	public void defend() 
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void use()
-	{
-		// TODO Auto-generated method stub
-		
-	}
 
 }

@@ -11,8 +11,8 @@ public class Mage extends GameCharacterClass
 		this.character = character;
 		
 		//update the characters hp and mp
-		this.character.hp = getMaxHP();
-		this.character.mp = getMaxMP();
+		this.hp = getMaxHP();
+		this.mp = getMaxMP();
 		
 	}
 	
