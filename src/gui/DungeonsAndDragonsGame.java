@@ -9,20 +9,13 @@ import gameObjects.Abilities.*;
 
 // TODO: Can not import all classes with .*
 import gameObjects.Class.*;
-import gameObjects.Class.Berserker;
-import gameObjects.Class.Cleric;
-import gameObjects.Class.Mage;
-import gameObjects.Class.Samurai;
-
-import gameObjects.Items.*;
 
 // TODO: Can not import all races with .*
 import gameObjects.Race.*;
-import gameObjects.Race.Elf;
-import gameObjects.Race.Human;
-import gameObjects.Race.Ork;
 
-public class DungeonsAndDragonsGame {
+
+public class DungeonsAndDragonsGame 
+{
   
   static Random rand = new Random();
   static Scanner input = new Scanner(System.in);
