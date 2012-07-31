@@ -12,12 +12,12 @@ public abstract class GameCharacter
 	protected int hp;
 	protected int mp;
 	
-	
-	
 	//what stuff the character can equip
 	protected int armorType;
 	protected int weaponSize;
 	
+	
+	protected int toHit;
 	
 	
 	
@@ -47,9 +47,17 @@ public abstract class GameCharacter
 		return this.weaponSize;
 	}
 	
-	public void attack(GameCharacter foe)
+	public void attack(GameCharacter opponent)
 	{
-		
+		int damage; 
+	    
+	    if (rand.nextInt(20) + 1 > this.toHit) {
+	      damage = weapon.use();
+	      opponent.damage(damage);
+	      System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );
+	    } else {
+	      System.out.println(this.name + " misses!");
+	    }
 	}
 	
 	public void doDamage(int DamageToDeal)
