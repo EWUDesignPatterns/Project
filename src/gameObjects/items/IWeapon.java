@@ -6,5 +6,7 @@ public interface IWeapon {
 	
 	public int getMaxDamage();
 	
+	public int getDamage();
+	
 	public String getName();
 }

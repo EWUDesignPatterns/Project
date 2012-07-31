@@ -1,15 +1,17 @@
 package gameObjects.items;
 
-public class WoodenSword implements IWeapon {
+public class WoodenSword extends Weapon implements IWeapon {
 
 	@Override
-	public int getMinDamage() {
+	public int getMinDamage() 
+	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int getMaxDamage() {
+	public int getMaxDamage() 
+	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -17,5 +19,11 @@ public class WoodenSword implements IWeapon {
 	@Override
 	public String getName() {
 		return "Wooden Sword";
+	}
+
+	@Override
+	public int getDamage() 
+	{
+		return 1;
 	}
 }

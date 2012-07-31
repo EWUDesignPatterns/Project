@@ -1,6 +1,7 @@
 package gameObjects;
 
-public interface IItem {
+public interface iItem 
+{
 	
 	/**
 	 * 

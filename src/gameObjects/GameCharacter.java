@@ -1,5 +1,9 @@
 package gameObjects;
 
+import java.util.Random;
+
+import gameObjects.items.Weapon;
+
 
 public abstract class GameCharacter 
 {
@@ -13,11 +17,17 @@ public abstract class GameCharacter
 	protected int mp;
 	
 	//what stuff the character can equip
-	protected int armorType;
-	protected int weaponSize;
+	protected ArmorType armorType;
+	protected WeaponType weaponType;
 	
-	
+	//accuracy
 	protected int toHit;
+	
+	protected String name;
+	
+	protected Weapon weapon;
+	//protected Armor armor;
+	
 	
 	
 	
@@ -37,25 +47,29 @@ public abstract class GameCharacter
 		return this.maxMp;
 	}
 	
-	public int getArmorType()
+	public ArmorType getArmorType()
 	{
 		return this.armorType;
 	}
 	
-	public int getWeaponSize()
+	public WeaponType getWeaponType()
 	{
-		return this.weaponSize;
+		return this.weaponType;
 	}
 	
 	public void attack(GameCharacter opponent)
-	{
-		int damage; 
-	    
-	    if (rand.nextInt(20) + 1 > this.toHit) {
-	      damage = weapon.use();
-	      opponent.damage(damage);
-	      System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );
-	    } else {
+	{ 
+	    Random rand = new Random();
+	    if (rand.nextInt(20) + 1 > this.toHit) 
+	    {
+	    	//don't need to know about damage unless we hit
+	    	int damage = 0;
+	    	damage += weapon.getDamage();
+	    	opponent.doDamage(damage);
+	    	System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );
+	    } 
+	    else 
+	    {
 	      System.out.println(this.name + " misses!");
 	    }
 	}
