@@ -4,13 +4,10 @@ import gameObjects.ArmorType;
 import gameObjects.GameCharacter;
 import gameObjects.WeaponType;
 
-
-
-public class Mage extends GameCharacterClass
+public class Berserker extends GameCharacterClass
 {
 	
-	
-	public Mage(GameCharacter character)
+	public Berserker(GameCharacter character)
 	{
 		//assign character
 		this.character = character;
@@ -24,12 +21,12 @@ public class Mage extends GameCharacterClass
 	
 	public int getMaxHP()
 	{
-		return character.getMaxHP() - 5;
+		return character.getMaxHP() + 5;
 	}
 	
 	public int getMaxMP()
 	{
-		return character.getMaxMP() + 8;
+		return 0;
 	}
 	
 	public ArmorType getArmorType()
@@ -39,6 +36,8 @@ public class Mage extends GameCharacterClass
 	
 	public WeaponType getWeaponType()
 	{
-		return WeaponType.MAGIC;
+		return WeaponType.HEAVY;
 	}
+	
+	
 }

@@ -10,7 +10,7 @@ public class Elf extends GameCharacter implements iPlayerCharacter
 	@Override
 	public void attack(GameCharacter foe) 
 	{
-		foe.doDamage(2);
+		foe.doDamage(this.baseDamage);
 
 	}
 

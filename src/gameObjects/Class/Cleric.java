@@ -1,16 +1,12 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
-import gameObjects.GameCharacter;
 import gameObjects.WeaponType;
+import gameObjects.GameCharacter;
 
-
-
-public class Mage extends GameCharacterClass
+public class Cleric extends GameCharacterClass 
 {
-	
-	
-	public Mage(GameCharacter character)
+	public Cleric(GameCharacter character)
 	{
 		//assign character
 		this.character = character;
@@ -29,16 +25,16 @@ public class Mage extends GameCharacterClass
 	
 	public int getMaxMP()
 	{
-		return character.getMaxMP() + 8;
+		return character.getMaxMP() + 10;
 	}
 	
 	public ArmorType getArmorType()
 	{
-		return ArmorType.LIGHT;
+		return armorType.LIGHT;
 	}
 	
 	public WeaponType getWeaponType()
 	{
-		return WeaponType.MAGIC;
+		return weaponType.MAGIC;
 	}
 }

@@ -23,6 +23,9 @@ public abstract class GameCharacter
 	//accuracy
 	protected int toHit;
 	
+	//base damage
+	protected int baseDamage;
+	
 	protected String name;
 	
 	protected Weapon weapon;

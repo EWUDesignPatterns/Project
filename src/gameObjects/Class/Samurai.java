@@ -4,13 +4,9 @@ import gameObjects.ArmorType;
 import gameObjects.GameCharacter;
 import gameObjects.WeaponType;
 
-
-
-public class Mage extends GameCharacterClass
+public class Samurai extends GameCharacterClass
 {
-	
-	
-	public Mage(GameCharacter character)
+	public Samurai(GameCharacter character)
 	{
 		//assign character
 		this.character = character;
@@ -24,21 +20,25 @@ public class Mage extends GameCharacterClass
 	
 	public int getMaxHP()
 	{
-		return character.getMaxHP() - 5;
+		return character.getMaxHP() + 2;
 	}
 	
 	public int getMaxMP()
 	{
-		return character.getMaxMP() + 8;
+		return character.getMaxMP();
 	}
 	
 	public ArmorType getArmorType()
 	{
-		return ArmorType.LIGHT;
+		return ArmorType.HEAVY;
 	}
 	
 	public WeaponType getWeaponType()
 	{
-		return WeaponType.MAGIC;
+		return WeaponType.LIGHT;
 	}
+	
+	
 }
+
+

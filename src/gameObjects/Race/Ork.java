@@ -14,14 +14,14 @@ public class Ork extends GameCharacter
 		this.maxHp = 10;
 		this.mp = 3;
 		this.maxMp = 3;
-		this.weaponSize = 3;//large weapons
-		this.armorType = 3; //heavy armor
+		this.baseDamage = 8;
+
 	}
 	
 	@Override
 	public void attack(GameCharacter foe) 
 	{
-		foe.doDamage(5);
+		foe.doDamage(this.baseDamage);
 		
 	}
 

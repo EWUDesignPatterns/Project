@@ -11,14 +11,14 @@ public class Human extends GameCharacter implements iPlayerCharacter
 	{
 		this.hp = 8;
 		this.mp = 8;
-		this.armorType = 2;
-		this.weaponSize = 2;
+		this.baseDamage = 5;
+
 	}
 	
 	@Override
 	public void attack(GameCharacter foe)
 	{
-		foe.doDamage(4);
+		foe.doDamage(this.baseDamage);
 
 	}
 
