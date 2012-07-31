@@ -2,19 +2,17 @@ package gameObjects;
 
 import java.util.Random;
 
-import gameObjects.items.Weapon;
+import gameObjects.Abilities.iAbility;
+import gameObjects.items.Weapons.Weapon;
+
 
 
 public abstract class GameCharacter 
 {
 
-	//Maximum HP/MP
-	protected int maxHp;
-	protected int maxMp;
-	
-	//current hp/mp
-	protected int hp;
-	protected int mp;
+	//Maximum/current hp/mp
+	protected int maxHp, hp;
+	protected int maxMp, mp;
 	
 	//what stuff the character can equip
 	protected ArmorType armorType;
@@ -26,14 +24,17 @@ public abstract class GameCharacter
 	//base damage
 	protected int baseDamage;
 	
+	//character name
 	protected String name;
 	
 	protected Weapon weapon;
 	//protected Armor armor;
 	
+	protected iAbility[] abilities;
 	
 	
 	
+	//Getters
 	public int getHP()
 	{
 		return this.hp;
@@ -43,7 +44,6 @@ public abstract class GameCharacter
 	{
 		return this.maxHp;
 	}
-	
 	
 	public int getMaxMP()
 	{
@@ -60,6 +60,14 @@ public abstract class GameCharacter
 		return this.weaponType;
 	}
 	
+	public String toString()
+	{
+		return "" + this.getClass() + "\n"+
+				this.hp + "\n"+
+				this.mp + "\n";
+	}
+	
+	//Attack/Defend logic here
 	public void attack(GameCharacter opponent)
 	{ 
 	    Random rand = new Random();
@@ -67,7 +75,7 @@ public abstract class GameCharacter
 	    {
 	    	//don't need to know about damage unless we hit
 	    	int damage = 0;
-	    	damage += weapon.getDamage();
+	    	damage += weapon.getEffect();
 	    	opponent.doDamage(damage);
 	    	System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );
 	    } 
@@ -85,10 +93,11 @@ public abstract class GameCharacter
 			this.hp = 0;
 	}
 	
-	public String toString()
+	//Ability Logic Here
+	public void addAbility(int index, iAbility ability)
 	{
-		return "" + this.getClass() + "\n"+
-				this.hp + "\n"+
-				this.mp + "\n";
+		this.abilities[index] = ability;
 	}
+
+
 }

@@ -1,6 +1,7 @@
 import java.util.*;
 
-class Game {
+class Game02 
+{
 
   static Random rand = new Random();
   static Scanner input = new Scanner(System.in);
