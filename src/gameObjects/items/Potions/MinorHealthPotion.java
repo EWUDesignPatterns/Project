@@ -33,14 +33,14 @@ public class MinorHealthPotion extends Item implements iItem, iPotion
 	public int getMaxEffect() 
 	{
 		//Kinda made this up.... will need to work out math later
-		return this.baseEffect + (int)this.effectMultiplier * 20;
+		return this.baseEffect + (int)(this.effectMultiplier * 20);
 	}
 
 	@Override
 	public int getEffect() 
 	{
 		Random rand = new Random();
-		return this.baseEffect + (int)this.effectMultiplier * (rand.nextInt() % 20);
+		return this.baseEffect + (int)(this.effectMultiplier * (rand.nextInt() % 20));
 	}
 
 	@Override
