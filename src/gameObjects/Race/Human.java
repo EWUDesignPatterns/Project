@@ -1,10 +1,9 @@
 package gameObjects.Race;
 
-import gameObjects.GameCharacter;
-import gameObjects.iPlayerCharacter;
+import gameObjects.PlayerCharacter;
 
 
-public class Human extends GameCharacter implements iPlayerCharacter 
+public class Human extends PlayerCharacter
 {
 
 	public Human(String name)
@@ -17,28 +16,9 @@ public class Human extends GameCharacter implements iPlayerCharacter
 	}
 	
 	@Override
-	public void attack(GameCharacter foe)
+	public void attack(PlayerCharacter foe)
 	{
 		foe.doDamage(this.baseDamage);
 
 	}
-
-	@Override
-	public void defend() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void use() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void equip() {
-		// TODO Auto-generated method stub
-
-	}
-
 }

@@ -1,9 +1,9 @@
 package gameObjects.items;
 
-import gameObjects.GameCharacter;
+import gameObjects.PlayerCharacter;
 
 public interface iPotion 
 {
 	
-	public void use(GameCharacter target);
+	public void use(PlayerCharacter target);
 }

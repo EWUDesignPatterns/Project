@@ -2,11 +2,11 @@ package gameObjects.Class;
 
 import gameObjects.ArmorType;
 import gameObjects.WeaponType;
-import gameObjects.GameCharacter;
+import gameObjects.PlayerCharacter;
 
 public class Cleric extends GameCharacterClass 
 {
-	public Cleric(GameCharacter character)
+	public Cleric(PlayerCharacter character)
 	{
 		//assign character
 		this.character = character;
@@ -38,25 +38,6 @@ public class Cleric extends GameCharacterClass
 		return weaponType.MAGIC;
 	}
 	
-	@Override
-	public void equip() 
-	{
-		// TODO Auto-generated method stub
 
-	}
-	
-	@Override
-	public void use() 
-	{
-		// TODO Auto-generated method stub
-
-	}
-	
-	@Override
-	public void defend() 
-	{
-		// TODO Auto-generated method stub
-
-	}
 	
 }

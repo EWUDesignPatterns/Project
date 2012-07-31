@@ -20,7 +20,7 @@ public class DungeonsAndDragonsGame
   static Random rand = new Random();
   static Scanner input = new Scanner(System.in);
 
-  static iPlayerCharacter player;
+  static PlayerCharacter player;
   static IDungeon dungeon;
   
   
@@ -31,6 +31,8 @@ public class DungeonsAndDragonsGame
 		
 		player = selectRace();
 		player = selectClass(player);
+		
+		
 		
 		
 		System.out.println("Your Character is: Test character");
@@ -62,7 +64,7 @@ public class DungeonsAndDragonsGame
 		} while (true);
 	}
 	
-	public static iPlayerCharacter selectRace() {
+	public static PlayerCharacter selectRace() {
 	  int choice;
 	  String name;
 	  
@@ -90,11 +92,12 @@ public class DungeonsAndDragonsGame
 	}
 	
 	
-	public static iPlayerCharacter selectClass(iPlayerCharacter character) {
+	public static PlayerCharacter selectClass(PlayerCharacter character) {
 	  int choice;
 	  
 	  
-    while (true) {  	  
+    while (true) 
+    {  	  
       System.out.println("Please select a class: ");
       System.out.println("1. Berserker");
       System.out.println("2. Cleric");
@@ -103,15 +106,16 @@ public class DungeonsAndDragonsGame
       System.out.print(": ");
       choice = input.nextInt();
     
-      switch (choice) {
+      switch (choice)
+      {
         case 1: 
-          return new Berserker((GameCharacter)character);
+          return new Berserker((PlayerCharacter)character);
         case 2:
-          return new Cleric((GameCharacter)character);
+          return new Cleric((PlayerCharacter)character);
         case 3: 
-          return new Mage((GameCharacter)character);
+          return new Mage((PlayerCharacter)character);
         case 4: 
-          return new Samurai((GameCharacter)character);
+          return new Samurai((PlayerCharacter)character);
       }
     }    
 	}

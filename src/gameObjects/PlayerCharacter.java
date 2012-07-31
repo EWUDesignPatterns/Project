@@ -3,12 +3,13 @@ package gameObjects;
 import java.util.Random;
 
 import gameObjects.Abilities.iAbility;
+import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
 
 
 
-public abstract class GameCharacter implements iPlayerCharacter
+public abstract class PlayerCharacter implements iCharacter
 {
 
 	//Maximum/current hp/mp
@@ -32,6 +33,7 @@ public abstract class GameCharacter implements iPlayerCharacter
 	protected Armor armor;
 	
 	protected iAbility[] abilities;
+	
 	
 	
 	
@@ -69,7 +71,7 @@ public abstract class GameCharacter implements iPlayerCharacter
 	}
 	
 	//Attack/Defend logic here
-	public void attack(GameCharacter opponent)
+	public void attack(PlayerCharacter opponent)
 	{ 
 	    Random rand = new Random();
 	    if (rand.nextInt(20) + 1 > this.toHit) 
@@ -99,6 +101,24 @@ public abstract class GameCharacter implements iPlayerCharacter
 	public void addAbility(int index, iAbility ability)
 	{
 		this.abilities[index] = ability;
+	}
+	
+	//Behavior Logic
+	void defend()
+	{
+		
+	}
+	
+	void use()
+	{
+		
+	}
+	
+	void equip(Item toEquip)
+	{
+		
+			
+		
 	}
 
 

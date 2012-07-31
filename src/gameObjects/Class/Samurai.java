@@ -1,12 +1,12 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
-import gameObjects.GameCharacter;
+import gameObjects.PlayerCharacter;
 import gameObjects.WeaponType;
 
 public class Samurai extends GameCharacterClass
 {
-	public Samurai(GameCharacter character)
+	public Samurai(PlayerCharacter character)
 	{
 		//assign character
 		this.character = character;
@@ -36,27 +36,6 @@ public class Samurai extends GameCharacterClass
 	public WeaponType getWeaponType()
 	{
 		return WeaponType.LIGHT;
-	}
-	
-	@Override
-	public void equip() 
-	{
-		// TODO Auto-generated method stub
-
-	}
-	
-	@Override
-	public void use() 
-	{
-		// TODO Auto-generated method stub
-
-	}
-	
-	@Override
-	public void defend() 
-	{
-		// TODO Auto-generated method stub
-
 	}
 	
 	

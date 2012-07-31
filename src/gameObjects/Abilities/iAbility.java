@@ -1,9 +1,9 @@
 package gameObjects.Abilities;
 
-import gameObjects.GameCharacter;
+import gameObjects.PlayerCharacter;
 
 public interface iAbility 
 {
-	public void use(GameCharacter self, GameCharacter other);
+	public void use(PlayerCharacter self, PlayerCharacter other);
 
 }

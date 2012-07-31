@@ -2,7 +2,7 @@ package gameObjects.items.Potions;
 
 import java.util.Random;
 
-import gameObjects.GameCharacter;
+import gameObjects.PlayerCharacter;
 import gameObjects.items.Item;
 import gameObjects.items.iItem;
 import gameObjects.items.iPotion;
@@ -17,7 +17,7 @@ public class MinorHealthPotion extends Item implements iItem, iPotion
 		this.name = "Minor Health Potion";
 	}
 	@Override
-	public void use(GameCharacter target)
+	public void use(PlayerCharacter target)
 	{
 		target.doDamage(-this.getEffect());
 	}
