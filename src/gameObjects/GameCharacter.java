@@ -8,7 +8,7 @@ import gameObjects.items.Weapons.Weapon;
 
 
 
-public abstract class GameCharacter 
+public abstract class GameCharacter implements iPlayerCharacter
 {
 
 	//Maximum/current hp/mp

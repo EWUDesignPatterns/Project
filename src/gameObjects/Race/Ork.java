@@ -1,15 +1,14 @@
 package gameObjects.Race;
 
 import gameObjects.GameCharacter;
+import gameObjects.iPlayerCharacter;
 
-
-
-
-public class Ork extends GameCharacter
+public class Ork extends GameCharacter implements iPlayerCharacter
 {
 
-	public Ork()
+	public Ork(String name)
 	{
+	  this.name = name;
 		this.hp = 10;
 		this.maxHp = 10;
 		this.mp = 3;
@@ -25,5 +24,24 @@ public class Ork extends GameCharacter
 		
 	}
 
+	@Override
+	public void equip() 
+	{
+		// TODO Auto-generated method stub
 
+	}
+	
+	@Override
+	public void use() 
+	{
+		// TODO Auto-generated method stub
+
+	}
+	
+	@Override
+	public void defend() 
+	{
+		// TODO Auto-generated method stub
+
+	}
 }

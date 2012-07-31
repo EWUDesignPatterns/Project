@@ -4,7 +4,7 @@ import gameObjects.ArmorType;
 import gameObjects.GameCharacter;
 import gameObjects.WeaponType;
 
-public class Berserker extends GameCharacterClass
+public class Berserker extends GameCharacterClass 
 {
 	
 	public Berserker(GameCharacter character)
@@ -37,6 +37,27 @@ public class Berserker extends GameCharacterClass
 	public WeaponType getWeaponType()
 	{
 		return WeaponType.HEAVY;
+	}
+	
+	@Override
+	public void equip() 
+	{
+		// TODO Auto-generated method stub
+
+	}
+	
+	@Override
+	public void use() 
+	{
+		// TODO Auto-generated method stub
+
+	}
+	
+	@Override
+	public void defend() 
+	{
+		// TODO Auto-generated method stub
+
 	}
 	
 	

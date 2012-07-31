@@ -7,8 +7,9 @@ import gameObjects.iPlayerCharacter;
 public class Human extends GameCharacter implements iPlayerCharacter 
 {
 
-	public Human()
+	public Human(String name)
 	{
+	  this.name = name;
 		this.hp = 8;
 		this.mp = 8;
 		this.baseDamage = 5;

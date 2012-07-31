@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Game02 
+class Game 
 {
 
   static Random rand = new Random();

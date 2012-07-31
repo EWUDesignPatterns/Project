@@ -6,6 +6,13 @@ import gameObjects.iPlayerCharacter;
 
 public class Elf extends GameCharacter implements iPlayerCharacter
 {
+  
+  public Elf(String name) {
+    this.name = name;
+    this.hp = 6;
+		this.mp = 12;
+		this.baseDamage = 4;
+  }
 
 	@Override
 	public void attack(GameCharacter foe) 

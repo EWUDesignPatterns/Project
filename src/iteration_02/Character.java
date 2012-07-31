@@ -99,6 +99,7 @@ class Character {
   
   
   public void removeExp(int exp) {
+    System.out.println("You lost " + exp + " experience points!");
     this.exp -= exp;
     this.updateCharacter();
   }
@@ -125,7 +126,7 @@ class Character {
     System.out.println("Hp:  " + this.hp + " / " + this.maxHp);
     System.out.println("Sp:  " + this.spells + " / " + this.maxSpells);
     System.out.println("Lvl: " + this.level); 
-    System.out.println("Exp: " + this.exp + " / " + (1000 * this.level)); 
+    System.out.println("Exp: " + this.exp + " / " + (1000 * this.level + 1)); 
     System.out.println("================");
     
   }
