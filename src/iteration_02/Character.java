@@ -51,7 +51,7 @@ class Character {
 
   public void attack(Character opponent) {
     int damage; 
-    
+  
     if (rand.nextInt(20) + 1 > this.toHit) {
       damage = weapon.use();
       opponent.damage(damage);
