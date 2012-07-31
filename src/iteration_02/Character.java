@@ -18,7 +18,7 @@ class Character {
   public Character(String name, int level) {
     this.name = name;
     this.level = level;
-    this.exp = (level + 1) * 1000;
+    this.exp = 1000 * level;
     this.weapon = new Weapon("Fists", 1, 5, 0);
     
     this.updateCharacter();
@@ -126,7 +126,7 @@ class Character {
     System.out.println("Hp:  " + this.hp + " / " + this.maxHp);
     System.out.println("Sp:  " + this.spells + " / " + this.maxSpells);
     System.out.println("Lvl: " + this.level); 
-    System.out.println("Exp: " + this.exp + " / " + (1000 * this.level + 1)); 
+    System.out.println("Exp: " + this.exp + " / " + (1000 * (this.level + 1))); 
     System.out.println("================");
     
   }
