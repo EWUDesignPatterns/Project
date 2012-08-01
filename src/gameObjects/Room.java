@@ -1,15 +1,15 @@
 package gameObjects;
 
-import gameObjects.items.*;
+import gameObjects.items.IItem;;
 
 class Room implements iRoom 
 {
 	String description;
 
-	iItem[] items;
+	IItem[] items;
 
 	@Override
-	public iItem[] getItems() 
+	public IItem[] getItems() 
 	{
 		// TODO Auto-generated method stub
 		return null;
