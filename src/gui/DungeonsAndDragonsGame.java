@@ -75,7 +75,7 @@ public class DungeonsAndDragonsGame
       System.out.println("Please select a race: ");
       System.out.println("1. Elf");
       System.out.println("2. Human");
-      System.out.println("3. Ork");
+      System.out.println("3. Orc");
       System.out.print(": ");
       choice = input.nextInt();
     
@@ -85,7 +85,7 @@ public class DungeonsAndDragonsGame
         case 2:
           return new Human(name);
         case 3: 
-          return new Ork(name);
+          return new Orc(name);
       }
     }    
     

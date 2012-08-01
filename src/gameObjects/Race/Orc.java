@@ -2,10 +2,10 @@ package gameObjects.Race;
 
 import gameObjects.PlayerCharacter;
 
-public class Ork extends PlayerCharacter
+public class Orc extends PlayerCharacter
 {
 
-	public Ork(String name)
+	public Orc(String name)
 	{
 	  this.name = name;
 		this.hp = 10;
