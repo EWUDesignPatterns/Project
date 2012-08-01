@@ -2,7 +2,7 @@ package gameObjects.items;
 
 import gameObjects.ArmorType;
 
-public interface iArmor 
+public interface IArmor 
 {
 	public ArmorType getArmorType();
 }

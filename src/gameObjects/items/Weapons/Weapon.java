@@ -2,10 +2,10 @@ package gameObjects.items.Weapons;
 
 import gameObjects.WeaponType;
 import gameObjects.items.Item;
-import gameObjects.items.iItem;
-import gameObjects.items.iWeapon;
+import gameObjects.items.IItem;
+import gameObjects.items.IWeapon;
 
-public abstract class Weapon extends Item implements iWeapon, iItem
+public abstract class Weapon extends Item implements IWeapon, IItem
 {
 	protected WeaponType type;
 }

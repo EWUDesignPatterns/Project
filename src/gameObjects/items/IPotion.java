@@ -2,7 +2,7 @@ package gameObjects.items;
 
 import gameObjects.PlayerCharacter;
 
-public interface iPotion 
+public interface IPotion 
 {
 	
 	public void use(PlayerCharacter target);

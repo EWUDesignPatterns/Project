@@ -4,10 +4,10 @@ import java.util.Random;
 
 import gameObjects.PlayerCharacter;
 import gameObjects.items.Item;
-import gameObjects.items.iItem;
-import gameObjects.items.iPotion;
+import gameObjects.items.IItem;
+import gameObjects.items.IPotion;
 
-public class MinorHealthPotion extends Item implements iItem, iPotion
+public class MinorHealthPotion extends Item implements IItem, IPotion
 {
 
 	public MinorHealthPotion()

@@ -2,7 +2,7 @@ package gameObjects;
 
 
 
-public interface iCharacter
+public interface ICharacter
 {
 
 	public int getHP();

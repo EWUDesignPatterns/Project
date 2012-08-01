@@ -1,6 +1,6 @@
 package gameObjects.items;
 
-public interface iItem 
+public interface IItem 
 {
 	public abstract int getBaseEffect();
 	

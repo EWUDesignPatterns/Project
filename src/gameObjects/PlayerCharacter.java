@@ -2,14 +2,14 @@ package gameObjects;
 
 import java.util.Random;
 
-import gameObjects.Abilities.iAbility;
+import gameObjects.Abilities.IAbility;
 import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
 
 
 
-public abstract class PlayerCharacter implements iCharacter
+public abstract class PlayerCharacter implements ICharacter
 {
 
 	//Maximum/current hp/mp
@@ -32,7 +32,7 @@ public abstract class PlayerCharacter implements iCharacter
 	protected Weapon weapon;
 	protected Armor armor;
 	
-	protected iAbility[] abilities;
+	protected IAbility[] abilities;
 	
 	
 	
@@ -98,7 +98,7 @@ public abstract class PlayerCharacter implements iCharacter
 	}
 	
 	//Ability Logic Here
-	public void addAbility(int index, iAbility ability)
+	public void addAbility(int index, IAbility ability)
 	{
 		this.abilities[index] = ability;
 	}
