@@ -1,123 +1,28 @@
 package gui;
 
-
-import java.util.*;
-
-import dungeons.*;
-import gameObjects.*;
-import gameObjects.Abilities.*;
-
-// TODO: Can not import all classes with .*
-import gameObjects.Class.*;
-
-// TODO: Can not import all races with .*
-import gameObjects.Race.*;
-
+import java.io.FileNotFoundException;
 
 public class DungeonsAndDragonsGame 
 {
-  
-  static Random rand = new Random();
-  static Scanner input = new Scanner(System.in);
-
-  static PlayerCharacter player;
-  static IDungeon dungeon;
-  
-  
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to Dungeons and Dragons 21st Century Command Line Style");
+
+		Game game = null;
+		try {
+			game = new Game();
+		} catch (FileNotFoundException e) {
+			System.err.println("Unable to load map file");
+		}
 		
-		
-		player = selectRace();
-		player = selectClass(player);
-		
-		
-		
-		
-		System.out.println("Your Character is: Test character");
-		System.out.println("You are entering the XXXX dungeon");
+		IState state = game.getState();
 		
 		do {
-			
-			System.out.println("Please choose from the options below\n");
-			
-			System.out.println("1. Move Character");
-			System.out.println("2. Use Item/Equip Item");
-			System.out.println("3. Move");
-			System.out.println("4. Rest");
-			System.out.println("5. Get");
-			
-			Scanner scanner = new Scanner(System.in);
-			
-			System.out.print("Choice -->");
-			
-			int choice = scanner.nextInt();
-			
-			switch (choice)
-			{
-				case 1: 
-					System.out.println("Move character");
-				break;
-			}
-			
-		} while (true);
+		
+			state = state.execute();
+		
+		} while (!state.gameOver());
+		
+		System.exit(0);
 	}
-	
-	public static PlayerCharacter selectRace() {
-	  int choice;
-	  String name;
-	  
-	  System.out.print("Adventurer, what is your name?");
-	  name = input.next();
-	  
-	  while (true) {  	  
-      System.out.println("Please select a race: ");
-      System.out.println("1. Elf");
-      System.out.println("2. Human");
-      System.out.println("3. Orc");
-      System.out.print(": ");
-      choice = input.nextInt();
-    
-      switch (choice) {
-        case 1: 
-          return new Elf(name);
-        case 2:
-          return new Human(name);
-        case 3: 
-          return new Orc(name);
-      }
-    }    
-    
-	}
-	
-	
-	public static PlayerCharacter selectClass(PlayerCharacter character) {
-	  int choice;
-	  
-	  
-    while (true) 
-    {  	  
-      System.out.println("Please select a class: ");
-      System.out.println("1. Berserker");
-      System.out.println("2. Cleric");
-      System.out.println("3. Mage");
-      System.out.println("4. Samurai");
-      System.out.print(": ");
-      choice = input.nextInt();
-    
-      switch (choice)
-      {
-        case 1: 
-          return new Berserker((PlayerCharacter)character);
-        case 2:
-          return new Cleric((PlayerCharacter)character);
-        case 3: 
-          return new Mage((PlayerCharacter)character);
-        case 4: 
-          return new Samurai((PlayerCharacter)character);
-      }
-    }    
-	}
-	
 }
