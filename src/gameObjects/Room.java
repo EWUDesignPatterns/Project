@@ -2,7 +2,7 @@ package gameObjects;
 
 import gameObjects.items.IItem;;
 
-class Room implements iRoom 
+class Room implements IRoom 
 {
 	String description;
 
