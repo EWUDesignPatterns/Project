@@ -25,10 +25,8 @@ public class HomeScreenState implements IState
 			
 			System.out.println("1. Move Character");
 			System.out.println("2. Use Item/Equip Item");
-			System.out.println("3. Move");
-			System.out.println("4. Rest");
-			System.out.println("5. Get");
-			System.out.println("6. Exit Game");
+			System.out.println("3. Rest");
+			System.out.println("4. Exit Game");
 			
 			Scanner scanner = new Scanner(System.in);
 			
@@ -41,10 +39,15 @@ public class HomeScreenState implements IState
 			switch (choice)
 			{
 				case 1: 
-					
-				break;
+					return new MoveCharacterState(game);
 				
-				case 6:
+				case 2:
+					return new UseItemState(game);
+					
+				case 3:
+					return new RestState(game);
+				
+				case 4:
 					return new ExitGameState();
 			}
 			

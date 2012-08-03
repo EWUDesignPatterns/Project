@@ -37,6 +37,31 @@ public class Game
 		this.dungeon = new FileLoaderDungeon("Lamorte.map");
 	}
 	
+	public boolean moveNorth()
+	{
+		return dungeon.moveNorth();
+	}
+
+	public boolean moveEast()
+	{
+		return dungeon.moveEast();
+	}
+	
+	public boolean moveSouth()
+	{
+		return dungeon.moveSouth();
+	}
+	
+	public boolean moveWest()
+	{
+		return dungeon.moveWest();
+	}
+	
+	public IRoom getCurrentRoom()
+	{
+		return dungeon.getCurrentRoom();
+	}
+	
 	public void setPlayer(PlayerCharacter player)
 	{
 		this.player = player;
