@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import gameObjects.*;
+
 /**
  * FileLoaderDungeon is a default implementation of the IDungeon
  * interface that reads a from a file
@@ -33,6 +35,11 @@ public class FileLoaderDungeon implements IDungeon {
 		this.loadMap(filename);
 	}
 
+	@Override
+	public IRoom getCurrentRoom() {
+		throw null;
+	}
+	
 	@Override
 	public boolean isComplete() {
 		return !this.isActive();

@@ -1,5 +1,7 @@
 package dungeons;
 
+import gameObjects.*;
+
 public interface IDungeon
 {
 	/**
@@ -14,6 +16,12 @@ public interface IDungeon
 	 */
 	public boolean isActive();
 
+	/**
+	 * 
+	 * @return
+	 */
+	public IRoom getCurrentRoom();
+	
 	/**
 	 * 
 	 * @return True on successful move, false on failure
