@@ -29,9 +29,13 @@ public class FileLoaderDungeon implements IDungeon {
 	/**
 	 * Array of 0 or 1 values, 1 marking a wall, 0 marking a open room
 	 */
-	private int map[][];
+	private IRoom map[][];
 
-	public FileLoaderDungeon(String filename) throws FileNotFoundException {
+	final private int MAP_CREATE_ROOM 	= 0;
+	
+	final private int MAP_WALL 	  		= 1;
+	
+	public FileLoaderDungeon(String filename) throws FileNotFoundException, Exception {
 		this.loadMap(filename);
 	}
 
@@ -53,9 +57,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveNorth() {
-		if (this.row > 0 && this.map[this.row - 1][this.col] != 1) {
-			this.row--;
+	public boolean moveNorth(ICharacter player) {
+		if (this.row > 0 && this.map[this.row - 1][this.col] != null) {
+			
+			this.exitCurrentRoom(player);
+			this.changeRoom(-1, 0);
+			this.enterCurrentRoom(player);
 
 			return true;
 		}
@@ -64,9 +71,26 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveSouth() {
-		if (this.row < 4 && this.map[this.row + 1][this.col] != 1) {
-			this.row++;
+	public boolean moveSouth(ICharacter player) {
+		if (this.row < 4 && this.map[this.row + 1][this.col] != null) {
+			
+			this.exitCurrentRoom(player);
+			this.changeRoom(1, 0);
+			this.enterCurrentRoom(player);
+			
+			return true;
+		}
+
+		return false;
+	}
+
+	@Override
+	public boolean moveEast(ICharacter player) {
+		if (this.col < 4 && this.map[this.row][this.col + 1] != null) {
+
+			this.exitCurrentRoom(player);
+			this.changeRoom(0, 1);
+			this.enterCurrentRoom(player);
 
 			return true;
 		}
@@ -75,9 +99,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveEast() {
-		if (this.col < 4 && this.map[this.row][this.col + 1] != 1) {
-			this.col++;
+	public boolean moveWest(ICharacter player) {
+		if (this.col > 0 && this.map[this.row][this.col - 1] != null) {
+			
+			this.exitCurrentRoom(player);
+			this.changeRoom(0, -1);
+			this.enterCurrentRoom(player);
 
 			return true;
 		}
@@ -85,26 +112,41 @@ public class FileLoaderDungeon implements IDungeon {
 		return false;
 	}
 
-	@Override
-	public boolean moveWest() {
-		if (this.col > 0 && this.map[this.row][this.col - 1] != 1) {
-			this.col--;
-
-			return true;
-		}
-
-		return false;
+	private void changeRoom(int rowModifer, int colModifer)
+	{
+		this.col = this.col + colModifer;
+		this.row = this.row + rowModifer;
 	}
-
-	private void loadMap(String fileName) throws FileNotFoundException {
+	
+	private void exitCurrentRoom(ICharacter player)
+	{
+		this.map[this.row][this.col].exit(player);
+	}
+	
+	private void enterCurrentRoom(ICharacter player)
+	{
+		this.map[this.row][this.col].enter(player);
+	}
+	
+	private void loadMap(String fileName) throws FileNotFoundException, Exception {
 		Scanner input = new Scanner(new File(fileName));
 		int rows = input.nextInt();
 		int cols = input.nextInt();
 
-		this.map = new int[rows][cols];
+		this.map = new IRoom[rows][cols];
 
-		for (int i = 0; i < rows; i++)
-			for (int j = 0; j < cols; j++)
-				this.map[i][j] = input.nextInt();
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				int inputInt = input.nextInt();
+				if (inputInt == MAP_WALL) {
+					this.map[i][j] = null; // This is a wall
+				} else if (inputInt == MAP_CREATE_ROOM) {
+					this.map[i][j] = new Room();
+				} else {
+					// @todo Create custom exception for this			
+					throw new Exception("Unexpected value of "+inputInt);
+				}
+			}
+		}
 	}
 }

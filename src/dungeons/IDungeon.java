@@ -26,25 +26,25 @@ public interface IDungeon
 	 * 
 	 * @return True on successful move, false on failure
 	 */
-	public boolean moveNorth();
+	public boolean moveNorth(ICharacter player);
 
 	/**
 	 * 
 	 * @return True on successful move, false on failure
 	 */
-	public boolean moveSouth();
+	public boolean moveSouth(ICharacter player);
 
 	/**
 	 * 
 	 * @return True on successful move, false on failure
 	 */
-	public boolean moveEast();
+	public boolean moveEast(ICharacter player);
 
 	/**
 	 * 
 	 * @return True on successful move, false on failure
 	 */
-	public boolean moveWest();
+	public boolean moveWest(ICharacter player);
 
 	public String toString();
 }

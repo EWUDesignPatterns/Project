@@ -1,6 +1,7 @@
 package gameObjects;
 
-import gameObjects.items.IItem;
+import gameObjects.items.*;
+import gameObjects.*;
 
 public interface IRoom {  
   
@@ -10,7 +11,7 @@ public interface IRoom {
   //public abstract Weapon[] getWeapons();
   //public abstract Armor[] getArmor();
   
-  public void enter();
+  public void enter(ICharacter player);
   
-  public void exit(); 
+  public void exit(ICharacter player); 
 }
