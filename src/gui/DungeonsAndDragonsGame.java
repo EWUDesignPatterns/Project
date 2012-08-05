@@ -13,6 +13,8 @@ public class DungeonsAndDragonsGame
 			game = new Game();
 		} catch (FileNotFoundException e) {
 			System.err.println("Unable to load map file");
+		} catch (Exception e) {
+			System.err.println("Error reading map file: "+e.getMessage());
 		}
 		
 		IState state = game.getState();
