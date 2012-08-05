@@ -39,7 +39,7 @@ public class GameBeginState implements IState {
 			System.out.println("2. Human");
 			System.out.println("3. Orc");
 			System.out.print(": ");
-			int choice = game.getInput().nextInt();
+			int choice = game.nextInt();
 
 			switch (choice) {
 				case 1:
@@ -61,7 +61,7 @@ public class GameBeginState implements IState {
 			System.out.println("3. Mage");
 			System.out.println("4. Samurai");
 			System.out.print(": ");
-			int choice = game.getInput().nextInt();
+			int choice = game.nextInt();
 
 			switch (choice) {
 				case 1:

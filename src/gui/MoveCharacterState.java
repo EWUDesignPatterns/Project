@@ -21,9 +21,7 @@ public class MoveCharacterState implements IState
 	@Override
 	public IState execute() {
 		
-		String name = game.getInput().next();
-
-		while (true) {
+		while (true) { // We enter loop to allow the player to move until they want to go back to main menu
 			System.out.println("Please select a direction: ");
 			System.out.println("1. North");
 			System.out.println("2. East");
@@ -31,7 +29,7 @@ public class MoveCharacterState implements IState
 			System.out.println("3. West");
 			System.out.println("4. Back to main menu");
 			System.out.print(": ");
-			int choice = game.getInput().nextInt();
+			int choice = game.nextInt();
 
 			switch (choice) {
 				case 1:
@@ -62,7 +60,5 @@ public class MoveCharacterState implements IState
 					return new HomeScreenState(game);
 			}
 		}
-		
 	}
-
 }

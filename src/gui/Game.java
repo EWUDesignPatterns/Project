@@ -1,6 +1,7 @@
 package gui;
 
 import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -31,7 +32,7 @@ public class Game
 	 */
 	private IState state;
 	
-	public Game() throws FileNotFoundException
+	public Game() throws FileNotFoundException, Exception
 	{
 		this.state = new GameBeginState(this);
 		this.dungeon = new FileLoaderDungeon("Lamorte.map");
@@ -39,22 +40,22 @@ public class Game
 	
 	public boolean moveNorth()
 	{
-		return dungeon.moveNorth();
+		return dungeon.moveNorth(player);
 	}
 
 	public boolean moveEast()
 	{
-		return dungeon.moveEast();
+		return dungeon.moveEast(player);
 	}
 	
 	public boolean moveSouth()
 	{
-		return dungeon.moveSouth();
+		return dungeon.moveSouth(player);
 	}
 	
 	public boolean moveWest()
 	{
-		return dungeon.moveWest();
+		return dungeon.moveWest(player);
 	}
 	
 	public IRoom getCurrentRoom()
@@ -85,5 +86,34 @@ public class Game
 	public Random getRandom()
 	{
 		return rand;
+	}
+	
+	/**
+	 * Gets the next integer value from the input, this should
+	 * be in a sub class of game that is ConsoleGame since
+	 * this relates to only a console based game. This method
+	 * will catch InputMismatchException and prompt for input again
+	 * 
+	 * @return int
+	 */
+	public int nextInt()
+	{
+		int val;
+		while (true) {
+			try {
+				val = this.input.nextInt();
+				
+				break;
+			} catch (InputMismatchException e) {
+				System.out.println("Invalid integer");
+				
+				// Clear input
+				this.input.next();
+				
+				System.out.print("Enter a number: ");
+			}
+		}
+		
+		return val;
 	}
 }

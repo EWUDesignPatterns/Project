@@ -27,14 +27,9 @@ public class HomeScreenState implements IState
 			System.out.println("2. Use Item/Equip Item");
 			System.out.println("3. Rest");
 			System.out.println("4. Exit Game");
-			
-			Scanner scanner = new Scanner(System.in);
-			
 			System.out.print("Choice -->");
 			
-			int choice = scanner.nextInt();
-			
-			System.out.println("You choose " + choice);
+			int choice = game.nextInt();
 			
 			switch (choice)
 			{
