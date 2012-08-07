@@ -1,5 +1,5 @@
   all:
-	javac -classpath .. gui.DungeonsAndDragonsGame.java
+	javac -classpath .. DungeonsAndDragonsGame.java
 
 run: 
-	java -classpath .. DungeonsAndDragonsGame
+	java -classpath .. gui.DungeonsAndDragonsGame
