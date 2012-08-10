@@ -11,6 +11,9 @@ public class Samurai extends GameCharacterClass
 		//assign character
 		this.character = character;
 		
+		//assign name
+    this.className = "Samurai";
+		
 		//update the characters hp and mp
 		this.hp = getMaxHP();
 		this.mp = getMaxMP();
@@ -38,6 +41,10 @@ public class Samurai extends GameCharacterClass
 		return WeaponType.LIGHT;
 	}
 	
+	public String ToString()
+  {
+    return this.className + character.toString();
+  }
 	
 }
 

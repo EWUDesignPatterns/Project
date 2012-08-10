@@ -8,5 +8,7 @@ public abstract class GameCharacterClass extends PlayerCharacter
 {
 	PlayerCharacter character;
 	
+	String className;
+	
 	
 }

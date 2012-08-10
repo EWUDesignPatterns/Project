@@ -12,6 +12,9 @@ public class Berserker extends GameCharacterClass
 		//assign character
 		this.character = character;
 		
+		//assign name
+		this.className = "Berserker";
+		
 		//update the characters hp and mp
 		this.hp = getMaxHP();
 		this.mp = getMaxMP();
@@ -37,5 +40,10 @@ public class Berserker extends GameCharacterClass
 	public WeaponType getWeaponType()
 	{
 		return WeaponType.HEAVY;
+	}
+	
+	public String ToString()
+	{
+	  return this.className + character.toString();
 	}
 }

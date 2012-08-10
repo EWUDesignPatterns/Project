@@ -15,6 +15,9 @@ public class Mage extends GameCharacterClass
 		//assign character
 		this.character = character;
 		
+	 //assign name
+    this.className = "Mage";
+		
 		//update the characters hp and mp
 		this.hp = getMaxHP();
 		this.mp = getMaxMP();
@@ -42,4 +45,8 @@ public class Mage extends GameCharacterClass
 		return WeaponType.MAGIC;
 	}
 	
+	public String ToString()
+  {
+    return this.className + character.toString();
+  }
 }

@@ -65,9 +65,7 @@ public abstract class PlayerCharacter implements ICharacter
 	
 	public String toString()
 	{
-		return "" + this.getClass() + "\n"+
-				this.hp + "\n"+
-				this.mp + "\n";
+		return "" + this.hp + "\n"+ this.mp + "\n";
 	}
 	
 	//Attack/Defend logic here
