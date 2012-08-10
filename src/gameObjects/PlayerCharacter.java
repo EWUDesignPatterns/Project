@@ -12,26 +12,24 @@ import gameObjects.items.Weapons.Weapon;
 public abstract class PlayerCharacter implements ICharacter
 {
 
-	//Maximum/current hp/mp
+	//Stats
 	protected int maxHp, hp;
 	protected int maxMp, mp;
+	protected int defense;
+	protected int accuracy;
+	protected int baseDamage;
+	protected String name;
 	
 	//what stuff the character can equip
 	protected ArmorType armorType;
 	protected WeaponType weaponType;
-	
-	//accuracy
-	protected int toHit;
-	
-	//base damage
-	protected int baseDamage;
-	
-	//character name
-	protected String name;
-	
+
+	//Equipment
 	protected Weapon weapon;
 	protected Armor armor;
+	protected Item[] inventory;
 	
+	//What abilities the character currently has (limited)
 	protected IAbility[] abilities;
 	
 	
@@ -72,7 +70,7 @@ public abstract class PlayerCharacter implements ICharacter
 	public void attack(PlayerCharacter opponent)
 	{ 
 	    Random rand = new Random();
-	    if (rand.nextInt(20) + 1 > this.toHit) 
+	    if (rand.nextInt(20) + 1 > this.accuracy) 
 	    {
 	    	//don't need to know about damage unless we hit
 	    	int damage = 0;
@@ -112,12 +110,37 @@ public abstract class PlayerCharacter implements ICharacter
 		
 	}
 	
-	void equip(Item toEquip)
+	void equip(Item toEquip) //equip a weapon or an armor
 	{
+	  
+		if(toEquip instanceof Weapon)//if it is a weapon
+		{
+		  if(((Weapon)toEquip).getWeaponType() == this.weaponType)//if it is equippable
+		  {
+		    if(this.weapon == null)//if we don't have a weapon already
+		    {
+		      this.weapon = (Weapon)toEquip; //equip it
+		    }else{
+		      System.out.println("Are you sure? no? too bad."); //we already have a weapon, do we want to replace it?
+		      this.weapon = (Weapon)toEquip;  //too bad, we're doing it anyways
+		    }
+		  }
+		}
 		
-			
-		
-	}
+		else if(toEquip instanceof Armor)//if it is an armor
+		{
+		  if(((Armor)toEquip).getArmorType() == this.armorType)//if it is equippable
+      {
+        if(this.armor == null)//if we don't have an Armor already
+        {
+          this.armor = (Armor)toEquip; //equip it
+        }else{
+          System.out.println("Are you sure? no? too bad."); //we already have an Armor, do we want to replace it?
+          this.armor = (Armor)toEquip;  //too bad, we're doing it anyways
+        }
+      }   
+		}	
+	}//end equip
 
 
-}
+}//end PlayerCharacter
