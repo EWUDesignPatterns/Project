@@ -1,13 +1,13 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 import gameObjects.WeaponType;
 
 public class Berserker extends GameCharacterClass 
 {
 	
-	public Berserker(PlayerCharacter character)
+	public Berserker(ICharacter character)
 	{
 		//assign character
 		this.character = character;

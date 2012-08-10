@@ -1,12 +1,12 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
+import gameObjects.ICharacter;
 import gameObjects.WeaponType;
-import gameObjects.PlayerCharacter;
 
 public class Cleric extends GameCharacterClass 
 {
-	public Cleric(PlayerCharacter character)
+	public Cleric(ICharacter character)
 	{
 		//assign character
 		this.character = character;

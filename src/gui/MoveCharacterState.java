@@ -1,8 +1,8 @@
 package gui;
 
-import gameObjects.Race.Elf;
-import gameObjects.Race.Human;
-import gameObjects.Race.Orc;
+import gameObjects.Race.playable.Elf;
+import gameObjects.Race.playable.Human;
+import gameObjects.Race.playable.Orc;
 
 public class MoveCharacterState implements IState
 {

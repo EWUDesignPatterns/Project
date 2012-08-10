@@ -1,12 +1,12 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 import gameObjects.WeaponType;
 
 public class Samurai extends GameCharacterClass
 {
-	public Samurai(PlayerCharacter character)
+	public Samurai(ICharacter character)
 	{
 		//assign character
 		this.character = character;

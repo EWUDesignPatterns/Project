@@ -1,8 +1,8 @@
 package gameObjects.items.Potions;
 
-import java.util.Random;
 
-import gameObjects.PlayerCharacter;
+
+import gameObjects.ICharacter;
 import gameObjects.items.Item;
 import gameObjects.items.IItem;
 import gameObjects.items.IPotion;
@@ -19,7 +19,7 @@ public class MinorHealthPotion extends Item implements IItem, IPotion
 	
 	
 	@Override
-	public void use(PlayerCharacter target)
+	public void use(ICharacter target)
 	{
 		target.heal(this.getEffect());
 	}

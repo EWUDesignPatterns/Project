@@ -19,7 +19,7 @@ import gameObjects.Race.*;
  */
 public class Game
 {
-	private PlayerCharacter player;
+	private ICharacter player;
 	
 	private IDungeon dungeon;
 
@@ -63,7 +63,7 @@ public class Game
 		return dungeon.getCurrentRoom();
 	}
 	
-	public void setPlayer(PlayerCharacter player)
+	public void setPlayer(ICharacter player)
 	{
 		this.player = player;
 	}

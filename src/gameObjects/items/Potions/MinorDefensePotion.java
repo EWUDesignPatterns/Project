@@ -1,6 +1,6 @@
 package gameObjects.items.Potions;
 
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 import gameObjects.StatusEffects.DefenseBoosted;
 import gameObjects.items.IItem;
 import gameObjects.items.IPotion;
@@ -16,7 +16,7 @@ public class MinorDefensePotion extends Item implements IItem, IPotion
     this.name = "Minor Defense Potion";
   }
   @Override
-  public void use(PlayerCharacter target)
+  public void use(ICharacter target)
   {
     target.addStatusEffect(new DefenseBoosted(target, this.getEffect()));
   }

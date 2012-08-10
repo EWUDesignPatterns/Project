@@ -1,7 +1,7 @@
 package gameObjects.Class;
 
 import gameObjects.ArmorType;
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 import gameObjects.WeaponType;
 
 
@@ -10,7 +10,7 @@ public class Mage extends GameCharacterClass
 {
 	
 	
-	public Mage(PlayerCharacter character)
+	public Mage(ICharacter character)
 	{
 		//assign character
 		this.character = character;

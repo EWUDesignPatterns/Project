@@ -1,12 +1,13 @@
 package gameObjects.Class;
 
-import gameObjects.PlayerCharacter;
+import gameObjects.Character;
+import gameObjects.ICharacter;
 
 
 
-public abstract class GameCharacterClass extends PlayerCharacter
+public abstract class GameCharacterClass extends Character
 {
-	PlayerCharacter character;
+	ICharacter character;
 	
 	String className;
 	

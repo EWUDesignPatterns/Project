@@ -1,6 +1,6 @@
 package gameObjects.items.Potions;
 
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 import gameObjects.items.IItem;
 import gameObjects.items.IPotion;
 import gameObjects.items.Item;
@@ -15,7 +15,7 @@ public class StandardHealthPotion extends Item implements IItem, IPotion
     this.name = "Standard Health Potion";
   }
   @Override
-  public void use(PlayerCharacter target)
+  public void use(ICharacter target)
   {
     target.heal(this.getEffect());
   }

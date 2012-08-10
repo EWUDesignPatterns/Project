@@ -1,9 +1,9 @@
 package gameObjects.items;
 
-import gameObjects.PlayerCharacter;
+import gameObjects.ICharacter;
 
 public interface IPotion 
 {
 	
-	public void use(PlayerCharacter target);
+	public void use(ICharacter target);
 }

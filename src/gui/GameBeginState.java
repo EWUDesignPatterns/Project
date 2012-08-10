@@ -6,6 +6,9 @@ import gameObjects.Class.Cleric;
 import gameObjects.Class.Mage;
 import gameObjects.Class.Samurai;
 import gameObjects.Race.*;
+import gameObjects.Race.playable.Elf;
+import gameObjects.Race.playable.Human;
+import gameObjects.Race.playable.Orc;
 
 public class GameBeginState implements IState {
 	private Game game;
@@ -20,7 +23,7 @@ public class GameBeginState implements IState {
 
 	public IState execute() {
 
-		PlayerCharacter player = this.selectCharacter();
+		ICharacter player = this.selectCharacter();
 		player = this.selectClass(player);
 
 		game.setPlayer(player);
@@ -28,7 +31,7 @@ public class GameBeginState implements IState {
 		return new HomeScreenState(game);
 	}
 
-	private PlayerCharacter selectCharacter() {
+	private ICharacter selectCharacter() {
 		System.out.print("Adventurer, what is your name?");
 
 		String name = game.getInput().next();
@@ -52,7 +55,7 @@ public class GameBeginState implements IState {
 		}
 	}
 
-	private PlayerCharacter selectClass(PlayerCharacter character) {
+	private ICharacter selectClass(ICharacter character) {
 		
 		while (true) {
 			System.out.println("Please select a class: ");
@@ -65,13 +68,13 @@ public class GameBeginState implements IState {
 
 			switch (choice) {
 				case 1:
-					return new Berserker((PlayerCharacter) character);
+					return new Berserker(character);
 				case 2:
-					return new Cleric((PlayerCharacter) character);
+					return new Cleric(character);
 				case 3:
-					return new Mage((PlayerCharacter) character);
+					return new Mage(character);
 				case 4:
-					return new Samurai((PlayerCharacter) character);
+					return new Samurai(character);
 			}
 		}
 	}

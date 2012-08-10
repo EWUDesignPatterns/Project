@@ -24,7 +24,7 @@ public interface ICharacter
 	public String toString();
 	
 
-	public void attack(PlayerCharacter opponent);
+	public void attack(ICharacter opponent);
 	
 	public void doDamage(int damageToDeal);
 	
