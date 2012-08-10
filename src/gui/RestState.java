@@ -32,7 +32,6 @@ public class RestState implements IState {
 			}
 		}
 
-		System.out.print(String.format(String.format("%%0%dd", output), 0).replace("0",output));		
 		System.out.println("You are now awake!");
 		
 		return new HomeScreenState(game);
