@@ -12,6 +12,7 @@ public class Orc extends PlayerCharacter
 		this.maxHp = 10;
 		this.mp = 3;
 		this.maxMp = 3;
+		this.defense = 5;
 		this.baseDamage = 8;
 
 	}

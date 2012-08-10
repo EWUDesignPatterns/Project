@@ -1,5 +1,7 @@
 package gameObjects;
 
+import gameObjects.StatusEffects.IStatusEffect;
+
 
 
 public interface ICharacter
@@ -11,6 +13,10 @@ public interface ICharacter
 	
 	public int getMaxMP();
 	
+	public int getDefense();
+	
+	public void changeDefense(int change);
+	
 	public ArmorType getArmorType();
 	
 	public WeaponType getWeaponType();
@@ -20,6 +26,12 @@ public interface ICharacter
 
 	public void attack(PlayerCharacter opponent);
 	
-	public void doDamage(int DamageToDeal);
+	public void doDamage(int damageToDeal);
+	
+	public void heal(int damageToHeal);
+	
+	public void addStatusEffect(IStatusEffect effect);
+	
+	public void removeStatusEffect(IStatusEffect effect);
 	
 }

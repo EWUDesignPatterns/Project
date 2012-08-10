@@ -1,6 +1,8 @@
 package gameObjects.items;
 
-public abstract class Item
+import java.util.Random;
+
+public abstract class Item implements IItem
 {
 	protected String name;
 	
@@ -8,5 +10,28 @@ public abstract class Item
 	
 	protected int maxEffect;
 	
-	protected float effectMultiplier;
+	
+  public int getBaseEffect()
+  {
+    return this.baseEffect;
+  }
+
+  public int getMaxEffect()
+  {
+    return this.maxEffect;
+  }
+
+
+  public int getEffect()
+  {
+    Random rand = new Random();
+    return this.baseEffect + (rand.nextInt() % (this.maxEffect - this.baseEffect));
+  }
+
+
+  public String getName()
+  {
+    // TODO Auto-generated method stub
+    return this.name;
+  }
 }

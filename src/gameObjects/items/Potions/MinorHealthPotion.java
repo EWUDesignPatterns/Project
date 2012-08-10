@@ -13,40 +13,18 @@ public class MinorHealthPotion extends Item implements IItem, IPotion
 	public MinorHealthPotion()
 	{
 		this.baseEffect = 1;
-		this.effectMultiplier = .1f;
+		this.maxEffect = 5;
 		this.name = "Minor Health Potion";
 	}
+	
+	
 	@Override
 	public void use(PlayerCharacter target)
 	{
-		target.doDamage(-this.getEffect());
+		target.heal(this.getEffect());
 	}
 
-	@Override
-	public int getBaseEffect() 
-	{
-		
-		return this.baseEffect;
-	}
 
-	@Override
-	public int getMaxEffect() 
-	{
-		//Kinda made this up.... will need to work out math later
-		return this.baseEffect + (int)(this.effectMultiplier * 20);
-	}
 
-	@Override
-	public int getEffect() 
-	{
-		Random rand = new Random();
-		return this.baseEffect + (int)(this.effectMultiplier * (rand.nextInt() % 20));
-	}
-
-	@Override
-	public String getName() 
-	{
-		return this.name;
-	}
 
 }

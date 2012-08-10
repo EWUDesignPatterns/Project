@@ -1,8 +1,10 @@
 package gameObjects;
 
+import java.util.LinkedList;
 import java.util.Random;
 
 import gameObjects.Abilities.IAbility;
+import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
@@ -32,6 +34,8 @@ public abstract class PlayerCharacter implements ICharacter
 	//What abilities the character currently has (limited)
 	protected IAbility[] abilities;
 	
+	//What status effects the character currently has applied
+	protected LinkedList<IStatusEffect> statusEffects;
 	
 	
 	
@@ -49,6 +53,16 @@ public abstract class PlayerCharacter implements ICharacter
 	public int getMaxMP()
 	{
 		return this.maxMp;
+	}
+	
+	public int getDefense()
+	{
+	  return this.defense;
+	}
+	
+	public void changeDefense(int change)
+	{
+	  this.defense += change;
 	}
 	
 	public ArmorType getArmorType()
@@ -84,13 +98,24 @@ public abstract class PlayerCharacter implements ICharacter
 	    }
 	}
 	
+	
+	
 	public void doDamage(int DamageToDeal)
 	{
 		DamageToDeal -= armor.getEffect(); //just a straight subtraction for now, can change later
+		DamageToDeal -= this.getDefense();
 		if(this.hp > DamageToDeal)
 			this.hp -= DamageToDeal;
 		else //kill the character, unsure of how we want to do this
 			this.hp = 0;
+	}
+	
+	public void heal(int damageToHeal)
+	{
+	  if(this.hp + damageToHeal > this.maxHp)
+	    this.hp = this.maxHp;
+	  else
+	    this.hp += damageToHeal;
 	}
 	
 	//Ability Logic Here
@@ -99,16 +124,7 @@ public abstract class PlayerCharacter implements ICharacter
 		this.abilities[index] = ability;
 	}
 	
-	//Behavior Logic
-	void defend()
-	{
-		
-	}
-	
-	void use()
-	{
-		
-	}
+
 	
 	void equip(Item toEquip) //equip a weapon or an armor
 	{
@@ -141,6 +157,16 @@ public abstract class PlayerCharacter implements ICharacter
       }   
 		}	
 	}//end equip
+	
+	public void addStatusEffect(IStatusEffect effect)
+	{
+	  this.statusEffects.add(effect);
+	}
+	
+	public void removeStatusEffect(IStatusEffect effect)
+	{
+	  this.statusEffects.remove(effect);
+	}
 
 
 }//end PlayerCharacter

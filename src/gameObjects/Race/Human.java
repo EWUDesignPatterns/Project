@@ -10,7 +10,10 @@ public class Human extends PlayerCharacter
 	{
 	  this.name = name;
 		this.hp = 8;
+		this.maxHp = 8;
 		this.mp = 8;
+		this.maxMp = 8;
+		this.defense = 3;
 		this.baseDamage = 5;
 
 	}
