@@ -13,7 +13,8 @@ import gameObjects.Race.*;
 
 /**
  * This is just a wrapper class for holding the current
- * party and the dungeon for now
+ * party and the dungeon for now. This game object is meant to be implement
+ * currently with the console based java
  * 
  * @author Michael Williams
  */
@@ -27,6 +28,8 @@ public class Game
 	
 	private Scanner input = new Scanner(System.in);
 	
+	private FightGenerator fightGenerator;
+	
 	/**
 	 * Current state of the game
 	 */
@@ -34,8 +37,11 @@ public class Game
 	
 	public Game() throws FileNotFoundException, Exception
 	{
+		this.fightGenerator = new FightGenerator();
+		this.fightGenerator.addObserver("fight", new FightObserver(this));
+		
 		this.state = new GameBeginState(this);
-		this.dungeon = new FileLoaderDungeon("Lamorte.map");
+		this.dungeon = new FileLoaderDungeon("Lamorte.map", this.fightGenerator);
 	}
 	
 	public boolean moveNorth()
@@ -68,6 +74,11 @@ public class Game
 		this.player = player;
 	}
 	
+	public PlayerCharacter getPlayer()
+	{
+		return this.player;
+	}
+	
 	public IState getState()
 	{
 		return state;
@@ -86,6 +97,28 @@ public class Game
 	public Random getRandom()
 	{
 		return rand;
+	}
+	
+	public FightGenerator getFightGenerator()
+	{
+		return this.fightGenerator;
+	}
+	
+	public boolean run()
+	{
+		// @todo Tell everything that needs to know about the
+		// player running from the battle
+		
+		return true;
+	}
+	
+	public void attack()
+	{
+		IRoom room = this.dungeon.getCurrentRoom();
+		
+		room.getBadGuys();
+		
+		//player.attack();
 	}
 	
 	/**

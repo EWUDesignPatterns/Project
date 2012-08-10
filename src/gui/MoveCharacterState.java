@@ -21,44 +21,44 @@ public class MoveCharacterState implements IState
 	@Override
 	public IState execute() {
 		
-		while (true) { // We enter loop to allow the player to move until they want to go back to main menu
-			System.out.println("Please select a direction: ");
-			System.out.println("1. North");
-			System.out.println("2. East");
-			System.out.println("3. South");
-			System.out.println("3. West");
-			System.out.println("4. Back to main menu");
-			System.out.print(": ");
-			int choice = game.nextInt();
+		System.out.println("Please select a direction: ");
+		System.out.println("1. North");
+		System.out.println("2. East");
+		System.out.println("3. South");
+		System.out.println("4. West");
+		System.out.println("5. Back to main menu");
+		System.out.print(": ");
+		int choice = game.nextInt();
 
-			switch (choice) {
-				case 1:
-					if (!game.moveNorth()) {
-						System.out.println("Unable to move North");
-					}
-				break;
-					
-				case 2:
-					if (!game.moveEast()) {
-						System.out.println("Unable to move East");
-					}
-				break;
+		switch (choice) {
+			case 1:
+				if (!game.moveNorth()) {
+					System.out.println("Unable to move North");
+				}
+			break;
 				
-				case 3:
-					if (!game.moveSouth()) {
-						System.out.println("Unable to move South");
-					}
-				break;
-				
-				case 4:
-					if (!game.moveWest()) {
-						System.out.println("Unable to move West");
-					}
-				break;
-				
-				case 5:
-					return new HomeScreenState(game);
-			}
+			case 2:
+				if (!game.moveEast()) {
+					System.out.println("Unable to move East");
+				}
+			break;
+			
+			case 3:
+				if (!game.moveSouth()) {
+					System.out.println("Unable to move South");
+				}
+			break;
+			
+			case 4:
+				if (!game.moveWest()) {
+					System.out.println("Unable to move West");
+				}
+			break;
+			
+			case 5:
+				return new HomeScreenState(game);
 		}
+		
+		return game.getState();
 	}
 }

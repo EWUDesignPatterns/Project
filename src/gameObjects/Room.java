@@ -1,20 +1,26 @@
 package gameObjects;
 
+import java.util.Observable;
 import java.util.Random;
 
 import gameObjects.items.IItem;;
 
-public class Room implements IRoom 
+public class Room implements IRoom
 {
 	IItem[] items;
 
 	ICharacter[] badGuys;
 	
 	static Random rand = new Random();
-	  
-	public Room()
+	
+	private IFightGenerator fightGenerator;
+	
+	public Room(IFightGenerator fightGenerator)
 	{
+		// @todo initialize items
 		this.items = new IItem[5];
+		
+		this.fightGenerator = fightGenerator;
 	}
 	
 	@Override
@@ -26,18 +32,16 @@ public class Room implements IRoom
 	@Override
 	public void enter(ICharacter player) 
 	{
-		this.generateBadGuys();
+		//this.generateBadGuys();
 		
-		// @todo Change probability of there being bad guys
-		if (this.badGuys.length > 0 && rand.nextInt(20) > 15) {
-			this.triggerEncounter();
-		}
+		this.fightGenerator.roomEntered(this);
 	}
 
 	@Override
 	public void exit(ICharacter player)
 	{
 		// @todo
+		this.fightGenerator.roomExited(this);
 	}
 	
 	private void generateBadGuys()
@@ -45,11 +49,5 @@ public class Room implements IRoom
 		// @todo Determine randomly if bad guys should be
 		// generated
 		this.badGuys = new ICharacter[5];
-	}
-	
-	private void triggerEncounter()
-	{
-		// @todo
-		System.out.println("You got in a battle but this is not implemented yet");
 	}
 }

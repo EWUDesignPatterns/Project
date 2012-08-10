@@ -31,11 +31,16 @@ public class FileLoaderDungeon implements IDungeon {
 	 */
 	private IRoom map[][];
 
+	private IFightGenerator fightGenerator;
+	
 	final private int MAP_CREATE_ROOM 	= 0;
 	
 	final private int MAP_WALL 	  		= 1;
 	
-	public FileLoaderDungeon(String filename) throws FileNotFoundException, Exception {
+	public FileLoaderDungeon(String filename, IFightGenerator fightGenerator) throws FileNotFoundException, Exception {
+
+		this.fightGenerator = fightGenerator;
+		
 		this.loadMap(filename);
 	}
 
@@ -141,7 +146,7 @@ public class FileLoaderDungeon implements IDungeon {
 				if (inputInt == MAP_WALL) {
 					this.map[i][j] = null; // This is a wall
 				} else if (inputInt == MAP_CREATE_ROOM) {
-					this.map[i][j] = new Room();
+					this.map[i][j] = new Room(this.fightGenerator);
 				} else {
 					// @todo Create custom exception for this			
 					throw new Exception("Unexpected value of "+inputInt);

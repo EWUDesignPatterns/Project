@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 public class DungeonsAndDragonsGame 
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		System.out.println("Welcome to Dungeons and Dragons 21st Century Command Line Style");
 
@@ -13,8 +13,6 @@ public class DungeonsAndDragonsGame
 			game = new Game();
 		} catch (FileNotFoundException e) {
 			System.err.println("Unable to load map file");
-		} catch (Exception e) {
-			System.err.println("Error reading map file: "+e.getMessage());
 		}
 		
 		IState state = game.getState();
