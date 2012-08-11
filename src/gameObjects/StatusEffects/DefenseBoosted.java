@@ -17,6 +17,8 @@ public class DefenseBoosted implements IStatusEffect
   {
     if(target.getDefense() > baseDefense)
       target.changeDefense(-1);
+    else
+      target.removeStatusEffect(this);
   }
 
 }

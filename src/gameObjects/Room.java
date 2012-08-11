@@ -3,7 +3,8 @@ package gameObjects;
 import java.util.Observable;
 import java.util.Random;
 
-import gameObjects.items.IItem;;
+import gameObjects.items.IItem;
+import gameObjects.IFightGenerator;
 
 public class Room implements IRoom
 {
@@ -50,4 +51,11 @@ public class Room implements IRoom
 		// generated
 		this.badGuys = new ICharacter[5];
 	}
+
+  @Override
+  public ICharacter[] getBadGuys()
+  {
+    // TODO Auto-generated method stub
+    return null;
+  }
 }

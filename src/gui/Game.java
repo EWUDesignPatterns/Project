@@ -74,7 +74,7 @@ public class Game
 		this.player = player;
 	}
 	
-	public PlayerCharacter getPlayer()
+	public ICharacter getPlayer()
 	{
 		return this.player;
 	}

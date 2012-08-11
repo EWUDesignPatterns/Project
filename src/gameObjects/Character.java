@@ -48,6 +48,11 @@ public class Character implements ICharacter
     return this.maxHp;
   }
   
+  public int getMP()
+  {
+    return this.mp;
+  }
+  
   public int getMaxMP()
   {
     return this.maxMp;
@@ -61,6 +66,22 @@ public class Character implements ICharacter
   public void changeDefense(int change)
   {
     this.defense += change;
+  }
+  
+  public void reduceMP(int amt)
+  {
+    if(amt > this.mp)
+      this.mp = 0;
+    else
+      this.mp -= amt;
+  }
+  
+  public void increaseMP(int amt)
+  {
+    if(this.mp + amt > this.maxMp)
+      this.mp = this.maxMp;
+    else
+      this.mp += amt;
   }
   
   public ArmorType getArmorType()
