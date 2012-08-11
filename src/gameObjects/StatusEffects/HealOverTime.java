@@ -4,7 +4,7 @@ import java.util.Random;
 
 import gameObjects.ICharacter;
 
-public class HealOverTime implements IStatusEffect
+public class HealOverTime extends PositiveStatusEffect implements IStatusEffect
 {
   int duration;
   int damage;
@@ -19,7 +19,7 @@ public class HealOverTime implements IStatusEffect
   public void applyAffect(ICharacter target) //does 1 damage per turn
   {
     System.out.println(target + " heals " + damage + "Damage");
-    if(--duration > 0)
+    if(duration-- > 0)
       target.heal(damage);  
     else
       target.removeStatusEffect(this);

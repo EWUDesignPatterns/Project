@@ -4,7 +4,7 @@ import java.util.Random;
 
 import gameObjects.ICharacter;
 
-public class DefenseReduced implements IStatusEffect
+public class DefenseReduced extends NegativeStatusEffect implements IStatusEffect
 {
 
   int baseDefense;
@@ -23,7 +23,12 @@ public class DefenseReduced implements IStatusEffect
   @Override
   public void applyAffect(ICharacter target)
   {
-    if(--duration <= 0)
+    if(duration-- <= 0)
       target.removeStatusEffect(this);
+  }
+  
+  public void restore(ICharacter target)
+  {
+    target.changeDefense(baseDefense - target.getDefense());//reset the defense 
   }
 }

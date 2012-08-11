@@ -1,6 +1,10 @@
 package gameObjects;
 
+import java.util.LinkedList;
+
 import gameObjects.StatusEffects.IStatusEffect;
+import gameObjects.items.Armors.Armor;
+import gameObjects.items.Weapons.Weapon;
 
 
 
@@ -24,9 +28,15 @@ public interface ICharacter
 	
 	public void increaseMP(int amt);
 	
+	public LinkedList<IStatusEffect> getStatusEffects();
+	
 	public ArmorType getArmorType();
 	
+	public Armor getArmor();
+	
 	public WeaponType getWeaponType();
+	
+	public Weapon getWeapon();
 	
 	public String toString();
 	

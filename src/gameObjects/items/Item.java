@@ -6,6 +6,8 @@ public abstract class Item implements IItem
 {
 	protected String name;
 	
+	protected String description;
+	
 	protected int baseEffect;
 	
 	protected int maxEffect;
@@ -33,5 +35,10 @@ public abstract class Item implements IItem
   {
     // TODO Auto-generated method stub
     return this.name;
+  }
+  
+  public String getDescription()
+  {
+    return this.description;
   }
 }

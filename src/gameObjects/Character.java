@@ -84,14 +84,29 @@ public class Character implements ICharacter
       this.mp += amt;
   }
   
+  public LinkedList<IStatusEffect> getStatusEffects()
+  {
+    return this.statusEffects;
+  }
+  
   public ArmorType getArmorType()
   {
     return this.armorType;
   }
   
+  public Armor getArmor()
+  {
+    return this.armor;
+  }
+  
   public WeaponType getWeaponType()
   {
     return this.weaponType;
+  }
+  
+  public Weapon getWeapon()
+  {
+    return this.weapon;
   }
   
   public String toString()

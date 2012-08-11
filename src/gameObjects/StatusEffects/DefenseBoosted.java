@@ -2,7 +2,7 @@ package gameObjects.StatusEffects;
 
 import gameObjects.ICharacter;
 
-public class DefenseBoosted implements IStatusEffect
+public class DefenseBoosted extends PositiveStatusEffect implements IStatusEffect
 {
   int baseDefense;
   
