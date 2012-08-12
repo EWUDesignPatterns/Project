@@ -22,6 +22,8 @@ public interface ICharacter
 	
 	public int getDefense();
 	
+	public int getAccuracy();
+	
 	public void changeDefense(int change);
 	
 	public void reduceMP(int amt);
@@ -40,6 +42,11 @@ public interface ICharacter
 	
 	public String toString();
 	
+	public String getName();
+	
+	public String getRace();
+	
+	public String getClassName();
 
 	public void attack(ICharacter opponent);
 	

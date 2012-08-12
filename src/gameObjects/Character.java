@@ -9,7 +9,7 @@ import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
 
-public class Character implements ICharacter
+public abstract class Character implements ICharacter
 {
 
   //Stats
@@ -19,6 +19,8 @@ public class Character implements ICharacter
   protected int accuracy;
   protected int baseDamage;
   protected String name;
+  protected String className;
+  protected String race;
   
   //what stuff the character can equip
   protected ArmorType armorType;
@@ -35,8 +37,16 @@ public class Character implements ICharacter
   //What status effects the character currently has applied
   protected LinkedList<IStatusEffect> statusEffects;
   
+  //protected default constructor to init objects but prevent abstract class from being initialized
+  protected Character()
+  {
+    this.name = "Unknown";
+    this.abilities = new IAbility[4];
+    this.statusEffects = new LinkedList<IStatusEffect>();
+    this.inventory = new Item[10];
+  }
   
-  
+ 
   //Getters
   public int getHP()
   {
@@ -61,6 +71,11 @@ public class Character implements ICharacter
   public int getDefense()
   {
     return this.defense;
+  }
+  
+  public int getAccuracy()
+  {
+    return this.accuracy;
   }
   
   public void changeDefense(int change)
@@ -109,19 +124,37 @@ public class Character implements ICharacter
     return this.weapon;
   }
   
+  @Override
+  public String getName()
+  {
+    return this.name;
+  }
+
+  @Override
+  public String getRace()
+  {
+    return this.race;
+  }
+
+  @Override
+  public String getClassName()
+  {
+    return "";
+  }
+  
   public String toString()
   {
-    return "" + this.hp + "\n"+ this.mp + "\n";
+    return "";
   }
   
   //Attack/Defend logic here
   public void attack(ICharacter opponent)
   { 
       Random rand = new Random();
-      if (rand.nextInt(20) + 1 > this.accuracy) 
+      if (rand.nextInt(20) + 1 < this.accuracy) //higher accuracy is better
       {
         //don't need to know about damage unless we hit
-        int damage = 0;
+        int damage = this.baseDamage;
         damage += weapon.getEffect();
         opponent.doDamage(damage);
         System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );

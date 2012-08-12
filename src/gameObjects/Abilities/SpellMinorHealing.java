@@ -21,7 +21,7 @@ public class SpellMinorHealing extends Spell implements IAbility
     {
       self.reduceMP(MPCost);
       Random rand = new Random();
-      if((rand.nextInt() % 20) < 15)
+      if((rand.nextInt() % 20)+1 < self.getAccuracy())
       {
         System.out.println("Hit!");
         other.heal(damage);

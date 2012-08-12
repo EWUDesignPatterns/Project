@@ -42,8 +42,23 @@ public class Berserker extends GameCharacterClass
 		return WeaponType.HEAVY;
 	}
 	
-	public String ToString()
-	{
-	  return this.className + character.toString();
-	}
+  @Override
+  public String getName()
+  {
+    return character.getName();
+  }
+
+
+  @Override
+  public String getRace()
+  {
+    return character.getRace();
+  }
+
+
+  @Override
+  public String getClassName()
+  {
+    return this.className;
+  }
 }

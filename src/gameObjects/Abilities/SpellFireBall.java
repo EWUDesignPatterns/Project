@@ -13,6 +13,9 @@ public class SpellFireBall extends Spell implements IAbility
   {
     this.MPCost = cost;
     this.damage = damage;
+    this.name = "Fire Ball";
+    this.description = "A Giant Ball of Fire with a chance to set enemies afire";
+
   }
   
   @Override
@@ -22,7 +25,7 @@ public class SpellFireBall extends Spell implements IAbility
     {
       self.reduceMP(MPCost);
       Random rand = new Random();
-      if((rand.nextInt() % 20) < 15)
+      if((rand.nextInt() % 20)+1 < self.getAccuracy())
       {
         System.out.println("Hit!");
         other.doDamage(damage);

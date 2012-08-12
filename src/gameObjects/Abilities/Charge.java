@@ -5,7 +5,7 @@ import java.util.Random;
 import gameObjects.ICharacter;
 import gameObjects.StatusEffects.DefenseReduced;
 
-public class Charge implements IAbility
+public class Charge extends AbstractAbility implements IAbility
 {
 
   @Override

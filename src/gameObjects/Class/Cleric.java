@@ -23,7 +23,7 @@ public class Cleric extends GameCharacterClass
 	
 	public int getMaxHP()
 	{
-		return character.getMaxHP() - 5;
+		return character.getMaxHP() - 3;
 	}
 	
 	public int getMaxMP()
@@ -40,10 +40,25 @@ public class Cleric extends GameCharacterClass
 	{
 		return weaponType.MAGIC;
 	}
-	
 
-	public String ToString()
+
+  @Override
+  public String getName()
   {
-    return this.className + character.toString();
+    return character.getName();
+  }
+
+
+  @Override
+  public String getRace()
+  {
+    return character.getRace();
+  }
+
+
+  @Override
+  public String getClassName()
+  {
+    return "Cleric";
   }
 }
