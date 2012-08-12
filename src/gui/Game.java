@@ -9,7 +9,7 @@ import dungeons.*;
 import gameObjects.*;
 import gameObjects.Abilities.*;
 import gameObjects.Class.*;
-import gameObjects.Race.*;
+import gameObjects.Race.playable.*;
 
 /**
  * This is just a wrapper class for holding the current
