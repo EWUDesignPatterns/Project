@@ -1,26 +1,32 @@
 package gameObjects.StatusEffects;
 
-import java.util.Random;
+
 
 import gameObjects.ICharacter;
 
 public class HealOverTime extends PositiveStatusEffect implements IStatusEffect
 {
   int duration;
-  int damage;
+  int amount;
   
-  public HealOverTime(int dmg)
+  public HealOverTime(int dmg, int duration)
   {
-    Random rand = new Random();
-    this.duration = rand.nextInt() % 20;
-    this.damage = dmg;
+    this.duration = duration;
+    this.amount = dmg;
   }
   @Override
   public void applyAffect(ICharacter target) //does 1 damage per turn
   {
-    System.out.println(target + " heals " + damage + "Damage");
     if(duration-- > 0)
-      target.heal(damage);  
+    {
+      if(target.getHP() + amount > target.getMaxHP())
+        amount = target.getMaxHP() - target.getHP();
+      if(amount > 0)
+      {
+        target.heal(amount);
+        System.out.println(target.getName() + " heals " + amount + " HP");
+      }
+    }
     else
       target.removeStatusEffect(this);
   }

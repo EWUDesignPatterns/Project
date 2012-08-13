@@ -58,7 +58,7 @@ public class Samurai extends GameCharacterClass
   @Override
   public String getClassName()
   {
-    return "Samurai";
+    return this.className;
   }
 	
 }

@@ -19,7 +19,7 @@ public class SpellMinorHealing extends Spell implements IAbility
   {
     if(self.getMP() >= MPCost)//we can cast
     {
-      self.reduceMP(MPCost);
+      self.decreaseMP(MPCost);
       Random rand = new Random();
       if((rand.nextInt() % 20)+1 < self.getAccuracy())
       {

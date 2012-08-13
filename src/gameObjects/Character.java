@@ -8,6 +8,7 @@ import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
+import gameObjects.items.Weapons.MagicWeapon;
 
 public abstract class Character implements ICharacter
 {
@@ -78,12 +79,33 @@ public abstract class Character implements ICharacter
     return this.accuracy;
   }
   
-  public void changeDefense(int change)
+  public void increaseDefense(int change)
   {
     this.defense += change;
   }
   
-  public void reduceMP(int amt)
+  public void decreaseDefense(int change)
+  {
+    if(change > this.defense)
+      this.defense = 0;
+    else
+      this.defense -= change;
+  }
+  
+  public void increaseAccuracy(int change)
+  {
+    this.accuracy += change;
+  }
+  
+  public void decreaseAccuracy(int change)
+  {
+    if(this.accuracy < change)
+      this.accuracy = 1;
+    else
+      this.accuracy -= change;
+  }
+  
+  public void decreaseMP(int amt)
   {
     if(amt > this.mp)
       this.mp = 0;
@@ -193,18 +215,21 @@ public abstract class Character implements ICharacter
   
 
   
-  void equip(Item toEquip) //equip a weapon or an armor
+  public void equip(Item toEquip) //equip a weapon or an armor
   {
     
     if(toEquip instanceof Weapon)//if it is a weapon
     {
       if(((Weapon)toEquip).getWeaponType() == this.weaponType)//if it is equippable
       {
+        if(toEquip instanceof MagicWeapon)
+          this.addStatusEffect(((MagicWeapon) toEquip).status);
         if(this.weapon == null)//if we don't have a weapon already
         {
           this.weapon = (Weapon)toEquip; //equip it
         }else{
           System.out.println("Are you sure? no? too bad."); //we already have a weapon, do we want to replace it?
+          this.unEquip(this.getWeapon());
           this.weapon = (Weapon)toEquip;  //too bad, we're doing it anyways
         }
       }
@@ -224,6 +249,18 @@ public abstract class Character implements ICharacter
       }   
     } 
   }//end equip
+  
+  public void unEquip(Item toUnequip)
+  {
+    if(toUnequip instanceof Armor)
+    {
+      this.armor = null;
+    }else if(toUnequip instanceof Weapon){
+      if(toUnequip instanceof MagicWeapon)
+        this.removeStatusEffect(((MagicWeapon)toUnequip).status);
+      this.weapon = null;
+    }
+  }
   
   public void addStatusEffect(IStatusEffect effect)
   {

@@ -3,6 +3,7 @@ package gameObjects;
 import java.util.LinkedList;
 
 import gameObjects.StatusEffects.IStatusEffect;
+import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
 
@@ -24,9 +25,15 @@ public interface ICharacter
 	
 	public int getAccuracy();
 	
-	public void changeDefense(int change);
+	public void increaseDefense(int change);
 	
-	public void reduceMP(int amt);
+	public void decreaseDefense(int change);
+	
+	public void increaseAccuracy(int change);
+	
+	public void decreaseAccuracy(int change);
+	
+	public void decreaseMP(int amt);
 	
 	public void increaseMP(int amt);
 	
@@ -58,4 +65,7 @@ public interface ICharacter
 	
 	public void removeStatusEffect(IStatusEffect effect);
 	
+	void equip(Item toEquip);
+	
+	void unEquip(Item toRemove);
 }

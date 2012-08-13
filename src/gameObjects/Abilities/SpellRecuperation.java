@@ -17,12 +17,12 @@ public class SpellRecuperation extends Spell implements IAbility
   {
     if(self.getMP() >= this.MPCost)//have the mana to cast
     {
-      self.reduceMP(this.MPCost);//pay the mana
+      self.decreaseMP(this.MPCost);//pay the mana
       Random rand = new Random();
       if(1 + (rand.nextInt() % 20) < self.getAccuracy())
       {
         System.out.println("Hit");
-        other.addStatusEffect(new HealOverTime(damage));//between 1 and 4 dmg per turn
+        other.addStatusEffect(new HealOverTime(damage, (rand.nextInt()%5) + 1));//between 1 and 4 dmg per turn
       }
       else
         System.out.println("Miss");

@@ -7,7 +7,7 @@ import gameObjects.ICharacter;
 
 public abstract class GameCharacterClass extends Character
 {
-	ICharacter character;	
+	protected ICharacter character;	
 	
 	public String toString()
 	{
@@ -22,4 +22,24 @@ public abstract class GameCharacterClass extends Character
     temp += "-----------------\n";
     return temp;
 	}
+	
+  @Override
+  public String getName()
+  {
+    return character.getName();
+  }
+
+
+  @Override
+  public String getRace()
+  {
+    return character.getRace();
+  }
+
+
+  @Override
+  public String getClassName()
+  {
+    return this.className;
+  }
 }

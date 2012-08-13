@@ -21,7 +21,7 @@ public class SpellAcidRain extends Spell implements IAbility
   {
     if(self.getMP() >= this.MPCost)//have the mana to cast
     {
-      self.reduceMP(this.MPCost);//pay the mana
+      self.decreaseMP(this.MPCost);//pay the mana
       Random rand = new Random();
       if(1 + (rand.nextInt() % 20) < self.getAccuracy())
       {

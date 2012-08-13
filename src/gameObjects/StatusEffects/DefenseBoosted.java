@@ -9,14 +9,14 @@ public class DefenseBoosted extends PositiveStatusEffect implements IStatusEffec
   public DefenseBoosted(ICharacter target, int effect)
   {
     this.baseDefense = target.getDefense();
-    target.changeDefense(effect);
+    target.increaseDefense(effect);
   }
   
   @Override
   public void applyAffect(ICharacter target)
   {
     if(target.getDefense() > baseDefense)
-      target.changeDefense(-1);
+      target.decreaseDefense(1);
     else
       target.removeStatusEffect(this);
   }

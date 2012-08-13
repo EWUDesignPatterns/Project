@@ -59,6 +59,6 @@ public class Cleric extends GameCharacterClass
   @Override
   public String getClassName()
   {
-    return "Cleric";
+    return this.className;
   }
 }

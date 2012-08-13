@@ -5,4 +5,5 @@ import gameObjects.ArmorType;
 public interface IArmor 
 {
 	public ArmorType getArmorType();
+	
 }

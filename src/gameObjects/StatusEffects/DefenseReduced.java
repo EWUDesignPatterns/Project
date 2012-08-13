@@ -7,17 +7,15 @@ import gameObjects.ICharacter;
 public class DefenseReduced extends NegativeStatusEffect implements IStatusEffect
 {
 
-  int baseDefense;
+  int change;
   int duration;
   
-  public DefenseReduced(ICharacter target, int duration)
+  public DefenseReduced(ICharacter target, int affect)
   {
-    this.baseDefense = target.getDefense();
     Random rand = new Random();
-    int change = (rand.nextInt() % 4) + 1;
-    System.out.println("Targets defense reduced by "+change);
-    target.changeDefense(-change);
-    this.duration = duration;
+    this.duration = (rand.nextInt() % 4) + 1;
+    System.out.println("Targets defense reduced by "+change + "for "+ this.duration +" turns");
+    target.decreaseDefense(change);
   }
   
   @Override
@@ -29,6 +27,6 @@ public class DefenseReduced extends NegativeStatusEffect implements IStatusEffec
   
   public void restore(ICharacter target)
   {
-    target.changeDefense(baseDefense - target.getDefense());//reset the defense 
+    target.increaseDefense(change);//reset the defense 
   }
 }

@@ -19,25 +19,4 @@ public class Kobold extends NonPlayerCharacter implements ICharacter
     this.abilities[0] = new RapidAttack();
   }
 
-  @Override
-  public String getName()
-  {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
-  public String getRace()
-  {
-    // TODO Auto-generated method stub
-    return this.race;
-  }
-
-  @Override
-  public String getClassName()
-  {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
 }

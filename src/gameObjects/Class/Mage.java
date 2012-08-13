@@ -62,6 +62,6 @@ public class Mage extends GameCharacterClass
   @Override
   public String getClassName()
   {
-    return "Mage";
+    return this.className;
   }
 }
