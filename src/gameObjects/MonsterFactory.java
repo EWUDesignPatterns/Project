@@ -42,6 +42,9 @@ public class MonsterFactory {
 		 break;
 	 }
 	 
+	 monster.equip(ItemFactory.generateWeapon());
+	 monster.equip(ItemFactory.generateArmor());
+	 
 	 return monster;
   }
   
