@@ -5,11 +5,7 @@ import gameObjects.Race.playable.*;
 
 public class PlayerFactory {
   
-	public PlayerFactory() {
-		
-	}
-	
-	public ICharacter generate(String name, String className, String race) {
+	public static ICharacter generate(String name, String className, String race) {
 	  ICharacter player;
 	  
 	  if (race.equals("Elf")) 

@@ -5,11 +5,8 @@ import gameObjects.Class.enemyClasses.*;
 import java.util.*;
 
 public class MonsterFactory {
-    
-  public MonsterFactory() {
-  }
 
-  public ICharacter generate() {
+  public static ICharacter generate() {
 	 ICharacter monster = null;
 	 Random rand = new Random();
 	 int monster_race = rand.nextInt(4);
