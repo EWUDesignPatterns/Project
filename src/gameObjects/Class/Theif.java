@@ -10,12 +10,9 @@ public class Theif extends GameCharacterClass
   
   public Theif(ICharacter character)
   {
-    this.character = character;
+	super(character);
 
     this.className = "Theif";
-    
-    this.hp = getMaxHP();
-    this.mp = getMaxMP();
   }
   
   public int getMaxHP()

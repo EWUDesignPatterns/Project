@@ -8,16 +8,12 @@ public class Berserker extends GameCharacterClass
 {
 	
 	public Berserker(ICharacter character)
-	{
-		//assign character
-		this.character = character;
+	{	
+		super(character);
 		
 		//assign name
 		this.className = "Berserker";
 		
-		//update the characters hp and mp
-		this.hp = getMaxHP();
-		this.mp = getMaxMP();
 	}
 	
 	
@@ -60,4 +56,5 @@ public class Berserker extends GameCharacterClass
   {
     return this.className;
   }
+  
 }

@@ -12,16 +12,12 @@ public class Mage extends GameCharacterClass
 	
 	public Mage(ICharacter character)
 	{
-		//assign character
-		this.character = character;
+		super(character);
 		
-	 //assign name
-    this.className = "Mage";
+		//assign name
+		this.className = "Mage";
 		
-		//update the characters hp and mp
-		this.hp = getMaxHP();
-		this.mp = getMaxMP();
-		
+
 	}
 	
 	

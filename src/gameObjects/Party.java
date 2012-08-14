@@ -50,9 +50,12 @@ public class Party implements IParty
 	
 	public void doAttack(int index, ICharacter attacker)
 	{
-		attacker.attack(players.get(index));
-		if(players.get(index).getHP() <= 0)
-			players.remove(index);
+		if(players.size() >= index)
+		{
+			attacker.attack(players.get(index));
+			if(players.get(index).getHP() <= 0)
+				players.remove(index);
+		}
 	}
 
 	

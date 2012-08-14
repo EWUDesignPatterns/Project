@@ -8,15 +8,9 @@ public class Samurai extends GameCharacterClass
 {
 	public Samurai(ICharacter character)
 	{
-		//assign character
-		this.character = character;
-		
+		super(character);
 		//assign name
-    this.className = "Samurai";
-		
-		//update the characters hp and mp
-		this.hp = getMaxHP();
-		this.mp = getMaxMP();
+		this.className = "Samurai";
 		
 	}
 	

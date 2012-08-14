@@ -13,18 +13,14 @@ public class WitchDoctor extends GameCharacterClass
   
   public WitchDoctor(ICharacter character)
   {
-    //assign character
-    this.character = character;
+	super(character);
     
     //assign name
     this.className = "Witch Doctor";
     
-    //update the characters hp and mp
-    this.hp = getMaxHP();
-    this.mp = getMaxMP();
     
-    this.abilities[0] = new SpellMinorHealing(5, 5);
-    this.abilities[1] = new SpellRecuperation(10, 2);
+   // character.abilities[0] = new SpellMinorHealing(5, 5);
+   // character.abilities[1] = new SpellRecuperation(10, 2);
     
   }
   

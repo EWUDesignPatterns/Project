@@ -10,15 +10,11 @@ public class Poison extends GameCharacterClass implements ICharacter
 {
   public Poison(ICharacter character)
   {
-    //assign character
-    this.character = character;
+	  super(character);
     
     //assign name
     this.className = "(Poison)";
-    
-    //update the characters hp and mp
-    this.hp = getMaxHP();
-    this.mp = getMaxMP();
+
     
   }
   
