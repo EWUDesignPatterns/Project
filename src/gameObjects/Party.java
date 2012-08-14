@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Party implements IParty 
 {
-	ArrayList<ICharacter> players;
+	private ArrayList<ICharacter> players;
 
 	public Party()
 	{
@@ -19,9 +19,9 @@ public class Party implements IParty
 	}
 
 	@Override
-	public ICharacter[] getPlayers()
+	public ArrayList<ICharacter> getCharacters()
 	{
-		return (ICharacter[])players.toArray();
+		return this.players;
 	}
 	
 	public void add(ICharacter player)
@@ -44,7 +44,8 @@ public class Party implements IParty
 	
 	public void attack(Party badGuys)
 	{
-		//do nothing for now
+		for(ICharacter c:players)
+			c.attack(badGuys.getCharacters().get(0));
 	}
 
 	

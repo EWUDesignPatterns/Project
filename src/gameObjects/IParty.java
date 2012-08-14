@@ -1,8 +1,10 @@
 package gameObjects;
 
+import java.util.ArrayList;
+
 interface IParty extends Iterable<ICharacter>
 {
-	public ICharacter[] getPlayers();
+	public ArrayList<ICharacter> getCharacters();
 	
 	public void add(ICharacter character);
 	
