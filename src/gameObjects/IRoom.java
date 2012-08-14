@@ -12,7 +12,7 @@ public interface IRoom
   
 	public ICharacter[] getBadGuys();
 	
-	public void enter(ICharacter player);
+	public void enter(Party party);
   
-	public void exit(ICharacter player); 
+	public void exit(Party party); 
 }

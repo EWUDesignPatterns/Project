@@ -20,7 +20,7 @@ import gameObjects.Race.playable.*;
  */
 public class Game
 {
-	private ICharacter player;
+	private Party party;
 	
 	private IDungeon dungeon;
 
@@ -46,22 +46,22 @@ public class Game
 	
 	public boolean moveNorth()
 	{
-		return dungeon.moveNorth(player);
+		return dungeon.moveNorth(party);
 	}
 
 	public boolean moveEast()
 	{
-		return dungeon.moveEast(player);
+		return dungeon.moveEast(party);
 	}
 	
 	public boolean moveSouth()
 	{
-		return dungeon.moveSouth(player);
+		return dungeon.moveSouth(party);
 	}
 	
 	public boolean moveWest()
 	{
-		return dungeon.moveWest(player);
+		return dungeon.moveWest(party);
 	}
 	
 	public IRoom getCurrentRoom()
@@ -69,14 +69,14 @@ public class Game
 		return dungeon.getCurrentRoom();
 	}
 	
-	public void setPlayer(ICharacter player)
+	public void setParty(Party party)
 	{
-		this.player = player;
+		this.party = party;
 	}
 	
-	public ICharacter getPlayer()
+	public Party getParty()
 	{
-		return this.player;
+		return this.party;
 	}
 	
 	public IState getState()

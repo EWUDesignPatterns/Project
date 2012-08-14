@@ -49,11 +49,11 @@ public class FightState implements IState
 					// @todo This is not correct logic I don't think 
 					// we should move this out to to have an event 
 					// for player dying
-					if (game.getPlayer().getHP() >= 0) {
-						return this;
-					} else {
-						return new ExitGameState();
-					}
+					//if (game.getPlayer().getHP() >= 0) {
+					//	return this;
+					//} else {
+					//	return new ExitGameState();
+					//}
 			}
 		}
 	}
