@@ -6,10 +6,12 @@ import java.util.Random;
 import gameObjects.items.IItem;
 import gameObjects.IFightGenerator;
 import gameObjects.Race.enemies.*;
+import java.util.*;
 
 public class Room implements IRoom
 {
-	IItem[] items;
+	ArrayList <IItem>items;
+	
 
 	Party badGuys;
 	
@@ -19,11 +21,10 @@ public class Room implements IRoom
 	
 	public Room(IFightGenerator fightGenerator)
 	{
-		// @todo initialize items
-		this.items = new IItem[rand.nextInt(5) + 1];
-		
-		for (int i = 0; i < items.length; i++)
-			items[i] = ItemFactory.generate();
+		int itemCount = rand.nextInt(5) + 1;
+				
+		for (int i = 0; i < itemCount; i++)
+			items.add(ItemFactory.generate());
 		
 		this.fightGenerator = fightGenerator;
 		
@@ -33,7 +34,11 @@ public class Room implements IRoom
 	@Override
 	public IItem[] getItems() 
 	{
-		return this.items;
+		return (IItem[]) items.toArray(new IItem[items.size()]);
+	}
+	
+	public void addItem(IItem item) {
+		items.add(item);
 	}
 
 	@Override
