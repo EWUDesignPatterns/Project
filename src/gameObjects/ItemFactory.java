@@ -17,22 +17,22 @@ public class ItemFactory {
 	  
 	  switch (itemType) {
 	  case 1:
-		item = (IItem) generateArmor();
+		item = generateArmor();
 		break;
 	  case 2:
-		item = (IItem) generateWeapon();
+		item = generateWeapon();
 		break;
 	  case 3:
-	    item = (IItem) generatePotion();
+	    item = generatePotion();
 	    break;
 	  }
 	  
 	  return item;
 	}
 	
-	public static IArmor generateArmor() {
+	public static IItem generateArmor() {
 	  Random rand = new Random();
-	  IArmor armor = null;
+	  IItem armor = null;
 	  int armorType = rand.nextInt(7) + 1;
 	  
 	  switch (armorType) {
@@ -64,9 +64,9 @@ public class ItemFactory {
 	  
 	}
 	
-	public static IWeapon generateWeapon() {
+	public static IItem generateWeapon() {
 		Random rand = new Random();
-		IWeapon weapon = null;
+		IItem weapon = null;
 		int weaponType = rand.nextInt(6) + 1;
 
 		  switch (weaponType) {
@@ -94,9 +94,9 @@ public class ItemFactory {
 		return weapon;
 	}
 	
-	public static IPotion generatePotion() {
+	public static IItem generatePotion() {
 		  Random rand = new Random();
-		  IPotion potion = null;
+		  IItem potion = null;
 		  int potionType = rand.nextInt(6) + 1;
 		  
 		  switch (potionType) {

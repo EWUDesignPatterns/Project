@@ -3,6 +3,7 @@ package gameObjects;
 import java.util.LinkedList;
 
 import gameObjects.StatusEffects.IStatusEffect;
+import gameObjects.items.IItem;
 import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
@@ -65,7 +66,7 @@ public interface ICharacter
 	
 	public void removeStatusEffect(IStatusEffect effect);
 	
-	void equip(Item toEquip);
+	void equip(IItem toEquip);
 	
-	void unEquip(Item toRemove);
+	void unEquip(IItem toRemove);
 }

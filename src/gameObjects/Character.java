@@ -5,6 +5,7 @@ import java.util.Random;
 
 import gameObjects.Abilities.IAbility;
 import gameObjects.StatusEffects.IStatusEffect;
+import gameObjects.items.IItem;
 import gameObjects.items.Item;
 import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
@@ -223,7 +224,7 @@ public abstract class Character implements ICharacter
   
 
   
-  public void equip(Item toEquip) //equip a weapon or an armor
+  public void equip(IItem toEquip) //equip a weapon or an armor
   {
     
     if(toEquip instanceof Weapon)//if it is a weapon
@@ -258,7 +259,7 @@ public abstract class Character implements ICharacter
     } 
   }//end equip
   
-  public void unEquip(Item toUnequip)
+  public void unEquip(IItem toUnequip)
   {
     if(toUnequip instanceof Armor)
     {
