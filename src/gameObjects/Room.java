@@ -22,7 +22,7 @@ public class Room implements IRoom
 	public Room(IFightGenerator fightGenerator)
 	{
 		int itemCount = rand.nextInt(5) + 1;
-		
+		this.badGuys = null;
 		
 		for (int i = 0; i < itemCount; i++) {
 		  items.add(ItemFactory.generate());
@@ -30,7 +30,6 @@ public class Room implements IRoom
 				
 		this.fightGenerator = fightGenerator;
 		
-		this.generateBadGuys();
 	}
 	
 	@Override
@@ -59,9 +58,9 @@ public class Room implements IRoom
 	
 	private void generateBadGuys()
 	{
-		// @todo Determine randomly if bad guys should be
-		// generated
-		if (rand.nextInt(4) == 1) {
+				
+		if (this.badGuys == null && rand.nextInt(4) == 1) {
+		  //System.out.println("Ding");
 		
 		  this.badGuys = new Party();
 		
