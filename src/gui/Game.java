@@ -38,7 +38,7 @@ public class Game
 	public Game() throws FileNotFoundException, Exception
 	{
 		this.fightGenerator = new FightGenerator();
-		this.fightGenerator.addObserver("fight", new FightObserver(this));
+		this.fightGenerator.addObserver(new FightObserver(this));
 		
 		this.state = new GameBeginState(this);
 		this.dungeon = new FileLoaderDungeon("Lamorte.map", this.fightGenerator);
@@ -116,9 +116,10 @@ public class Game
 	{
 		IRoom room = this.dungeon.getCurrentRoom();
 		
-		room.getBadGuys();
+		ICharacter badGuy = room.getBadGuy();
 		
-		//player.attack();
+		player.attack(badGuy);
+		badGuy.attack(player);
 	}
 	
 	/**

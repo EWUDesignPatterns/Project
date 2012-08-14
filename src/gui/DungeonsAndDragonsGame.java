@@ -20,7 +20,8 @@ public class DungeonsAndDragonsGame
 		do {
 		
 			state = state.execute();
-		
+			game.setState(state);
+			
 		} while (!state.gameOver());
 		
 		System.exit(0);

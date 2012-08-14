@@ -177,9 +177,13 @@ public abstract class Character implements ICharacter
       {
         //don't need to know about damage unless we hit
         int damage = this.baseDamage;
-        damage += weapon.getEffect();
+        
+        if (weapon != null) {
+        	damage += weapon.getEffect();
+        }
+        
         opponent.doDamage(damage);
-        System.out.println(this.name + " hits with " + weapon.toString() + " for " + damage + " damage!" );
+        System.out.println(this.name + " hits " + ((weapon != null) ? "with " + weapon.toString() : "") + " for " + damage + " damage!" );
       } 
       else 
       {
@@ -191,12 +195,16 @@ public abstract class Character implements ICharacter
   
   public void doDamage(int DamageToDeal)
   {
-    DamageToDeal -= armor.getEffect(); //just a straight subtraction for now, can change later
-    DamageToDeal -= this.getDefense();
-    if(this.hp > DamageToDeal)
-      this.hp -= DamageToDeal;
-    else //kill the character, unsure of how we want to do this
-      this.hp = 0;
+	  if (armor != null) {
+		  DamageToDeal -= armor.getEffect(); //just a straight subtraction for now, can change later
+	  }
+	  
+	  DamageToDeal -= this.getDefense();
+    
+	  if(this.hp > DamageToDeal)
+  		this.hp -= DamageToDeal;
+	  else //kill the character, unsure of how we want to do this
+		  this.hp = 0;
   }
   
   public void heal(int damageToHeal)

@@ -46,7 +46,7 @@ public class FileLoaderDungeon implements IDungeon {
 
 	@Override
 	public IRoom getCurrentRoom() {
-		throw null;
+		return this.map[this.row][this.col];
 	}
 	
 	@Override
