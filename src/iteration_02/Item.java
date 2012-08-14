@@ -1,3 +1,5 @@
+package iteration_02;
+
 abstract class Item {
   String name;
   int value;

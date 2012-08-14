@@ -1,3 +1,5 @@
+package iteration_02;
+
 import java.util.*;
 
 class Game02 
