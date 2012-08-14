@@ -11,6 +11,8 @@ public class Samurai extends GameCharacterClass
 		super(character);
 		//assign name
 		this.className = "Samurai";
+		this.weaponType = getWeaponType();
+		this.armorType = getArmorType();
 		
 	}
 	

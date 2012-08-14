@@ -45,17 +45,19 @@ public class Party implements IParty
 	public void attack(Party badGuys)
 	{
 		for(ICharacter c:players)
-			badGuys.doAttack(0, c);
+			if(players.size() > 0)
+			{
+				badGuys.doAttack(0, c);
+			}
+			//else end state
 	}
 	
 	public void doAttack(int index, ICharacter attacker)
 	{
-		if(players.size() >= index)
-		{
+		
 			attacker.attack(players.get(index));
 			if(players.get(index).getHP() <= 0)
 				players.remove(index);
-		}
 	}
 
 	

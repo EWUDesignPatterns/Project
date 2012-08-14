@@ -21,7 +21,6 @@ public abstract class Character implements ICharacter
   protected int accuracy;
   protected int baseDamage;
   protected String name;
-  protected String className;
   protected String race;
   
   //what stuff the character can equip
@@ -116,9 +115,6 @@ public abstract class Character implements ICharacter
   
   public void increaseMP(int amt)
   {
-    if(this.mp + amt > this.maxMp)
-      this.mp = this.maxMp;
-    else
       this.mp += amt;
   }
   
@@ -196,11 +192,11 @@ public abstract class Character implements ICharacter
   
   public void doDamage(int DamageToDeal)
   {
-	  if (armor != null) {
-		  DamageToDeal -= armor.getEffect(); //just a straight subtraction for now, can change later
+	  if (getArmor() != null) {
+		  DamageToDeal -= getArmor().getEffect(); //just a straight subtraction for now, can change later
 	  }
 	  
-	  //DamageToDeal -= this.getDefense();
+	  DamageToDeal -= this.getDefense();
     
 	  if(this.hp > DamageToDeal)
   		this.hp -= DamageToDeal;
@@ -210,9 +206,6 @@ public abstract class Character implements ICharacter
   
   public void heal(int damageToHeal)
   {
-    if(this.hp + damageToHeal > this.maxHp)
-      this.hp = this.maxHp;
-    else
       this.hp += damageToHeal;
   }
   
@@ -232,7 +225,7 @@ public abstract class Character implements ICharacter
       if(((Weapon)toEquip).getWeaponType() == this.weaponType)//if it is equippable
       {
         if(toEquip instanceof MagicWeapon)
-          this.addStatusEffect(((MagicWeapon) toEquip).status);
+          this.addStatusEffect(((MagicWeapon) toEquip).getStatus());
         if(this.weapon == null)//if we don't have a weapon already
         {
           this.weapon = (Weapon)toEquip; //equip it
@@ -266,7 +259,7 @@ public abstract class Character implements ICharacter
       this.armor = null;
     }else if(toUnequip instanceof Weapon){
       if(toUnequip instanceof MagicWeapon)
-        this.removeStatusEffect(((MagicWeapon)toUnequip).status);
+        this.removeStatusEffect(((MagicWeapon)toUnequip).getStatus());
       this.weapon = null;
     }
   }

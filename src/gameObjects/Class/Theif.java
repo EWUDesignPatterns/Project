@@ -13,6 +13,8 @@ public class Theif extends GameCharacterClass
 	super(character);
 
     this.className = "Theif";
+	this.weaponType = getWeaponType();
+	this.armorType = getArmorType();
   }
   
   public int getMaxHP()

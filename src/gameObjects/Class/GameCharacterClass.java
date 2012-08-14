@@ -14,12 +14,12 @@ import gameObjects.items.Weapons.Weapon;
 public abstract class GameCharacterClass extends Character implements ICharacter
 {
 	protected ICharacter character;	
-
+	protected String className;
 	public GameCharacterClass(ICharacter character)
 	{
 		this.character = character;
-		character.heal(getMaxHP() - getHP());
-		character.decreaseMP(getMaxMP() - getMP());
+		this.heal(getMaxHP() - character.getHP());
+		this.increaseMP(getMaxMP() - character.getMP());
 	}
 	
 	
@@ -31,8 +31,8 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 			temp += "\t";
 		temp += "\t|\n";
 		temp += "| " + character.getRace()+ " " + this.className + "\t|\n";
-		temp += "| " + "HP: "+ this.getHP() + "/" + this.getMaxHP() + "\t|\n";
-		temp += "| " + "MP: "+ this.getMP() + "/" + this.getMaxMP() + "\t|\n";
+		temp += "| " + "HP: "+ getHP() + "/" + getMaxHP() + "\t|\n";
+		temp += "| " + "MP: "+ getMP() + "/" + getMaxMP() + "\t|\n";
 		temp += "-----------------\n";
 		return temp;
 	}
@@ -54,7 +54,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public String getClassName()
 	{
-		return this.className;
+		return character.getClassName();
 	}
 
 	public int getAccuracy()
@@ -71,7 +71,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public int getMaxHP() 
 	{
-		return 0;
+		return character.getMaxHP();
 	}
 
 	@Override
@@ -83,7 +83,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public int getMaxMP() 
 	{
-		return 0;
+		return character.getMaxHP();
 	}
 
 	@Override
@@ -128,7 +128,10 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public void increaseMP(int amt) 
 	{
-		character.increaseMP(amt);
+		if(getMP() + amt > getMaxMP())
+		      character.increaseMP(getMaxMP() - getMP());
+		    else
+		      character.increaseMP(amt);
 	}
 
 	@Override
@@ -140,7 +143,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public ArmorType getArmorType()
 	{
-		return null;
+		return character.getArmorType();
 	}
 
 	@Override
@@ -152,7 +155,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public WeaponType getWeaponType() 
 	{
-		return null;
+		return character.getWeaponType();
 	}
 
 	@Override
@@ -170,13 +173,25 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public void doDamage(int damageToDeal) 
 	{
-		character.doDamage(damageToDeal);
+		if (getArmor() != null) {
+			  damageToDeal -= character.getArmor().getEffect(); //just a straight subtraction for now, can change later
+		  }
+		  
+		  damageToDeal -= character.getDefense();
+	    
+		  if(character.getHP() > damageToDeal)
+	  		character.doDamage(damageToDeal);
+		  else //kill the character, unsure of how we want to do this
+			  character.doDamage(character.getHP());
 	}
 
 	@Override
 	public void heal(int damageToHeal)
 	{
-		character.heal(damageToHeal);
+		if(getHP() + damageToHeal > getMaxHP())
+		      character.heal(getMaxHP() - getHP());
+		    else
+		      character.heal(damageToHeal);
 
 	}
 

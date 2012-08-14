@@ -16,7 +16,8 @@ public class Mage extends GameCharacterClass
 		
 		//assign name
 		this.className = "Mage";
-		
+		this.weaponType = getWeaponType();
+		this.armorType = getArmorType();
 
 	}
 	

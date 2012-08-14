@@ -15,5 +15,10 @@ public abstract class MagicWeapon extends Weapon implements IWeapon
     // TODO Auto-generated method stub
     return WeaponType.MAGIC;
   }
+  
+  public IStatusEffect getStatus()
+  {
+	  return this.status;
+  }
 
 }

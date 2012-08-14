@@ -22,7 +22,17 @@ public class Berserker extends GameCharacterClass
 		return character.getMaxHP() + 5;
 	}
 	
+	public int getHP()
+	{
+		return character.getHP() + 5;
+	}
+	
 	public int getMaxMP()
+	{
+		return 0;
+	}
+	
+	public int getMP()
 	{
 		return 0;
 	}
@@ -37,24 +47,5 @@ public class Berserker extends GameCharacterClass
 		return WeaponType.HEAVY;
 	}
 	
-  @Override
-  public String getName()
-  {
-    return character.getName();
-  }
-
-
-  @Override
-  public String getRace()
-  {
-    return character.getRace();
-  }
-
-
-  @Override
-  public String getClassName()
-  {
-    return this.className;
-  }
   
 }
