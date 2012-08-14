@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Room implements IRoom
 {
-	ArrayList <IItem>items;
+	ArrayList <IItem>items = new ArrayList<IItem>();
 	
 
 	Party badGuys;
@@ -22,10 +22,12 @@ public class Room implements IRoom
 	public Room(IFightGenerator fightGenerator)
 	{
 		int itemCount = rand.nextInt(5) + 1;
-				
-		for (int i = 0; i < itemCount; i++)
-			items.add(ItemFactory.generate());
 		
+		
+		for (int i = 0; i < itemCount; i++) {
+		  items.add(ItemFactory.generate());
+		}
+				
 		this.fightGenerator = fightGenerator;
 		
 		this.generateBadGuys();
