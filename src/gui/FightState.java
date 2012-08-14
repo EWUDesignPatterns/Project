@@ -46,6 +46,9 @@ public class FightState implements IState
 				case 2:
 					game.attack();
 					
+					System.out.println(game.getPlayer());
+					System.out.println(game.getCurrentRoom().getBadGuy());
+					
 					// @todo This is not correct logic I don't think 
 					// we should move this out to to have an event 
 					// for player dying

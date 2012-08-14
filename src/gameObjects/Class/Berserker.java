@@ -18,7 +18,6 @@ public class Berserker extends GameCharacterClass
 		//update the characters hp and mp
 		this.hp = getMaxHP();
 		this.mp = getMaxMP();
-		
 	}
 	
 	

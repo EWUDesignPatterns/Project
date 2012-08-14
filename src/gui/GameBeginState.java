@@ -25,7 +25,7 @@ public class GameBeginState implements IState {
 
 		ICharacter player = this.selectCharacter();
 		player = this.selectClass(player);
-
+		
 		game.setPlayer(player);
 		
 		return new HomeScreenState(game);
