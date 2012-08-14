@@ -44,7 +44,7 @@ public class Room implements IRoom
 	@Override
 	public void enter(Party party) 
 	{
-		//this.generateBadGuys();
+		this.generateBadGuys();
 		
 		this.fightGenerator.roomEntered(this);
 	}
@@ -59,11 +59,13 @@ public class Room implements IRoom
 	{
 		// @todo Determine randomly if bad guys should be
 		// generated
-		this.badGuys = new Party();
+		if (rand.nextInt(4) == 1) {
 		
-		for (int i = 0; i < rand.nextInt(3) + 1; i++)
-		  badGuys.add(MonsterFactory.generate());
-
+		  this.badGuys = new Party();
+		
+		  for (int i = 0; i < rand.nextInt(3) + 1; i++)
+		    badGuys.add(MonsterFactory.generate());
+		}
 	}
 
 
