@@ -11,7 +11,7 @@ public class Room implements IRoom
 {
 	IItem[] items;
 
-	ICharacter[] badGuys;
+	Party badGuys;
 	
 	static Random rand = new Random();
 	
@@ -33,7 +33,7 @@ public class Room implements IRoom
 	}
 
 	@Override
-	public void enter(ICharacter player) 
+	public void enter(Party party) 
 	{
 		//this.generateBadGuys();
 		
@@ -41,24 +41,23 @@ public class Room implements IRoom
 	}
 
 	@Override
-	public void exit(ICharacter player)
+	public void exit(Party party)
 	{
 		
 	}
 	
 	private void generateBadGuys()
 	{
-		this.badGuys = new ICharacter[5];
+		// @todo Determine randomly if bad guys should be
+		// generated
+		this.badGuys = new Party();
 
-		for (int i = 0; i < rand.nextInt(); i++) {
-			//this.badGuys[i] = new Ogre();
-		}
 	}
 
-	@Override
-	public ICharacter getBadGuy()
-	{
-		// TODO Auto-generated method stub
-		return new Ogre();
-	}
+
+  public Party getBadGuys()
+  {
+    return badGuys;
+  }
+
 }

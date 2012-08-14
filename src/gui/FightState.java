@@ -46,17 +46,17 @@ public class FightState implements IState
 				case 2:
 					game.attack();
 					
-					System.out.println(game.getPlayer());
-					System.out.println(game.getCurrentRoom().getBadGuy());
+					System.out.println(game.getParty());
+					System.out.println(game.getCurrentRoom().getBadGuys());
 					
 					// @todo This is not correct logic I don't think 
 					// we should move this out to to have an event 
 					// for player dying
-					if (game.getPlayer().getHP() >= 0) {
-						return this;
-					} else {
-						return new ExitGameState();
-					}
+					//if (game.getPlayer().getHP() >= 0) {
+					//	return this;
+					//} else {
+					//	return new ExitGameState();
+					//}
 			}
 		}
 	}

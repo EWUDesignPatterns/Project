@@ -23,11 +23,19 @@ public class GameBeginState implements IState {
 
 	public IState execute() {
 
-		ICharacter player = this.selectCharacter();
-		player = this.selectClass(player);
+	
+		Party party = new Party();
 		
-		game.setPlayer(player);
-		
+		//TEMP loop for size of party
+		for(int i = 0; i < 5; i ++)
+		{
+			
+			ICharacter player = this.selectCharacter();
+			player = this.selectClass(player);
+			party.add(player);
+		}
+		game.setParty(party);
+	
 		return new HomeScreenState(game);
 	}
 

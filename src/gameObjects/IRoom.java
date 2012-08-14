@@ -9,9 +9,9 @@ public interface IRoom
 {  
 	public IItem[] getItems();
   
-	public ICharacter getBadGuy();
+	public Party getBadGuys();
 	
-	public void enter(ICharacter player);
+	public void enter(Party party);
   
-	public void exit(ICharacter player); 
+	public void exit(Party party); 
 }

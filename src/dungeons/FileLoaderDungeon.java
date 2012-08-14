@@ -62,12 +62,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveNorth(ICharacter player) {
+	public boolean moveNorth(Party party) {
 		if (this.row > 0 && this.map[this.row - 1][this.col] != null) {
 			
-			this.exitCurrentRoom(player);
+			this.exitCurrentRoom(party);
 			this.changeRoom(-1, 0);
-			this.enterCurrentRoom(player);
+			this.enterCurrentRoom(party);
 
 			return true;
 		}
@@ -76,12 +76,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveSouth(ICharacter player) {
+	public boolean moveSouth(Party party) {
 		if (this.row < 4 && this.map[this.row + 1][this.col] != null) {
 			
-			this.exitCurrentRoom(player);
+			this.exitCurrentRoom(party);
 			this.changeRoom(1, 0);
-			this.enterCurrentRoom(player);
+			this.enterCurrentRoom(party);
 			
 			return true;
 		}
@@ -90,12 +90,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveEast(ICharacter player) {
+	public boolean moveEast(Party party) {
 		if (this.col < 4 && this.map[this.row][this.col + 1] != null) {
 
-			this.exitCurrentRoom(player);
+			this.exitCurrentRoom(party);
 			this.changeRoom(0, 1);
-			this.enterCurrentRoom(player);
+			this.enterCurrentRoom(party);
 
 			return true;
 		}
@@ -104,12 +104,12 @@ public class FileLoaderDungeon implements IDungeon {
 	}
 
 	@Override
-	public boolean moveWest(ICharacter player) {
+	public boolean moveWest(Party party) {
 		if (this.col > 0 && this.map[this.row][this.col - 1] != null) {
 			
-			this.exitCurrentRoom(player);
+			this.exitCurrentRoom(party);
 			this.changeRoom(0, -1);
-			this.enterCurrentRoom(player);
+			this.enterCurrentRoom(party);
 
 			return true;
 		}
@@ -123,14 +123,14 @@ public class FileLoaderDungeon implements IDungeon {
 		this.row = this.row + rowModifer;
 	}
 	
-	private void exitCurrentRoom(ICharacter player)
+	private void exitCurrentRoom(Party party)
 	{
-		this.map[this.row][this.col].exit(player);
+		this.map[this.row][this.col].exit(party);
 	}
 	
-	private void enterCurrentRoom(ICharacter player)
+	private void enterCurrentRoom(Party party)
 	{
-		this.map[this.row][this.col].enter(player);
+		this.map[this.row][this.col].enter(party);
 	}
 	
 	private void loadMap(String fileName) throws FileNotFoundException, Exception {
