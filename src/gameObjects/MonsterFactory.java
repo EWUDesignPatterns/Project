@@ -9,8 +9,8 @@ public class MonsterFactory {
   public static ICharacter generate() {
 	 ICharacter monster = null;
 	 Random rand = new Random();
-	 int monster_race = rand.nextInt(4);
-	 int monster_class = rand.nextInt(4);
+	 int monster_race = rand.nextInt(4) + 1;
+	 int monster_class = rand.nextInt(4) + 1;
 	 
 	 switch (monster_race) {
 	 case 1:
