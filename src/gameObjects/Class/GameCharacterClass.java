@@ -1,7 +1,7 @@
 package gameObjects.Class;
 
-import gameObjects.Character;
-import gameObjects.ICharacter;
+import gameObjects.Character; // For some reason this has to be imported expclity
+import gameObjects.*;
 
 
 

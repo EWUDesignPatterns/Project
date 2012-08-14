@@ -22,6 +22,7 @@ public class GameBeginState implements IState {
 	}
 
 	public IState execute() {
+
 	
 		Party party = new Party();
 		

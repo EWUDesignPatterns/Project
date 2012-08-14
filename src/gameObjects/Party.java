@@ -41,6 +41,11 @@ public class Party implements IParty
 			temp += c.toString();
 		return temp;
 	}
+	
+	public void attack(Party badGuys)
+	{
+		//do nothing for now
+	}
 
 	
 

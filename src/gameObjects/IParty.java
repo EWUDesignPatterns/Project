@@ -9,4 +9,6 @@ interface IParty extends Iterable<ICharacter>
 	public void remove(ICharacter character);
 	
 	public String toString();
+	
+	public void attack(Party badguys);
 }

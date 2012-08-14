@@ -12,7 +12,7 @@ public class Cleric extends GameCharacterClass
 		this.character = character;
 		
 		//assign name
-    this.className = "Cleric";
+		this.className = "Cleric";
 		
 		//update the characters hp and mp
 		this.hp = getMaxHP();

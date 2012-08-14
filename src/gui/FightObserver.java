@@ -14,6 +14,6 @@ public class FightObserver implements Observer
 	
 	public void update(Observable o, Object args)
 	{
-		game.setState(new RestState(this.game));
+		game.setState(new FightState(this.game));
 	}
 }

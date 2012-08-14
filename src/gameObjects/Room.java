@@ -5,6 +5,7 @@ import java.util.Random;
 
 import gameObjects.items.IItem;
 import gameObjects.IFightGenerator;
+import gameObjects.Race.enemies.*;
 
 public class Room implements IRoom
 {
@@ -20,8 +21,9 @@ public class Room implements IRoom
 	{
 		// @todo initialize items
 		this.items = new IItem[5];
-		
 		this.fightGenerator = fightGenerator;
+		
+		this.generateBadGuys();
 	}
 	
 	@Override
@@ -41,8 +43,7 @@ public class Room implements IRoom
 	@Override
 	public void exit(Party party)
 	{
-		// @todo
-		this.fightGenerator.roomExited(this);
+		
 	}
 	
 	private void generateBadGuys()
@@ -50,11 +51,13 @@ public class Room implements IRoom
 		// @todo Determine randomly if bad guys should be
 		// generated
 		this.badGuys = new Party();
+
 	}
 
-  @Override
-  public ICharacter[] getBadGuys()
+
+  public Party getBadGuys()
   {
-    return badGuys.getPlayers();
+    return badGuys;
   }
+
 }
