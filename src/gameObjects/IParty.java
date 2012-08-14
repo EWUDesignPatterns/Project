@@ -13,4 +13,6 @@ interface IParty extends Iterable<ICharacter>
 	public String toString();
 	
 	public void attack(Party badguys);
+	
+	public void doAttack(int index, ICharacter attacker);
 }
