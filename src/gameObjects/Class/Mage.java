@@ -3,10 +3,11 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
 
 
 
-public class Mage extends GameCharacterClass
+public class Mage extends GameCharacterClass implements IPlayableCharacter
 {
 	
 	

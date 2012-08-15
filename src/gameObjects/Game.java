@@ -1,16 +1,13 @@
 package gameObjects;
 
 import java.io.FileNotFoundException;
-import java.util.InputMismatchException;
 import java.util.Random;
-import java.util.Scanner;
 
 import dungeons.*;
 import gameObjects.*;
 import gameObjects.Abilities.*;
 import gameObjects.Class.*;
 import gameObjects.Race.playable.*;
-import gui.GameBeginState;
 import gui.IState;
 
 /**
@@ -106,13 +103,49 @@ public class Game
 		return false;
 	}
 	
-	public void attack()
+	/**
+	 * Attacking logic/behavior for when the player playing
+	 * the game wants to perform an attack, this method should
+	 * delegate work to an attack engine that uses a console attack
+	 * engine to delegate attacking logic to user
+	 * 
+	 * @todo
+	 */
+	public final void attack()
 	{
-		IRoom room = this.dungeon.getCurrentRoom();
+		Party badGuys = this.getCurrentBadGuys();
 		
-		Party badGuys = room.getBadGuys();
+		// Loop through good guys
+		for (ICharacter c : party.getCharacters()) {
+			// @todo This is prone to runtime errors since we are casting to
+			// something that may not be allowed. We should have a good guy paty implementation
+			// of IParty
+			this.playersAttackTurn((IPlayableCharacter) c, badGuys);
+		}
 		
-		party.attack(badGuys);
-		badGuys.attack(party);
+		// Loop through bad guys and attack good guys
+		for (ICharacter c : badGuys.getCharacters()) {
+			this.nonPlayableCharacterAttack(c, party);
+		}
+	}
+	
+	/**
+	 * Hook method for when a playable character needs to perform
+	 * an attack on a given party of bad guys
+	 * 
+	 * Should be part of attack engine 
+	 * 
+	 * @param player
+	 * @param partyToAttack
+	 */
+	protected void playersAttackTurn(IPlayableCharacter player, IParty partyToAttack)
+	{
+		// by default attack the first player in the party
+		partyToAttack.doAttack(0, player);
+	}
+	
+	protected void nonPlayableCharacterAttack(ICharacter player, IParty partyToAttack)
+	{
+		partyToAttack.doAttack(0, player);
 	}
 }

@@ -46,32 +46,6 @@ public class Party implements IParty
 		return temp;
 	}
 	
-	public void attack(Party badGuys)
-	{
-		for(ICharacter c:players)
-		{
-			//badGuys.doAttack(0, c);
-			
-			//REMOVE THIS LATER
-			
-			if(!(c instanceof NonPlayerCharacter))
-			{		
-				System.out.println(c.getName() + "'s Turn");
-				System.out.println("Who should "+ c.getName() + " Attack?");
-				for(int i = 0; i < badGuys.getCharacters().size(); i++)
-				{
-					System.out.println((i+1) + ": " + badGuys.getCharacters().get(i));
-				}
-				Scanner keyboard = new Scanner(System.in);
-				int input = keyboard.nextInt();
-				input --; //decrement to be in the range of the array
-				badGuys.doAttack(input, c);
-			}
-			else
-				badGuys.doAttack(0, c);
-		}
-	}
-	
 	public boolean isAlive()
 	{
 		return players.size() > 0;

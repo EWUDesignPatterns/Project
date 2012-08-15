@@ -1,7 +1,10 @@
 package gui;
 
 import gameObjects.Game;
+import gameObjects.ICharacter;
+import gameObjects.IParty;
 import gameObjects.PlayerFactory;
+import gameObjects.Race.playable.IPlayableCharacter;
 
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -16,9 +19,27 @@ public class DungeonsAndDragonsGame extends Game
 	{
 		super();
 
+		// Setup the observers for the console based game
 		this.fightGenerator.addObserver(new FightState(this));
 		
+		// Initial state is one to get information from player and
+		// create the good guy party
 		this.setState(new GameBeginState(this));
+	}
+	
+	protected void playersAttackTurn(IPlayableCharacter player, IParty partyToAttack)
+	{
+		System.out.println(player.getName() + "'s Turn");
+		System.out.println("Who should "+ player.getName() + " Attack?");
+		
+		for(int i = 0; i < partyToAttack.getCharacters().size(); i++)
+		{
+			System.out.println((i+1) + ": " + partyToAttack.getCharacters().get(i));
+		}
+		
+		int choice = this.nextInt();
+		choice--; // decrement because 0 based in party, not zero based for this
+		partyToAttack.doAttack(0, player);
 	}
 
 	public Scanner getInput()

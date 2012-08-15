@@ -64,13 +64,7 @@ public class FightState implements IState, Observer
 				case 2:
 					game.attack();
 					
-					System.out.println(game.getParty());
-					System.out.println(game.getCurrentBadGuys());
-					
-					// @todo Implement as observer for parties dying
-					if (game.getParty().isAlive() == false) {
-						return new GameOverState();
-					}
+					return this;
 			}
 		}
 	}
