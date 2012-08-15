@@ -1,7 +1,10 @@
 package gameObjects;
 
+import gameObjects.Race.enemies.NonPlayerCharacter;
+
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Party implements IParty 
 {
@@ -45,19 +48,34 @@ public class Party implements IParty
 	public void attack(Party badGuys)
 	{
 		for(ICharacter c:players)
-			if(players.size() > 0)
-			{
-				badGuys.doAttack(0, c);
+		{
+			//badGuys.doAttack(0, c);
+			
+			//REMOVE THIS LATER
+			
+			if(!(c instanceof NonPlayerCharacter))
+			{		
+				System.out.println(c.getName() + "'s Turn");
+				System.out.println("Who should "+ c.getName() + " Attack?");
+				for(int i = 0; i < badGuys.getCharacters().size(); i++)
+				{
+					System.out.println((i+1) + ": " + badGuys.getCharacters().get(i));
+				}
+				Scanner keyboard = new Scanner(System.in);
+				int input = keyboard.nextInt();
+				input --; //decrement to be in the range of the array
+				badGuys.doAttack(input, c);
 			}
-			//else end state
+			else
+				badGuys.doAttack(0, c);
+		}
 	}
 	
 	public void doAttack(int index, ICharacter attacker)
 	{
-		
 			attacker.attack(players.get(index));
-			if(players.get(index).getHP() <= 0)
-				players.remove(index);
+			//if(players.get(index).getHP() <= 0)
+			//	players.remove(index);
 	}
 
 	

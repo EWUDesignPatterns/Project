@@ -19,7 +19,7 @@ public class FightState implements IState
 	public IState execute()
 	{
 		while (true) {
-			System.out.println("Bad guys encountered!");
+			System.out.println("You have encountered :\n" + game.getCurrentRoom().getBadGuys());
 			
 			System.out.println("1. Run");
 			System.out.println("2. Attack");

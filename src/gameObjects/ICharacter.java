@@ -58,7 +58,7 @@ public interface ICharacter
 
 	public void attack(ICharacter opponent);
 	
-	public void doDamage(int damageToDeal);
+	public int doDamage(int damageToDeal);
 	
 	public void heal(int damageToHeal);
 	

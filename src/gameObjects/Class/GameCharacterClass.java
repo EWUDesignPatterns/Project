@@ -171,18 +171,24 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	}
 
 	@Override
-	public void doDamage(int damageToDeal) 
+	public int doDamage(int damageToDeal) 
 	{
 		if (getArmor() != null) {
 			  damageToDeal -= character.getArmor().getEffect(); //just a straight subtraction for now, can change later
-		  }
+			  System.out.println(getArmor().getEffect() + " Damage mitigated by Armor");
+		}
 		  
 		  damageToDeal -= character.getDefense();
+		  System.out.println(this.getDefense() + " Damage resisted by defense");
+		  
+		  if(damageToDeal < 0)
+			  damageToDeal = 0;
 	    
 		  if(character.getHP() > damageToDeal)
 	  		character.doDamage(damageToDeal);
 		  else //kill the character, unsure of how we want to do this
 			  character.doDamage(character.getHP());
+		  return damageToDeal;
 	}
 
 	@Override

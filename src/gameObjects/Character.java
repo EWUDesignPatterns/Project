@@ -179,7 +179,7 @@ public abstract class Character implements ICharacter
         	damage += weapon.getEffect();
         }
         
-        opponent.doDamage(damage);
+        damage = opponent.doDamage(damage);
         System.out.println(this.name + " hits "+ opponent.getName() + " " + ((weapon != null) ? "with " + weapon.toString() : "") + " for " + damage + " damage!" );
       } 
       else 
@@ -190,18 +190,26 @@ public abstract class Character implements ICharacter
   
   
   
-  public void doDamage(int DamageToDeal)
+  public int doDamage(int DamageToDeal)
   {
-	  if (getArmor() != null) {
+	  if (getArmor() != null) 
+	  {
 		  DamageToDeal -= getArmor().getEffect(); //just a straight subtraction for now, can change later
+		  
 	  }
 	  
 	  DamageToDeal -= this.getDefense();
+	 
+	  
+	  if(DamageToDeal < 0)
+		  DamageToDeal = 0;
     
 	  if(this.hp > DamageToDeal)
   		this.hp -= DamageToDeal;
 	  else //kill the character, unsure of how we want to do this
 		  this.hp = 0;
+	  
+	  return DamageToDeal;
   }
   
   public void heal(int damageToHeal)

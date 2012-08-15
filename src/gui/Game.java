@@ -118,9 +118,6 @@ public class Game
 		
 		Party badGuys = room.getBadGuys();
 		
-		System.out.println(party);
-		System.out.println("\n\n\n\n");
-		System.out.println(badGuys);
 		party.attack(badGuys);
 		badGuys.attack(party);
 	}
