@@ -29,7 +29,6 @@ public class Room implements IRoom
 		}
 				
 		this.fightGenerator = fightGenerator;
-		
 	}
 	
 	@Override

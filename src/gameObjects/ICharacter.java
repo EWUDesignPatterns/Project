@@ -1,6 +1,8 @@
 package gameObjects;
 
 import java.util.LinkedList;
+import java.util.Observer;
+import java.util.Observable;
 
 import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.IItem;
@@ -67,6 +69,8 @@ public interface ICharacter
 	public void removeStatusEffect(IStatusEffect effect);
 	
 	void equip(IItem toEquip);
+
+	public void addObserver(Observer o);
 	
 	void unEquip(IItem toRemove);
 }

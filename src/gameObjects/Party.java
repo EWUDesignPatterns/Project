@@ -5,8 +5,9 @@ import gameObjects.Race.enemies.NonPlayerCharacter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Observable;
 
-public class Party implements IParty 
+public class Party implements IParty
 {
 	private ArrayList<ICharacter> players;
 
@@ -71,13 +72,17 @@ public class Party implements IParty
 		}
 	}
 	
+	public boolean isAlive()
+	{
+		return players.size() > 0;
+	}
+	
 	public void doAttack(int index, ICharacter attacker)
 	{
-			attacker.attack(players.get(index));
-			//if(players.get(index).getHP() <= 0)
-			//	players.remove(index);
+		attacker.attack(players.get(index));
+			
+		// Did we die?
+		if (players.get(index).getHP() <= 0)
+			players.remove(index);
 	}
-
-	
-
 }
