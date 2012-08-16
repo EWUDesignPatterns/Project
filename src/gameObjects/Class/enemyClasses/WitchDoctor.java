@@ -27,7 +27,7 @@ public class WitchDoctor extends GameCharacterClass
   
   public int getMaxHP()
   {
-    if(character.getHP() - 5 <0)
+    if(character.getMaxHP() - 5 < 0)
       return 0;
     return character.getMaxHP() - 5;
   }
