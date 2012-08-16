@@ -16,6 +16,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 {
 	protected ICharacter character;	
 	protected String className;
+	
 	public GameCharacterClass(ICharacter character)
 	{
 		this.character = character;
@@ -26,14 +27,14 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	
 	public String toString()
 	{
-		String temp = "-----------------\n";
+		String temp = "----------------------\n";
 		temp += "| " + character.getName();
 		if(temp.length()-18 < 10)
 			temp += "\t";
 		temp += "\t|\n";
-		temp += "| " + character.getRace()+ " " + this.className + "\t|\n";
-		temp += "| " + "HP: "+ getHP() + "/" + getMaxHP() + "\t|\n";
-		temp += "| " + "MP: "+ getMP() + "/" + getMaxMP() + "\t|\n";
+		temp += "| " + character.getRace()+ " " + this.className + "\t\t|\n";
+		temp += "| " + "HP: "+ getHP() + "/" + getMaxHP() + "\t\t|\n";
+		temp += "| " + "MP: "+ getMP() + "/" + getMaxMP() + "\t\t|\n";
 		temp += "-----------------\n";
 		return temp;
 	}
@@ -180,19 +181,17 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 			  System.out.println(getArmor().getEffect() + " Damage mitigated by Armor");
 		}
 		  
-		  damageToDeal -= character.getDefense();
-		  System.out.println(this.getDefense() + " Damage resisted by defense");
+		damageToDeal -= character.getDefense();
+		System.out.println(this.getDefense() + " Damage resisted by defense");
 		  
-		  if(damageToDeal < 0)
-			  damageToDeal = 0;
+		if(damageToDeal < 0)
+		  damageToDeal = 0;
 		  
-		  System.out.println(damageToDeal + " Total damage done");
+		System.out.println(damageToDeal + " Total damage done");
 	    
-		  if(character.getHP() > damageToDeal)
-	  		character.doDamage(damageToDeal);
-		  else //kill the character, unsure of how we want to do this
-			  character.doDamage(character.getHP());
-		  return damageToDeal;
+	  	character.doDamage(damageToDeal);
+		
+	  	return damageToDeal;
 	}
 
 	@Override

@@ -17,16 +17,16 @@ public class Flaming extends GameCharacterClass implements ICharacter
     
   }
   
-  @Override
-  public void attack(ICharacter opponent)
-  { 
-	  super.attack(opponent);
-      Random rand = new Random();
-      if(rand.nextInt() % 10 < 6)
+  
+  protected void characterDidHit(ICharacter opponent)
+  {
+	  super.characterDidHit(opponent);
+	  
+	  Random rand = new Random();
+      if(rand.nextInt() % 10 < 3)
       {
         opponent.addStatusEffect(new DamageOverTime(2));
         System.out.println(opponent.getName() + " is On Fire");
       }
-      
   }
 }

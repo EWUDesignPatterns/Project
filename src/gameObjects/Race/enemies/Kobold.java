@@ -10,7 +10,9 @@ public class Kobold extends NonPlayerCharacter implements ICharacter
     super();
     this.race = "Kobold";
     this.hp = 9;
+    this.maxHp = 9;
     this.mp = 0;
+    this.maxMp = 0;
     this.defense = 2;
     this.accuracy = 20;
     this.baseDamage = 5;

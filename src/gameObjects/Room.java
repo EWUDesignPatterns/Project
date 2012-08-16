@@ -1,11 +1,9 @@
 package gameObjects;
 
-import java.util.Observable;
 import java.util.Random;
 
 import gameObjects.items.IItem;
 import gameObjects.IFightGenerator;
-import gameObjects.Race.enemies.*;
 import java.util.*;
 
 public class Room implements IRoom

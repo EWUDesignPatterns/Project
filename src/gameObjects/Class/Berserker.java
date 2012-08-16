@@ -4,6 +4,7 @@ import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
 import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Armors.PlateArmor;
 import gameObjects.items.Weapons.BastardSword;
 
 public class Berserker extends GameCharacterClass implements IPlayableCharacter
@@ -16,7 +17,10 @@ public class Berserker extends GameCharacterClass implements IPlayableCharacter
 		//assign name
 		this.className = "Berserker";
 		
+		
+		//testing only
 		this.equip(new BastardSword());
+		this.equip(new PlateArmor());
 		
 	}
 	
@@ -43,7 +47,7 @@ public class Berserker extends GameCharacterClass implements IPlayableCharacter
 	
 	public ArmorType getArmorType()
 	{
-		return ArmorType.LIGHT;
+		return ArmorType.HEAVY;
 	}
 	
 	public WeaponType getWeaponType()

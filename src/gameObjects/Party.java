@@ -1,11 +1,8 @@
 package gameObjects;
 
-import gameObjects.Race.enemies.NonPlayerCharacter;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Observable;
 
 public class Party implements IParty
 {

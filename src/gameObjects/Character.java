@@ -200,18 +200,7 @@ public abstract class Character extends Observable implements ICharacter
   }
   
   public int doDamage(int DamageToDeal)
-  {
-	  if (getArmor() != null) 
-	  {
-		  DamageToDeal -= getArmor().getEffect(); //just a straight subtraction for now, can change later  
-	  }
-	  
-	  DamageToDeal -= this.getDefense();
-	 
-	  
-	  if(DamageToDeal < 0)
-		  DamageToDeal = 0;
-    
+  {  
 	  if(this.hp > DamageToDeal)
   		this.hp -= DamageToDeal;
 	  else //kill the character, unsure of how we want to do this

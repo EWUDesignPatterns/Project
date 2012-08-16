@@ -125,12 +125,20 @@ public class Game
 			// @todo This is prone to runtime errors since we are casting to
 			// something that may not be allowed. We should have a good guy paty implementation
 			// of IParty
-			this.playersAttackTurn((IPlayableCharacter) c, badGuys);
+			if(c.getHP() > 0) //only allow attack if player is "Alive"
+				this.playersAttackTurn((IPlayableCharacter) c, badGuys);
 		}
 		
 		// Loop through bad guys and attack good guys
 		for (ICharacter c : badGuys.getCharacters()) {
 			this.nonPlayableCharacterAttack(c, party);
+		}
+		
+		//loop through bad guys and remove dead players
+		for (ICharacter c : badGuys.getCharacters()) 
+		{
+			if(c.getHP() == 0)
+				badGuys.remove(c);
 		}
 	}
 	

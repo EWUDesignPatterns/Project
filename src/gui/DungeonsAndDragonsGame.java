@@ -34,7 +34,7 @@ public class DungeonsAndDragonsGame extends Game
 		
 		for(int i = 0; i < partyToAttack.getCharacters().size(); i++)
 		{
-			System.out.println((i+1) + ": " + partyToAttack.getCharacters().get(i));
+			System.out.println((i+1) + ":\n" + partyToAttack.getCharacters().get(i));
 		}
 		
 		int choice = this.nextInt();
