@@ -1,6 +1,6 @@
-package gameObjects.StatusEffects;
+package gameObjects.items.Weapons;
 
-import gameObjects.items.Weapons.MagicWeapon;
+import gameObjects.StatusEffects.HealOverTime;
 import gameObjects.items.IWeapon;
 
 public class StaffOfHealing extends MagicWeapon implements IWeapon

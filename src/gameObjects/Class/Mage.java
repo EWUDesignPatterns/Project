@@ -7,7 +7,7 @@ import gameObjects.Abilities.SpellAcidRain;
 import gameObjects.Abilities.SpellFireBall;
 import gameObjects.Race.playable.IPlayableCharacter;
 import gameObjects.items.Armors.WizardRobe;
-import gameObjects.items.Weapons.StaffOfMana;
+import gameObjects.items.Weapons.StaffOfHealing;
 
 
 
@@ -23,7 +23,7 @@ public class Mage extends GameCharacterClass implements IPlayableCharacter
 		this.className = "Mage";
 		
 		this.equip(new WizardRobe());
-		this.equip(new StaffOfMana());
+		this.equip(new StaffOfHealing());
 		
 		this.addAbility(new SpellFireBall(5, 10), 0);
 		this.addAbility(new SpellAcidRain(3), 1);
