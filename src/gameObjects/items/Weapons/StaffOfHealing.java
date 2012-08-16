@@ -8,7 +8,7 @@ public class StaffOfHealing extends MagicWeapon implements IWeapon
 
   public StaffOfHealing()
   {
-    this.baseEffect = 1;
+    this.baseEffect = 0;
     this.maxEffect = 1;
     this.name = "Staff of Healing";
     this.description = "A Magic Staff that boosts a characters HP Regeneration";

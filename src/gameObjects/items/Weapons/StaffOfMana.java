@@ -8,7 +8,7 @@ public class StaffOfMana extends MagicWeapon implements IWeapon
 
   public StaffOfMana()
   {
-    this.baseEffect = 1;
+    this.baseEffect = 0;
     this.maxEffect = 1;
     this.name = "Staff of Mana";
     this.description = "A Magic Staff that boosts a characters MP Regeneration";

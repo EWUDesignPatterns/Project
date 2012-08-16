@@ -182,7 +182,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 		}
 		  
 		damageToDeal -= character.getDefense();
-		System.out.println(this.getDefense() + " Damage resisted by defense");
+		System.out.println(character.getDefense() + " Damage resisted by defense");
 		  
 		if(damageToDeal < 0)
 		  damageToDeal = 0;
