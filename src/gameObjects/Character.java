@@ -169,22 +169,16 @@ public abstract class Character extends Observable implements ICharacter
   
   //Attack/Defend logic here
   public void attack(ICharacter opponent)
-  { 
-
-	  this.setChanged();
-  	
+  {
       Random rand = new Random();
       if (rand.nextInt(20) + 1 < this.accuracy) //higher accuracy is better
       {
-        opponent.doDamage(this.getWeaponDamage());
-        System.out.println(this.name + " hits " + opponent.getName() + ((weapon != null) ? "with " + weapon.toString() : "") + " for " + this.getWeaponDamage() + " damage!" );
-
-        this.notifyObservers("hit");
+    	  opponent.doDamage(this.getWeaponDamage());
+    	  this.characterDidHit(opponent);
       } 
       else 
       {
-        System.out.println(this.name + " misses!");
-        this.notifyObservers("miss");
+    	  this.characterDidMiss();
       }
   }
   
@@ -198,7 +192,6 @@ public abstract class Character extends Observable implements ICharacter
       
       return damage;       
   }
-  
   
   public int doDamage(int DamageToDeal)
   {
@@ -292,6 +285,14 @@ public abstract class Character extends Observable implements ICharacter
     this.statusEffects.remove(effect);
   }
 
-
+  protected void characterDidHit(ICharacter opponent)
+  {
+	  System.out.println(this.name + " hit " + opponent + "!");
+  }
+  
+  protected void characterDidMiss()
+  {
+	  System.out.println(this.name + " misses!");
+  }
 }
 
