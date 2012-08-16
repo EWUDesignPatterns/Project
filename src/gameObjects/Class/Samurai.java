@@ -3,7 +3,12 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Abilities.RapidAttack;
+import gameObjects.Abilities.SunderArmor;
+import gameObjects.Abilities.SunderWeapon;
 import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Armors.GlassArmor;
+import gameObjects.items.Weapons.Katana;
 
 public class Samurai extends GameCharacterClass implements IPlayableCharacter
 {
@@ -12,8 +17,12 @@ public class Samurai extends GameCharacterClass implements IPlayableCharacter
 		super(character);
 		//assign name
 		this.className = "Samurai";
-		this.weaponType = getWeaponType();
-		this.armorType = getArmorType();
+
+		this.equip(new Katana());
+		this.equip(new GlassArmor());
+		
+		this.addAbility(new SunderArmor(), 0);
+		this.addAbility(new SunderWeapon(), 1);
 		
 	}
 	

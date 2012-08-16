@@ -3,8 +3,10 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Abilities.Berserk;
+import gameObjects.Abilities.Charge;
 import gameObjects.Race.playable.IPlayableCharacter;
-import gameObjects.items.Armors.PlateArmor;
+import gameObjects.items.Armors.LoinCloth;
 import gameObjects.items.Weapons.BastardSword;
 
 public class Berserker extends GameCharacterClass implements IPlayableCharacter
@@ -20,7 +22,10 @@ public class Berserker extends GameCharacterClass implements IPlayableCharacter
 		
 		//testing only
 		this.equip(new BastardSword());
-		this.equip(new PlateArmor());
+		this.equip(new LoinCloth());
+		
+		this.addAbility(new Charge(), 0);
+		this.addAbility(new Berserk(), 1);
 		
 	}
 	
@@ -47,7 +52,7 @@ public class Berserker extends GameCharacterClass implements IPlayableCharacter
 	
 	public ArmorType getArmorType()
 	{
-		return ArmorType.HEAVY;
+		return ArmorType.LIGHT;
 	}
 	
 	public WeaponType getWeaponType()

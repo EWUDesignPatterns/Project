@@ -3,7 +3,12 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Abilities.SpellLeech;
+import gameObjects.Abilities.SpellMinorHealing;
+import gameObjects.Abilities.SpellRecuperation;
 import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Armors.Clothes;
+import gameObjects.items.Weapons.StaffOfMana;
 
 public class Cleric extends GameCharacterClass implements IPlayableCharacter
 {
@@ -13,6 +18,12 @@ public class Cleric extends GameCharacterClass implements IPlayableCharacter
 		
 		//assign name
 		this.className = "Cleric";
+		this.equip(new StaffOfMana());
+		this.equip(new Clothes());
+		
+		this.addAbility(new SpellMinorHealing(2, 5), 0);
+		this.addAbility(new SpellRecuperation(10, 20), 1);
+		this.addAbility(new SpellLeech(5, 8), 2);
 	}
 	
 	

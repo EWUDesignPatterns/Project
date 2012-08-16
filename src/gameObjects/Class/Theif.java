@@ -3,7 +3,11 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Abilities.RapidAttack;
+import gameObjects.Abilities.SmokeBomb;
 import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Armors.LeatherArmor;
+import gameObjects.items.Weapons.TwinDaggers;
 
 
 public class Theif extends GameCharacterClass implements IPlayableCharacter
@@ -14,8 +18,12 @@ public class Theif extends GameCharacterClass implements IPlayableCharacter
 	super(character);
 
     this.className = "Theif";
-	this.weaponType = getWeaponType();
-	this.armorType = getArmorType();
+	
+    this.equip(new TwinDaggers());
+    this.equip(new LeatherArmor());
+    
+    this.addAbility(new RapidAttack(), 0);
+    this.addAbility(new SmokeBomb(), 1);
   }
   
   public int getMaxHP()
