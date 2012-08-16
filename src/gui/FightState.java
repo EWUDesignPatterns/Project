@@ -37,36 +37,39 @@ public class FightState implements IState, Observer
 	@Override
 	public IState execute()
 	{
-		while (true) {
-			System.out.println("You have encountered :\n" + game.getCurrentBadGuys());
-			
-			System.out.println("1. Run");
-			System.out.println("2. Attack");
-			
-			int choice = game.nextInt();
-	
-			switch (choice)
-			{
-				case 1:
-					// @todo This is the principle of asking the game
-					// for feedback but good for now until we think
-					// about this some more
-					if (game.run()) {
-						System.out.println("You got away");
-						
-						return new MoveCharacterState(game);
-					} else {
-						System.out.println("Sorry, can't run away");
-						
-						return this;
-					}
-				
-				case 2:
-					game.attack();
+		System.out.println("You have encountered :\n" + game.getCurrentBadGuys());
+		
+		System.out.println("1. Run");
+		System.out.println("2. Attack");
+		
+		int choice = game.nextInt();
+
+		switch (choice)
+		{
+			case 1:
+				// @todo This is the principle of asking the game
+				// for feedback but good for now until we think
+				// about this some more
+				if (game.run()) {
+					System.out.println("You got away");
+					
+					return new MoveCharacterState(game);
+				} else {
+					System.out.println("Sorry, can't run away");
 					
 					return this;
-			}
+				}			
+			case 2:
+				game.attack();
+				
+				if (game.getCurrentBadGuys().isAlive() == false) {
+					System.out.println("You have defeated the enemy party!");
+					
+					return new MoveCharacterState(game); // Fight over
+				}
 		}
+		
+		return this;
 	}
 	
 }

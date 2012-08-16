@@ -59,6 +59,11 @@ public class Game
 		return dungeon.moveWest(party);
 	}
 	
+	public boolean mapOver()
+	{
+		return this.dungeon.isComplete();
+	}
+	
 	public Party getCurrentBadGuys()
 	{
 		return this.dungeon.getCurrentRoom().getBadGuys();
