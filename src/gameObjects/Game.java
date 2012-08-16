@@ -121,7 +121,8 @@ public class Game
 		Party badGuys = this.getCurrentBadGuys();
 		
 		// Loop through good guys
-		for (ICharacter c : party.getCharacters()) {
+		for (ICharacter c : party.getCharacters()) 
+		{
 			// @todo This is prone to runtime errors since we are casting to
 			// something that may not be allowed. We should have a good guy paty implementation
 			// of IParty
@@ -129,16 +130,19 @@ public class Game
 				this.playersAttackTurn((IPlayableCharacter) c, badGuys);
 		}
 		
-		// Loop through bad guys and attack good guys
-		for (ICharacter c : badGuys.getCharacters()) {
-			this.nonPlayableCharacterAttack(c, party);
-		}
+		
 		
 		//loop through bad guys and remove dead players
+		for (int i = 0; i < badGuys.getCharacters().size(); i ++) 
+		{
+			if(badGuys.getCharacters().get(i).getHP() <=0)
+				badGuys.remove(badGuys.getCharacters().get(i));
+		}
+		
+		// Loop through bad guys and attack good guys
 		for (ICharacter c : badGuys.getCharacters()) 
 		{
-			if(c.getHP() == 0)
-				badGuys.remove(c);
+			this.nonPlayableCharacterAttack(c, party);
 		}
 	}
 	

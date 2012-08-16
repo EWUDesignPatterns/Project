@@ -39,7 +39,7 @@ public class DungeonsAndDragonsGame extends Game
 		
 		int choice = this.nextInt();
 		choice--; // decrement because 0 based in party, not zero based for this
-		partyToAttack.doAttack(0, player);
+		partyToAttack.doAttack(choice, player);
 	}
 
 	public Scanner getInput()
