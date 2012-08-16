@@ -1,7 +1,10 @@
 package gameObjects;
 
 import java.util.LinkedList;
+import java.util.Observer;
+import java.util.Observable;
 
+import gameObjects.Abilities.IAbility;
 import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.IItem;
 import gameObjects.items.Item;
@@ -40,6 +43,8 @@ public interface ICharacter
 	
 	public LinkedList<IStatusEffect> getStatusEffects();
 	
+	public void applyStatusEffects();
+	
 	public ArmorType getArmorType();
 	
 	public Armor getArmor();
@@ -60,6 +65,8 @@ public interface ICharacter
 	
 	public int doDamage(int damageToDeal);
 	
+	public void doDamageWithoutDefenses(int damageToDeal);
+	
 	public void heal(int damageToHeal);
 	
 	public void addStatusEffect(IStatusEffect effect);
@@ -67,6 +74,12 @@ public interface ICharacter
 	public void removeStatusEffect(IStatusEffect effect);
 	
 	void equip(IItem toEquip);
+
+	public void addObserver(Observer o);
 	
 	void unEquip(IItem toRemove);
+	
+	void addAbility(IAbility ability, int index);
+	
+	void removeAbility(IAbility ability, int index);
 }

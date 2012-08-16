@@ -138,6 +138,9 @@ public class FileLoaderDungeon implements IDungeon {
 		int rows = input.nextInt();
 		int cols = input.nextInt();
 
+		winRow = input.nextInt();
+		winCol = input.nextInt();
+		
 		this.map = new IRoom[rows][cols];
 
 		for (int i = 0; i < rows; i++) {

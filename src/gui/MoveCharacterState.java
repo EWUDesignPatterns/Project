@@ -1,14 +1,15 @@
 package gui;
 
+import gameObjects.Game;
 import gameObjects.Race.playable.Elf;
 import gameObjects.Race.playable.Human;
 import gameObjects.Race.playable.Orc;
 
 public class MoveCharacterState implements IState
 {
-	private Game game;
+	private DungeonsAndDragonsGame game;
 	
-	public MoveCharacterState(Game game)
+	public MoveCharacterState(DungeonsAndDragonsGame game)
 	{
 		this.game = game;
 	}
@@ -57,6 +58,10 @@ public class MoveCharacterState implements IState
 			
 			case 5:
 				return new HomeScreenState(game);
+		}
+		
+		if (game.mapOver()) {
+			return new GameWonState();
 		}
 		
 		return game.getState();

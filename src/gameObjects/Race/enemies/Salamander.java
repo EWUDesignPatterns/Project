@@ -11,7 +11,9 @@ public class Salamander extends NonPlayerCharacter implements ICharacter
     super();
     this.race = "Salamander";
     this.hp = 10;
+    this.maxHp = 10;
     this.mp = 0;
+    this.maxMp = 0;
     this.defense = 5;
     this.accuracy = 12;
     this.baseDamage = 0;

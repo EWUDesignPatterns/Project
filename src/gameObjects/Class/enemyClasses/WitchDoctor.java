@@ -19,23 +19,35 @@ public class WitchDoctor extends GameCharacterClass
     this.className = "Witch Doctor";
     
     
-   // character.abilities[0] = new SpellMinorHealing(5, 5);
-   // character.abilities[1] = new SpellRecuperation(10, 2);
-    
+   character.addAbility(new SpellMinorHealing(5, 5), 0);
+   character.addAbility(new SpellRecuperation(10,2), 1);
   }
   
   
   public int getMaxHP()
   {
-    if(character.getHP() - 5 <0)
-      return 0;
+    if(character.getMaxHP() - 5 <0)
+      return 1;
+
     return character.getMaxHP() - 5;
+  }
+  
+  public int getHP()
+  {
+	  return character.getHP();
   }
   
   public int getMaxMP()
   {
     return character.getMaxMP() + 5;
   }
+  
+  public int getMP()
+  {
+	  return character.getMP() + 5;
+  }
+  
+  
   
   public int getAccuracy()
   {

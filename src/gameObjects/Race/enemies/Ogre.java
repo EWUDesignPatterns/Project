@@ -11,7 +11,9 @@ public class Ogre extends NonPlayerCharacter implements ICharacter
     super();
     this.race = "Ogre";
     this.hp = 12;
+    this.maxHp = 12;
     this.mp = 0;
+    this.maxMp = 0;
     this.defense = 4;
     this.accuracy = 3;
     this.baseDamage = 10;

@@ -3,9 +3,10 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
 
 
-public class Theif extends GameCharacterClass
+public class Theif extends GameCharacterClass implements IPlayableCharacter
 {
   
   public Theif(ICharacter character)

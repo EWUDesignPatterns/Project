@@ -1,10 +1,16 @@
 package gui;
 
-public class FightState implements IState 
+import gameObjects.FightGenerator;
+import gameObjects.Game;
+
+import java.util.Observable;
+import java.util.Observer;
+
+public class FightState implements IState, Observer 
 {
-	Game game;
+	DungeonsAndDragonsGame game;
 	
-	public FightState(Game game)
+	public FightState(DungeonsAndDragonsGame game)
 	{
 		this.game = game;
 	}
@@ -15,50 +21,55 @@ public class FightState implements IState
 		return false;
 	}
 
+	/**
+	 * Waits for a fight generator to pass in the fight in room message and then tells the game
+	 * to use this instance of fight state as the current state/view to begin the fighting state
+	 */
+	public void update(Observable ob, Object obj) 
+	{
+		if ((ob instanceof FightGenerator)) {
+			if (obj.equals("fight_in_room")) {
+				game.setState(this);
+			}
+		}
+	}
+
 	@Override
 	public IState execute()
 	{
-		while (true) {
-			System.out.println("You have encountered :\n" + game.getCurrentRoom().getBadGuys());
-			
-			System.out.println("1. Run");
-			System.out.println("2. Attack");
-			
-			int choice = game.nextInt();
-			
-	
-			switch (choice)
-			{
-				case 1:
-					// @todo This is the principle of asking the game
-					// for feedback but good for now until we think
-					// about this some more
-					if (game.run()) {
-						System.out.println("You got away");
-						
-						return new MoveCharacterState(game);
-					} else {
-						System.out.println("Sorry, can't run away");
-						
-						return this;
-					}
+		System.out.println("You have encountered :\n" + game.getCurrentBadGuys());
+		
+		System.out.println("1. Run");
+		System.out.println("2. Attack");
+		
+		int choice = game.nextInt();
+
+		switch (choice)
+		{
+			case 1:
+				// @todo This is the principle of asking the game
+				// for feedback but good for now until we think
+				// about this some more
+				if (game.run()) {
+					System.out.println("You got away");
+					
+					return new MoveCharacterState(game);
+				} else {
+					System.out.println("Sorry, can't run away");
+					
+					return this;
+				}			
+			case 2:
+				game.attack();
 				
-				case 2:
-					game.attack();
+				if (game.getCurrentBadGuys().isAlive() == false) {
+					System.out.println("You have defeated the enemy party!");
 					
-					System.out.println(game.getParty());
-					System.out.println(game.getCurrentRoom().getBadGuys());
-					
-					// @todo This is not correct logic I don't think 
-					// we should move this out to to have an event 
-					// for player dying
-					//if (game.getPlayer().getHP() >= 0) {
-					//	return this;
-					//} else {
-					//	return new ExitGameState();
-					//}
-			}
+					return new MoveCharacterState(game); // Fight over
+				}
 		}
+		
+		return this;
 	}
 	
 }

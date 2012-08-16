@@ -7,6 +7,7 @@ import gameObjects.*;
 import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.IItem;
 import gameObjects.items.Armors.Armor;
+import gameObjects.items.Weapons.MagicWeapon;
 import gameObjects.items.Weapons.Weapon;
 
 
@@ -15,6 +16,7 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 {
 	protected ICharacter character;	
 	protected String className;
+	
 	public GameCharacterClass(ICharacter character)
 	{
 		this.character = character;
@@ -25,14 +27,14 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	
 	public String toString()
 	{
-		String temp = "-----------------\n";
+		String temp = "----------------------\n";
 		temp += "| " + character.getName();
 		if(temp.length()-18 < 10)
 			temp += "\t";
 		temp += "\t|\n";
-		temp += "| " + character.getRace()+ " " + this.className + "\t|\n";
-		temp += "| " + "HP: "+ getHP() + "/" + getMaxHP() + "\t|\n";
-		temp += "| " + "MP: "+ getMP() + "/" + getMaxMP() + "\t|\n";
+		temp += "| " + character.getRace()+ " " + this.className + "\t\t|\n";
+		temp += "| " + "HP: "+ getHP() + "/" + getMaxHP() + "\t\t|\n";
+		temp += "| " + "MP: "+ getMP() + "/" + getMaxMP() + "\t\t|\n";
 		temp += "-----------------\n";
 		return temp;
 	}
@@ -168,27 +170,28 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	public void attack(ICharacter opponent)
 	{
 		character.attack(opponent);
-	}
+}
 
 	@Override
 	public int doDamage(int damageToDeal) 
 	{
+		System.out.println(damageToDeal + " Total Damage");
 		if (getArmor() != null) {
 			  damageToDeal -= character.getArmor().getEffect(); //just a straight subtraction for now, can change later
 			  System.out.println(getArmor().getEffect() + " Damage mitigated by Armor");
 		}
 		  
-		  damageToDeal -= character.getDefense();
-		  System.out.println(this.getDefense() + " Damage resisted by defense");
+		damageToDeal -= character.getDefense();
+		System.out.println(this.getDefense() + " Damage resisted by defense");
 		  
-		  if(damageToDeal < 0)
-			  damageToDeal = 0;
+		if(damageToDeal < 0)
+		  damageToDeal = 0;
+		  
+		System.out.println(damageToDeal + " Total damage done");
 	    
-		  if(character.getHP() > damageToDeal)
-	  		character.doDamage(damageToDeal);
-		  else //kill the character, unsure of how we want to do this
-			  character.doDamage(character.getHP());
-		  return damageToDeal;
+	  	character.doDamage(damageToDeal);
+		
+	  	return damageToDeal;
 	}
 
 	@Override
@@ -218,7 +221,21 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public void equip(IItem toEquip) 
 	{
-		character.equip(toEquip);
+		if(toEquip instanceof Weapon)//if it is a weapon
+	    {
+	      if(((Weapon)toEquip).getWeaponType() == this.getWeaponType())//if it is equippable
+	      {
+	        character.equip(toEquip);
+	      }
+	    }
+	    
+	    else if(toEquip instanceof Armor)//if it is an armor
+	    {
+	      if(((Armor)toEquip).getArmorType() == this.getArmorType())//if it is equippable
+	      {
+	        character.equip(toEquip);
+	      }   
+	    }
 
 	}
 

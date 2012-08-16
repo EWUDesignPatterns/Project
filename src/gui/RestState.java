@@ -1,10 +1,12 @@
 package gui;
 
+import gameObjects.Game;
+
 public class RestState implements IState {
 
-	private Game game;
+	private DungeonsAndDragonsGame game;
 	
-	public RestState(Game game)
+	public RestState(DungeonsAndDragonsGame game)
 	{
 		this.game = game;
 	}

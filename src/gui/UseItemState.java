@@ -1,10 +1,12 @@
 package gui;
 
+import gameObjects.Game;
+
 public class UseItemState implements IState {
 
-	private Game game;
+	private DungeonsAndDragonsGame game;
 	
-	public UseItemState(Game game)
+	public UseItemState(DungeonsAndDragonsGame game)
 	{
 		this.game = game;
 	}

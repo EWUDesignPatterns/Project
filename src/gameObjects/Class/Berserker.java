@@ -3,8 +3,11 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Armors.PlateArmor;
+import gameObjects.items.Weapons.BastardSword;
 
-public class Berserker extends GameCharacterClass 
+public class Berserker extends GameCharacterClass implements IPlayableCharacter
 {
 	
 	public Berserker(ICharacter character)
@@ -13,6 +16,11 @@ public class Berserker extends GameCharacterClass
 		
 		//assign name
 		this.className = "Berserker";
+		
+		
+		//testing only
+		this.equip(new BastardSword());
+		this.equip(new PlateArmor());
 		
 	}
 	
@@ -24,7 +32,7 @@ public class Berserker extends GameCharacterClass
 	
 	public int getHP()
 	{
-		return character.getHP() + 5;
+		return character.getHP();
 	}
 	
 	public int getMaxMP()
@@ -39,7 +47,7 @@ public class Berserker extends GameCharacterClass
 	
 	public ArmorType getArmorType()
 	{
-		return ArmorType.LIGHT;
+		return ArmorType.HEAVY;
 	}
 	
 	public WeaponType getWeaponType()

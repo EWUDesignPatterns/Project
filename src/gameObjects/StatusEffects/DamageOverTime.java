@@ -20,7 +20,7 @@ public class DamageOverTime extends NegativeStatusEffect implements IStatusEffec
   {
     System.out.println(target + " takes " + damage + "Damage");
     if(duration-- > 0)
-      target.doDamage(damage);  
+      target.doDamageWithoutDefenses(damage);  
     else
       target.removeStatusEffect(this);
   }

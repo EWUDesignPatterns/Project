@@ -22,7 +22,10 @@ public class AccuracyReduced extends NegativeStatusEffect implements IStatusEffe
   public void applyAffect(ICharacter target)
   {
     if(duration-- <= 0)
-      target.removeStatusEffect(this);
+    {
+    	restore(target);
+    	target.removeStatusEffect(this);
+    }
   }
   
   public void restore(ICharacter target)

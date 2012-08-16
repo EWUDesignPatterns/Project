@@ -1,12 +1,14 @@
 package gui;
 
+import gameObjects.Game;
+
 import java.util.Scanner;
 
 public class HomeScreenState implements IState
 {
-	private Game game;
+	private DungeonsAndDragonsGame game;
 	
-	public HomeScreenState(Game game)
+	public HomeScreenState(DungeonsAndDragonsGame game)
 	{
 		this.game = game;
 	}

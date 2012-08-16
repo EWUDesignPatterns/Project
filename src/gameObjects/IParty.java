@@ -2,7 +2,7 @@ package gameObjects;
 
 import java.util.ArrayList;
 
-interface IParty extends Iterable<ICharacter>
+public interface IParty extends Iterable<ICharacter>
 {
 	public ArrayList<ICharacter> getCharacters();
 	
@@ -11,8 +11,6 @@ interface IParty extends Iterable<ICharacter>
 	public void remove(ICharacter character);
 	
 	public String toString();
-	
-	public void attack(Party badguys);
 	
 	public void doAttack(int index, ICharacter attacker);
 }

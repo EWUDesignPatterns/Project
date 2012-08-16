@@ -11,11 +11,20 @@ public class FightGenerator extends Observable implements IFightGenerator
 {
 	private static Random rand = new Random();
 	
+	private IRoom room;
+	
 	@Override
 	public void roomEntered(IRoom room) {
-		//if (room.getBadGuy() != null && (rand.nextInt(20) > 10)) {
-			this.setChanged();
-			this.notifyObservers(room);
-		//}
+		if (room.getBadGuys() != null && (rand.nextInt(20) > 10)) {
+			this.setChanged();			
+			this.room = room; // Store room for the observers to pull
+			this.notifyObservers("fight_in_room");
+			this.room = null; // Not thread safe as it expects this will happen and notify all observers before returning
+		}
+	}
+	
+	public IRoom room()
+	{
+		return room;
 	}
 }

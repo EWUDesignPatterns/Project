@@ -3,8 +3,9 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
 
-public class Samurai extends GameCharacterClass
+public class Samurai extends GameCharacterClass implements IPlayableCharacter
 {
 	public Samurai(ICharacter character)
 	{
