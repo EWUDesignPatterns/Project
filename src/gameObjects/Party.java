@@ -40,7 +40,6 @@ public class Party implements IParty
 	
 	public String toString()
 	{
-		//build the top string
 		String temp = "";
 		for(ICharacter c:players)
 		{

@@ -65,6 +65,8 @@ public interface ICharacter
 	
 	public int doDamage(int damageToDeal);
 	
+	public void doDamageWithoutDefenses(int damageToDeal);
+	
 	public void heal(int damageToHeal);
 	
 	public void addStatusEffect(IStatusEffect effect);

@@ -7,6 +7,7 @@ import gameObjects.*;
 import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.IItem;
 import gameObjects.items.Armors.Armor;
+import gameObjects.items.Weapons.MagicWeapon;
 import gameObjects.items.Weapons.Weapon;
 
 
@@ -168,11 +169,12 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	public void attack(ICharacter opponent)
 	{
 		character.attack(opponent);
-	}
+}
 
 	@Override
 	public int doDamage(int damageToDeal) 
 	{
+		System.out.println(damageToDeal + " Total Damage");
 		if (getArmor() != null) {
 			  damageToDeal -= character.getArmor().getEffect(); //just a straight subtraction for now, can change later
 			  System.out.println(getArmor().getEffect() + " Damage mitigated by Armor");
@@ -183,6 +185,8 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 		  
 		  if(damageToDeal < 0)
 			  damageToDeal = 0;
+		  
+		  System.out.println(damageToDeal + " Total damage done");
 	    
 		  if(character.getHP() > damageToDeal)
 	  		character.doDamage(damageToDeal);
@@ -218,7 +222,21 @@ public abstract class GameCharacterClass extends Character implements ICharacter
 	@Override
 	public void equip(IItem toEquip) 
 	{
-		character.equip(toEquip);
+		if(toEquip instanceof Weapon)//if it is a weapon
+	    {
+	      if(((Weapon)toEquip).getWeaponType() == this.getWeaponType())//if it is equippable
+	      {
+	        character.equip(toEquip);
+	      }
+	    }
+	    
+	    else if(toEquip instanceof Armor)//if it is an armor
+	    {
+	      if(((Armor)toEquip).getArmorType() == this.getArmorType())//if it is equippable
+	      {
+	        character.equip(toEquip);
+	      }   
+	    }
 
 	}
 

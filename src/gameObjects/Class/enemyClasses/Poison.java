@@ -1,6 +1,5 @@
 package gameObjects.Class.enemyClasses;
 
-import java.util.Random;
 
 import gameObjects.ICharacter;
 import gameObjects.Class.GameCharacterClass;

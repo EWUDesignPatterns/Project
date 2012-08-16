@@ -4,6 +4,7 @@ import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
 import gameObjects.Race.playable.IPlayableCharacter;
+import gameObjects.items.Weapons.BastardSword;
 
 public class Berserker extends GameCharacterClass implements IPlayableCharacter
 {
@@ -14,6 +15,8 @@ public class Berserker extends GameCharacterClass implements IPlayableCharacter
 		
 		//assign name
 		this.className = "Berserker";
+		
+		this.equip(new BastardSword());
 		
 	}
 	

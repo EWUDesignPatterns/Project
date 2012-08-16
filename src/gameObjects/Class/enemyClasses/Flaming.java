@@ -11,8 +11,8 @@ public class Flaming extends GameCharacterClass implements ICharacter
   public Flaming(ICharacter character)
   {
 	  super(character); 
-    //assign name
-    this.className = "(Flaming)";
+	  //assign name
+	  this.className = "(Flaming)";
     
     
   }
