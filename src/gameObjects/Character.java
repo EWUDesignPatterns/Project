@@ -1,6 +1,7 @@
 package gameObjects;
 
 import java.util.LinkedList;
+import java.util.Observable;
 import java.util.Random;
 
 import gameObjects.Abilities.IAbility;
@@ -11,7 +12,7 @@ import gameObjects.items.Armors.Armor;
 import gameObjects.items.Weapons.Weapon;
 import gameObjects.items.Weapons.MagicWeapon;
 
-public abstract class Character implements ICharacter
+public abstract class Character extends Observable implements ICharacter
 {
 
   //Stats
@@ -174,27 +175,29 @@ public abstract class Character implements ICharacter
   
   //Attack/Defend logic here
   public void attack(ICharacter opponent)
-  { 
+  {
       Random rand = new Random();
       if (rand.nextInt(20) + 1 < this.accuracy) //higher accuracy is better
       {
-        //don't need to know about damage unless we hit
-        int damage = this.baseDamage;
-        
-        if (weapon != null) {
-        	damage += weapon.getEffect();
-        }
-        
-        damage = opponent.doDamage(damage);
-        System.out.println(this.name + " hits "+ opponent.getName() + " " + ((weapon != null) ? "with " + weapon.toString() : "") + " for " + damage + " damage!" );
+    	  opponent.doDamage(this.getWeaponDamage());
+    	  this.characterDidHit(opponent);
       } 
       else 
       {
-        System.out.println(this.name + " misses!");
+    	  this.characterDidMiss();
       }
   }
   
-  
+  private int getWeaponDamage()
+  {
+	  int damage = this.baseDamage;
+      
+      if (weapon != null) {
+      	damage += weapon.getEffect();
+      }
+      
+      return damage;       
+  }
   
   public int doDamage(int DamageToDeal)
   {
@@ -298,6 +301,14 @@ public abstract class Character implements ICharacter
 	  abilities[index] = null;
   }
 
-
+  protected void characterDidHit(ICharacter opponent)
+  {
+	  System.out.println(this.name + " hit " + opponent + "!");
+  }
+  
+  protected void characterDidMiss()
+  {
+	  System.out.println(this.name + " misses!");
+  }
 }
 

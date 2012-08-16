@@ -2,9 +2,7 @@ package gameObjects.Race.playable;
 
 import gameObjects.Character;
 
-
-
-public class Human extends Character
+public class Human extends Character implements IPlayableCharacter
 {
 
 	public Human(String name)

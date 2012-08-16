@@ -3,8 +3,9 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
 
-public class Berserker extends GameCharacterClass 
+public class Berserker extends GameCharacterClass implements IPlayableCharacter
 {
 	
 	public Berserker(ICharacter character)

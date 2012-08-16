@@ -3,8 +3,9 @@ package gameObjects.Class;
 import gameObjects.ArmorType;
 import gameObjects.ICharacter;
 import gameObjects.WeaponType;
+import gameObjects.Race.playable.IPlayableCharacter;
 
-public class Cleric extends GameCharacterClass 
+public class Cleric extends GameCharacterClass implements IPlayableCharacter
 {
 	public Cleric(ICharacter character)
 	{

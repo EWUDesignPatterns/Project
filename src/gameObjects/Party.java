@@ -5,8 +5,9 @@ import gameObjects.Race.enemies.NonPlayerCharacter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Observable;
 
-public class Party implements IParty 
+public class Party implements IParty
 {
 	private ArrayList<ICharacter> players;
 
@@ -49,41 +50,15 @@ public class Party implements IParty
 
 	}
 	
-	public void attack(Party badGuys)
+	public boolean isAlive()
 	{
-		for(ICharacter c:players)
-		{
-			//badGuys.doAttack(0, c);
-			
-			//REMOVE THIS LATER
-			if(!(c instanceof NonPlayerCharacter))
-			{		
-				System.out.println(c.getName() + "'s Turn");
-				c.applyStatusEffects(); //apply status effects at the beginning of each characters turn
-				System.out.println("Who should "+ c.getName() + " Attack?");
-				for(int i = 0; i < badGuys.getCharacters().size(); i++)
-				{
-					System.out.println((i+1) + ": " + badGuys.getCharacters().get(i));
-				}
-				Scanner keyboard = new Scanner(System.in);
-				int input = keyboard.nextInt();
-				input --; //decrement to be in the range of the array
-				badGuys.doAttack(input, c);
-			}
-			else
-				badGuys.doAttack(0, c);
-			
-		}
-		for(ICharacter c:players)
-			if(c.getHP() == 0)
-				players.remove(c);
+
+		return players.size() > 0;
+
 	}
 	
 	public void doAttack(int index, ICharacter attacker)
 	{
-			attacker.attack(players.get(index));
+		attacker.attack(players.get(index));
 	}
-
-	
-
 }

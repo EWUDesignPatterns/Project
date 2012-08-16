@@ -12,23 +12,17 @@ public class Poison extends GameCharacterClass implements ICharacter
   {
 	  super(character);
     
-    //assign name
-    this.className = "(Poison)";
+	  //assign name
+	  this.className = "(Poison)";
 
     
   }
   
   @Override
-  public void attack(ICharacter opponent)
-  { 
-      super.attack(opponent);
-      Random rand = new Random();
-      if(rand.nextInt() % 10 < 6)
-      {
-        opponent.addStatusEffect(new DamageOverTime(2));
-        System.out.println(opponent.getName() + "is On Fire");
-      }
+  protected void characterDidHit(ICharacter opponent)
+  {
+	  super.characterDidHit(opponent);
+	  
+	  opponent.addStatusEffect(new DamageOverTime(2));
   }
- 
-
 }
