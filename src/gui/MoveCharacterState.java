@@ -60,6 +60,10 @@ public class MoveCharacterState implements IState
 				return new HomeScreenState(game);
 		}
 		
+		if (game.mapOver()) {
+			return new GameWonState();
+		}
+		
 		return game.getState();
 	}
 }

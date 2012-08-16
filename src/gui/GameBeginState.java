@@ -31,6 +31,7 @@ public class GameBeginState implements IState {
 			ICharacter player = PlayerFactory.generate(this.getPlayerName(), this.getPlayerClass(), this.getPlayerRace(), null);
 			party.add(player);
 		//}
+
 		game.setParty(party);
 	
 		return new HomeScreenState(game);
