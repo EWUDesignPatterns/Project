@@ -3,11 +3,7 @@
 <h2>Dungeons and Dragons 21st Century Command Line Style</h2>
 
 
-<div class='left' style='margin-right: 20px;' >
-  <img src='images/logo.gif' style='width: 200px' />
-</div>
-
-<div class='left'>
+<div class='left full'>
 
   <h3>Team Name</h3>
   

@@ -26,11 +26,11 @@ public class GameBeginState implements IState {
 		Party party = new Party();
 		
 		//TEMP loop for size of party
-		//for(int i = 0; i < 3; i ++)
-		//{
+		for(int i = 0; i < 3; i ++)
+		{
 			ICharacter player = PlayerFactory.generate(this.getPlayerName(), this.getPlayerClass(), this.getPlayerRace(), null);
 			party.add(player);
-		//}
+		}
 
 		game.setParty(party);
 	

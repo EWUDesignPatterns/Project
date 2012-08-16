@@ -27,8 +27,8 @@ public class PlayerFactory {
 		player = new Mage(player);
 	  else if (className.equals("samurai"))
 		player = new Samurai(player);
-	  else if (className.equals("theif"))
-		player = new Theif(player);
+	  else if (className.equals("thief"))
+		player = new Thief(player);
 	  else
 		player = null;
 	  
@@ -44,6 +44,6 @@ public class PlayerFactory {
 	
 	public static String[] getClasses()
 	{
-		return new String[] {"berserker", "cleric", "mage", "samurai", "theif"};
+		return new String[] {"berserker", "cleric", "mage", "samurai", "thief"};
 	}
 }
