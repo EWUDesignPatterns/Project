@@ -10,14 +10,14 @@ import gameObjects.items.Armors.LeatherArmor;
 import gameObjects.items.Weapons.TwinDaggers;
 
 
-public class Theif extends GameCharacterClass implements IPlayableCharacter
+public class Thief extends GameCharacterClass implements IPlayableCharacter
 {
   
-  public Theif(ICharacter character)
+  public Thief(ICharacter character)
   {
 	super(character);
 
-    this.className = "Theif";
+    this.className = "Thief";
 	
     this.equip(new TwinDaggers());
     this.equip(new LeatherArmor());
