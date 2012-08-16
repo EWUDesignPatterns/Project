@@ -24,7 +24,7 @@ public class Berserker extends GameCharacterClass
 	
 	public int getHP()
 	{
-		return character.getHP() + 5;
+		return character.getHP();
 	}
 	
 	public int getMaxMP()

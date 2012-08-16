@@ -123,6 +123,12 @@ public abstract class Character implements ICharacter
     return this.statusEffects;
   }
   
+  public void applyStatusEffects()
+  {
+	  for(IStatusEffect i:statusEffects)
+		  i.applyAffect(this);
+  }
+  
   public ArmorType getArmorType()
   {
     return this.armorType;
@@ -280,6 +286,16 @@ public abstract class Character implements ICharacter
   public void removeStatusEffect(IStatusEffect effect)
   {
     this.statusEffects.remove(effect);
+  }
+  
+  public void addAbility(IAbility ability, int index)
+  {
+	  abilities[index] = ability;
+  }
+	
+  public void removeAbility(IAbility ability, int index)
+  {
+	  abilities[index] = null;
   }
 
 

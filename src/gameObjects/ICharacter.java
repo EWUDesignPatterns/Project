@@ -2,6 +2,7 @@ package gameObjects;
 
 import java.util.LinkedList;
 
+import gameObjects.Abilities.IAbility;
 import gameObjects.StatusEffects.IStatusEffect;
 import gameObjects.items.IItem;
 import gameObjects.items.Item;
@@ -40,6 +41,8 @@ public interface ICharacter
 	
 	public LinkedList<IStatusEffect> getStatusEffects();
 	
+	public void applyStatusEffects();
+	
 	public ArmorType getArmorType();
 	
 	public Armor getArmor();
@@ -69,4 +72,8 @@ public interface ICharacter
 	void equip(IItem toEquip);
 	
 	void unEquip(IItem toRemove);
+	
+	void addAbility(IAbility ability, int index);
+	
+	void removeAbility(IAbility ability, int index);
 }

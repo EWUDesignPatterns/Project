@@ -39,10 +39,14 @@ public class Party implements IParty
 	
 	public String toString()
 	{
+		//build the top string
 		String temp = "";
 		for(ICharacter c:players)
+		{
 			temp += c.toString();
+		}
 		return temp;
+
 	}
 	
 	public void attack(Party badGuys)
@@ -52,10 +56,10 @@ public class Party implements IParty
 			//badGuys.doAttack(0, c);
 			
 			//REMOVE THIS LATER
-			
 			if(!(c instanceof NonPlayerCharacter))
 			{		
 				System.out.println(c.getName() + "'s Turn");
+				c.applyStatusEffects(); //apply status effects at the beginning of each characters turn
 				System.out.println("Who should "+ c.getName() + " Attack?");
 				for(int i = 0; i < badGuys.getCharacters().size(); i++)
 				{
@@ -68,14 +72,16 @@ public class Party implements IParty
 			}
 			else
 				badGuys.doAttack(0, c);
+			
 		}
+		for(ICharacter c:players)
+			if(c.getHP() == 0)
+				players.remove(c);
 	}
 	
 	public void doAttack(int index, ICharacter attacker)
 	{
 			attacker.attack(players.get(index));
-			//if(players.get(index).getHP() <= 0)
-			//	players.remove(index);
 	}
 
 	
