@@ -4,8 +4,8 @@
 <p>This pattern was applied partially and can be improved in future iterations</p>
 
 
-<div class='half right'>
-  <img src='http://placehold.it/450x400' class='rounded' />
+<div class='full'>
+  <img src='images/mvc.png' class='rounded full' />
 </div>
 
 

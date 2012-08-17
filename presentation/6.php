@@ -4,8 +4,8 @@
 <p>Used to change into the fight state.</p>
 
 
-<div class='half right'>
-  <img src='http://placehold.it/450x400' class='rounded' />
+<div class='full'>
+  <img src='images/observer.png' class='rounded full' />
 </div>
 
 
