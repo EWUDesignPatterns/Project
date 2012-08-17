@@ -4,34 +4,10 @@
 <p>Give the characters some class...</p>
 
 
-<div class='half right'>
-  <img src='http://placehold.it/450x400' class='rounded' />
+<div class='full'>
+  <img src='images/characters.png' class='rounded full' />
 </div>
 
-
-<div class='half left'>
-  
-  <div class='list'>
-    <h3></h3>
-    <ul>
-      <li></li>
-    </ul>
-  </div>
-
-  <div class='list'>
-    <h3></h3>
-    <ul>
-      <li></li>
-    </ul>
-  </div>
-  
-  <div class='list'>
-    <h3></h3>
-    <ul>
-      <li></li>
-    </ul>
-  </div>
     
-</div>
 
 <?php include 'layout/footer.php'; ?>

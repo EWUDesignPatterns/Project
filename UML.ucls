@@ -275,15 +275,7 @@
     <position height="49" width="213" x="1241" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="38" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.Theif" project="Project" 
-    file="/Project/src/gameObjects/Class/Theif.java" binary="false">    
-    <position height="196" width="198" x="7635" y="1240"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
-    </display>  
-  </class>  
-  <class id="39" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.Berserker" project="Project" 
+  <class id="38" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.Berserker" project="Project" 
     file="/Project/src/gameObjects/Class/Berserker.java" binary="false">    
     <position height="196" width="198" x="7873" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -291,12 +283,12 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <package id="40" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities" project="Project" 
+  <package id="39" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities" project="Project" 
     file="/Project/src/gameObjects/Abilities" binary="false">    
     <position height="49" width="174" x="1494" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="41" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.MagicWeapon" project="Project" 
+  <class id="40" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.MagicWeapon" project="Project" 
     file="/Project/src/gameObjects/items/Weapons/MagicWeapon.java" binary="false">    
     <position height="111" width="198" x="6157" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -304,7 +296,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="42" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.WoodenSword" project="Project" 
+  <class id="41" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.WoodenSword" project="Project" 
     file="/Project/src/gameObjects/items/Weapons/WoodenSword.java" binary="false">    
     <position height="94" width="198" x="5681" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -312,7 +304,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="43" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MajorHealthPotion" 
+  <class id="42" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MajorHealthPotion" 
     project="Project" file="/Project/src/gameObjects/items/Potions/MajorHealthPotion.java" binary="false">    
     <position height="94" width="151" x="5962" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -320,7 +312,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="44" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.Cleric" project="Project" 
+  <class id="43" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.Cleric" project="Project" 
     file="/Project/src/gameObjects/Class/Cleric.java" binary="false">    
     <position height="196" width="198" x="8111" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -328,7 +320,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="45" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IWeapon" project="Project" 
+  <interface id="44" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IWeapon" project="Project" 
     file="/Project/src/gameObjects/items/IWeapon.java" binary="false">    
     <position height="77" width="198" x="6395" y="2254"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -336,7 +328,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="46" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SunderArmor" project="Project" 
+  <class id="45" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SunderArmor" project="Project" 
     file="/Project/src/gameObjects/Abilities/SunderArmor.java" binary="false">    
     <position height="94" width="195" x="3802" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -344,7 +336,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="47" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellLeech" project="Project" 
+  <class id="46" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellLeech" project="Project" 
     file="/Project/src/gameObjects/Abilities/SpellLeech.java" binary="false">    
     <position height="94" width="195" x="3200" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -352,7 +344,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="48" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.Katana" project="Project" 
+  <class id="47" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.Katana" project="Project" 
     file="/Project/src/gameObjects/items/Weapons/Katana.java" binary="false">    
     <position height="94" width="198" x="6395" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -360,7 +352,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="49" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellRecuperation" project="Project" 
+  <class id="48" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellRecuperation" project="Project" 
     file="/Project/src/gameObjects/Abilities/SpellRecuperation.java" binary="false">    
     <position height="94" width="195" x="3435" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -368,7 +360,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="50" corner="BOTTOM_RIGHT" language="java" name="gui.GameBeginState" project="Project" 
+  <class id="49" corner="BOTTOM_RIGHT" language="java" name="gui.GameBeginState" project="Project" 
     file="/Project/src/gui/GameBeginState.java" binary="false">    
     <position height="145" width="212" x="5497" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -376,7 +368,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="51" corner="BOTTOM_RIGHT" language="java" name="gameObjects.MonsterFactory" project="Project" 
+  <class id="50" corner="BOTTOM_RIGHT" language="java" name="gameObjects.MonsterFactory" project="Project" 
     file="/Project/src/gameObjects/MonsterFactory.java" binary="false">    
     <position height="94" width="141" x="1708" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -384,7 +376,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="52" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.StandardHealthPotion" 
+  <class id="51" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.StandardHealthPotion" 
     project="Project" file="/Project/src/gameObjects/items/Potions/StandardHealthPotion.java" binary="false">    
     <position height="94" width="175" x="5747" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -392,7 +384,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="53" corner="BOTTOM_RIGHT" language="java" name="gui.HomeScreenState" project="Project" 
+  <class id="52" corner="BOTTOM_RIGHT" language="java" name="gui.HomeScreenState" project="Project" 
     file="/Project/src/gui/HomeScreenState.java" binary="false">    
     <position height="111" width="165" x="4484" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -400,7 +392,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="54" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.LeatherArmor" project="Project" 
+  <class id="53" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.LeatherArmor" project="Project" 
     file="/Project/src/gameObjects/items/Armors/LeatherArmor.java" binary="false">    
     <position height="77" width="131" x="4808" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -408,7 +400,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="55" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Elf" project="Project" 
+  <class id="54" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Elf" project="Project" 
     file="/Project/src/gameObjects/Race/playable/Elf.java" binary="false">    
     <position height="77" width="138" x="5185" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -416,7 +408,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="56" corner="BOTTOM_RIGHT" language="java" name="gameObjects.ItemFactory" project="Project" 
+  <class id="55" corner="BOTTOM_RIGHT" language="java" name="gameObjects.ItemFactory" project="Project" 
     file="/Project/src/gameObjects/ItemFactory.java" binary="false">    
     <position height="145" width="156" x="1889" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -424,7 +416,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="57" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.Armor" project="Project" 
+  <class id="56" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.Armor" project="Project" 
     file="/Project/src/gameObjects/items/Armors/Armor.java" binary="false">    
     <position height="111" width="172" x="5322" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -432,17 +424,17 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <package id="58" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable" project="Project" 
+  <package id="57" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable" project="Project" 
     file="/Project/src/gameObjects/Race/playable" binary="false">    
     <position height="49" width="214" x="2085" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <package id="59" corner="BOTTOM_RIGHT" language="java" name="gameObjects.StatusEffects" project="Project" 
+  <package id="58" corner="BOTTOM_RIGHT" language="java" name="gameObjects.StatusEffects" project="Project" 
     file="/Project/src/gameObjects/StatusEffects" binary="false">    
     <position height="49" width="210" x="2339" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="60" corner="BOTTOM_RIGHT" language="java" name="gui.StringUtils" project="Project" 
+  <class id="59" corner="BOTTOM_RIGHT" language="java" name="gui.StringUtils" project="Project" 
     file="/Project/src/gui/StringUtils.java" binary="false">    
     <position height="94" width="150" x="2589" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -450,7 +442,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="61" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Orc" project="Project" 
+  <class id="60" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Orc" project="Project" 
     file="/Project/src/gameObjects/Race/playable/Orc.java" binary="false">    
     <position height="77" width="138" x="5363" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -458,7 +450,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="62" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Human" project="Project" 
+  <class id="61" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.playable.Human" project="Project" 
     file="/Project/src/gameObjects/Race/playable/Human.java" binary="false">    
     <position height="77" width="138" x="5541" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -466,7 +458,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="63" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.CureAllPotion" project="Project" 
+  <class id="62" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.CureAllPotion" project="Project" 
     file="/Project/src/gameObjects/items/Potions/CureAllPotion.java" binary="false">    
     <position height="94" width="135" x="6746" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -474,7 +466,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="64" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.UltraHealthPotion" 
+  <class id="63" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.UltraHealthPotion" 
     project="Project" file="/Project/src/gameObjects/items/Potions/UltraHealthPotion.java" binary="false">    
     <position height="94" width="145" x="6357" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -482,7 +474,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="65" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Troll" project="Project" 
+  <class id="64" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Troll" project="Project" 
     file="/Project/src/gameObjects/Race/enemies/Troll.java" binary="false">    
     <position height="77" width="138" x="9221" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -490,7 +482,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="66" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.Chainmail" project="Project" 
+  <class id="65" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.Chainmail" project="Project" 
     file="/Project/src/gameObjects/items/Armors/Chainmail.java" binary="false">    
     <position height="77" width="131" x="4979" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -498,7 +490,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="67" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellFireBall" project="Project" 
+  <class id="66" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellFireBall" project="Project" 
     file="/Project/src/gameObjects/Abilities/SpellFireBall.java" binary="false">    
     <position height="94" width="195" x="3670" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -506,7 +498,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="68" corner="BOTTOM_RIGHT" language="java" name="dungeons.FileLoaderDungeon" project="Project" 
+  <class id="67" corner="BOTTOM_RIGHT" language="java" name="dungeons.FileLoaderDungeon" project="Project" 
     file="/Project/src/dungeons/FileLoaderDungeon.java" binary="false">    
     <position height="366" width="262" x="2598" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -514,7 +506,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="69" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellMinorHealing" project="Project" 
+  <class id="68" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellMinorHealing" project="Project" 
     file="/Project/src/gameObjects/Abilities/SpellMinorHealing.java" binary="false">    
     <position height="94" width="195" x="3905" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -522,12 +514,12 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <package id="70" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons" project="Project" 
+  <package id="69" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons" project="Project" 
     file="/Project/src/gameObjects/items/Weapons" binary="false">    
     <position height="49" width="223" x="2779" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="71" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.Broadsword" project="Project" 
+  <class id="70" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.Broadsword" project="Project" 
     file="/Project/src/gameObjects/items/Weapons/Broadsword.java" binary="false">    
     <position height="94" width="198" x="6633" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -535,7 +527,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="72" corner="BOTTOM_RIGHT" language="java" name="gameObjects.IFightGenerator" project="Project" 
+  <interface id="71" corner="BOTTOM_RIGHT" language="java" name="gameObjects.IFightGenerator" project="Project" 
     file="/Project/src/gameObjects/IFightGenerator.java" binary="false">    
     <position height="77" width="165" x="2890" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -543,7 +535,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="73" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IPotion" project="Project" 
+  <interface id="72" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IPotion" project="Project" 
     file="/Project/src/gameObjects/items/IPotion.java" binary="false">    
     <position height="77" width="135" x="7309" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -551,7 +543,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="74" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.IAbility" project="Project" 
+  <interface id="73" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.IAbility" project="Project" 
     file="/Project/src/gameObjects/Abilities/IAbility.java" binary="false">    
     <position height="77" width="195" x="3670" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -559,7 +551,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="75" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.Spell" project="Project" 
+  <class id="74" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.Spell" project="Project" 
     file="/Project/src/gameObjects/Abilities/Spell.java" binary="false">    
     <position height="111" width="107" x="4037" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -567,7 +559,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="76" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SunderWeapon" project="Project" 
+  <class id="75" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SunderWeapon" project="Project" 
     file="/Project/src/gameObjects/Abilities/SunderWeapon.java" binary="false">    
     <position height="94" width="195" x="4198" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -575,7 +567,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="77" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Character" project="Project" 
+  <class id="76" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Character" project="Project" 
     file="/Project/src/gameObjects/Character.java" binary="false">    
     <position height="757" width="259" x="6542" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -583,7 +575,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="78" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MinorHealthPotion" 
+  <class id="77" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MinorHealthPotion" 
     project="Project" file="/Project/src/gameObjects/items/Potions/MinorHealthPotion.java" binary="false">    
     <position height="94" width="152" x="5555" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -591,7 +583,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="79" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellAcidRain" project="Project" 
+  <class id="78" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.SpellAcidRain" project="Project" 
     file="/Project/src/gameObjects/Abilities/SpellAcidRain.java" binary="false">    
     <position height="94" width="195" x="4140" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -599,7 +591,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="80" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Item" project="Project" 
+  <class id="79" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Item" project="Project" 
     file="/Project/src/gameObjects/items/Item.java" binary="false">    
     <position height="230" width="146" x="5962" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -607,7 +599,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="81" corner="BOTTOM_RIGHT" language="java" name="gui.IState" project="Project" 
+  <interface id="80" corner="BOTTOM_RIGHT" language="java" name="gui.IState" project="Project" 
     file="/Project/src/gui/IState.java" binary="false">    
     <position height="94" width="137" x="5145" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -615,7 +607,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="82" corner="BOTTOM_RIGHT" language="java" name="gui.RestState" project="Project" 
+  <class id="81" corner="BOTTOM_RIGHT" language="java" name="gui.RestState" project="Project" 
     file="/Project/src/gui/RestState.java" binary="false">    
     <position height="111" width="137" x="5103" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -623,7 +615,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="83" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IArmor" project="Project" 
+  <interface id="82" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.IArmor" project="Project" 
     file="/Project/src/gameObjects/items/IArmor.java" binary="false">    
     <position height="77" width="172" x="4808" y="2086"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -631,7 +623,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="84" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.BastardSword" project="Project" 
+  <class id="83" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Weapons.BastardSword" project="Project" 
     file="/Project/src/gameObjects/items/Weapons/BastardSword.java" binary="false">    
     <position height="94" width="198" x="6871" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -639,7 +631,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="85" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Ogre" project="Project" 
+  <class id="84" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Ogre" project="Project" 
     file="/Project/src/gameObjects/Race/enemies/Ogre.java" binary="false">    
     <position height="77" width="138" x="9399" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -647,7 +639,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="86" corner="BOTTOM_RIGHT" language="java" name="gui.DungeonsAndDragonsGame" project="Project" 
+  <class id="85" corner="BOTTOM_RIGHT" language="java" name="gui.DungeonsAndDragonsGame" project="Project" 
     file="/Project/src/gui/DungeonsAndDragonsGame.java" binary="false">    
     <position height="94" width="220" x="3042" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -655,7 +647,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="87" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Party" project="Project" 
+  <class id="86" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Party" project="Project" 
     file="/Project/src/gameObjects/Party.java" binary="false">    
     <position height="196" width="231" x="4874" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -663,7 +655,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="88" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MinorDefensePotion" 
+  <class id="87" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Potions.MinorDefensePotion" 
     project="Project" file="/Project/src/gameObjects/items/Potions/MinorDefensePotion.java" binary="false">    
     <position height="94" width="164" x="6153" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -671,7 +663,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="89" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.WizardRobe" project="Project" 
+  <class id="88" corner="BOTTOM_RIGHT" language="java" name="gameObjects.items.Armors.WizardRobe" project="Project" 
     file="/Project/src/gameObjects/items/Armors/WizardRobe.java" binary="false">    
     <position height="77" width="131" x="5342" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -679,7 +671,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="90" corner="BOTTOM_RIGHT" language="java" name="gui.FightState" project="Project" 
+  <class id="89" corner="BOTTOM_RIGHT" language="java" name="gui.FightState" project="Project" 
     file="/Project/src/gui/FightState.java" binary="false">    
     <position height="111" width="137" x="4926" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -687,7 +679,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <enumeration id="91" corner="BOTTOM_RIGHT" language="java" name="gameObjects.ArmorType" project="Project" 
+  <enumeration id="90" corner="BOTTOM_RIGHT" language="java" name="gameObjects.ArmorType" project="Project" 
     file="/Project/src/gameObjects/ArmorType.java" binary="false">    
     <position height="145" width="139" x="7130" y="1510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -695,12 +687,12 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </enumeration>  
-  <package id="92" corner="BOTTOM_RIGHT" language="java" name="dungeons" project="Project" file="/Project/src/dungeons" 
+  <package id="91" corner="BOTTOM_RIGHT" language="java" name="dungeons" project="Project" file="/Project/src/dungeons" 
     binary="false">    
     <position height="49" width="113" x="3585" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="93" corner="BOTTOM_RIGHT" language="java" name="gameObjects.PlayerFactory" project="Project" 
+  <class id="92" corner="BOTTOM_RIGHT" language="java" name="gameObjects.PlayerFactory" project="Project" 
     file="/Project/src/gameObjects/PlayerFactory.java" binary="false">    
     <position height="94" width="243" x="3302" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -708,7 +700,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="94" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Salamander" project="Project" 
+  <class id="93" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Race.enemies.Salamander" project="Project" 
     file="/Project/src/gameObjects/Race/enemies/Salamander.java" binary="false">    
     <position height="77" width="138" x="9577" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -716,7 +708,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="95" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.enemyClasses.Chieftain" project="Project" 
+  <class id="94" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.enemyClasses.Chieftain" project="Project" 
     file="/Project/src/gameObjects/Class/enemyClasses/Chieftain.java" binary="false">    
     <position height="230" width="198" x="8349" y="1240"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -724,12 +716,12 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <package id="96" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.enemyClasses" project="Project" 
+  <package id="95" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Class.enemyClasses" project="Project" 
     file="/Project/src/gameObjects/Class/enemyClasses" binary="false">    
     <position height="49" width="259" x="3738" y="37"/>    
     <display autosize="true" stereotype="true"/>  
   </package>  
-  <class id="97" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.Berserk" project="Project" 
+  <class id="96" corner="BOTTOM_RIGHT" language="java" name="gameObjects.Abilities.Berserk" project="Project" 
     file="/Project/src/gameObjects/Abilities/Berserk.java" binary="false">    
     <position height="94" width="195" x="4433" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -737,623 +729,619 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <realization id="98">    
-    <end type="SOURCE" refId="54"/>    
-    <end type="TARGET" refId="83"/>  
+  <realization id="97">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="82"/>  
   </realization>  
-  <generalization id="99">    
-    <end type="SOURCE" refId="39"/>    
+  <generalization id="98">    
+    <end type="SOURCE" refId="38"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <generalization id="100">    
-    <end type="SOURCE" refId="46"/>    
+  <generalization id="99">    
+    <end type="SOURCE" refId="45"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="101">    
+  <generalization id="100">    
     <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="80"/>  
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <realization id="102">    
+  <realization id="101">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="15"/>  
   </realization>  
-  <generalization id="103">    
+  <generalization id="102">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <realization id="104">    
+  <realization id="103">    
     <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <realization id="105">    
+  <realization id="104">    
     <bendpoint x="5154" y="834"/>    
     <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <generalization id="106">    
+  <generalization id="105">    
     <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="57"/>  
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <realization id="107">    
-    <end type="SOURCE" refId="87"/>    
+  <realization id="106">    
+    <end type="SOURCE" refId="86"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <generalization id="108">    
-    <end type="SOURCE" refId="54"/>    
-    <end type="TARGET" refId="57"/>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <association id="109">    
+  <association id="108">    
     <bendpoint x="8991" y="1240"/>    
     <end type="SOURCE" refId="24" navigable="false">      
-      <attribute id="110" name="character"/>      
-      <multiplicity id="111" minimum="0" maximum="1"/>    
+      <attribute id="109" name="character"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="112">    
-    <end type="SOURCE" refId="64"/>    
-    <end type="TARGET" refId="80"/>  
+  <generalization id="111">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <realization id="113">    
+  <realization id="112">    
     <bendpoint x="5730" y="834"/>    
-    <end type="SOURCE" refId="50"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <generalization id="114">    
+  <generalization id="113">    
     <end type="SOURCE" refId="30"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <association id="115">    
+  <association id="114">    
     <bendpoint x="6551" y="834"/>    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="116" name="weapon"/>      
-      <multiplicity id="117" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="115" name="weapon"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="118">    
+  <realization id="117">    
     <end type="SOURCE" refId="36"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <generalization id="119">    
-    <end type="SOURCE" refId="78"/>    
-    <end type="TARGET" refId="80"/>  
+  <generalization id="118">    
+    <end type="SOURCE" refId="77"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <realization id="120">    
-    <end type="SOURCE" refId="65"/>    
+  <realization id="119">    
+    <end type="SOURCE" refId="64"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
+  <generalization id="120">    
+    <end type="SOURCE" refId="66"/>    
+    <end type="TARGET" refId="74"/>  
+  </generalization>  
   <generalization id="121">    
-    <end type="SOURCE" refId="67"/>    
-    <end type="TARGET" refId="75"/>  
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
   <generalization id="122">    
-    <end type="SOURCE" refId="63"/>    
-    <end type="TARGET" refId="80"/>  
-  </generalization>  
-  <generalization id="123">    
-    <end type="SOURCE" refId="41"/>    
+    <end type="SOURCE" refId="40"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <realization id="124">    
+  <realization id="123">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <generalization id="124">    
+    <end type="SOURCE" refId="78"/>    
+    <end type="TARGET" refId="74"/>  
+  </generalization>  
+  <generalization id="125">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="56"/>  
+  </generalization>  
+  <realization id="126">    
+    <bendpoint x="5587" y="1510"/>    
     <end type="SOURCE" refId="42"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <generalization id="125">    
-    <end type="SOURCE" refId="79"/>    
-    <end type="TARGET" refId="75"/>  
-  </generalization>  
-  <generalization id="126">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="57"/>  
-  </generalization>  
   <realization id="127">    
-    <bendpoint x="5587" y="1510"/>    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="33"/>  
-  </realization>  
-  <realization id="128">    
     <bendpoint x="4658" y="834"/>    
-    <end type="SOURCE" refId="53"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <association id="129">    
+  <association id="128">    
     <bendpoint x="2718" y="1240"/>    
-    <end type="SOURCE" refId="68" navigable="false">      
-      <attribute id="130" name="fightGenerator"/>      
-      <multiplicity id="131" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="129" name="fightGenerator"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="72" navigable="true"/>    
+    <end type="TARGET" refId="71" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="132">    
-    <end type="SOURCE" refId="87" navigable="false">      
-      <attribute id="133" name="players"/>      
-      <multiplicity id="134" minimum="0" maximum="2147483647"/>    
+  <association id="131">    
+    <end type="SOURCE" refId="86" navigable="false">      
+      <attribute id="132" name="players"/>      
+      <multiplicity id="133" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="135">    
+  <association id="134">    
     <bendpoint x="6715" y="834"/>    
     <bendpoint x="6715" y="1240"/>    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="136" name="armorType"/>      
-      <multiplicity id="137" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="135" name="armorType"/>      
+      <multiplicity id="136" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="91" navigable="true"/>    
+    <end type="TARGET" refId="90" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="138">    
+  <realization id="137">    
     <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <generalization id="139">    
+  <generalization id="138">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <generalization id="140">    
-    <end type="SOURCE" refId="76"/>    
+  <generalization id="139">    
+    <end type="SOURCE" refId="75"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="141">    
+  <generalization id="140">    
     <end type="SOURCE" refId="36"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <realization id="142">    
-    <end type="SOURCE" refId="94"/>    
+  <realization id="141">    
+    <end type="SOURCE" refId="93"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <association id="143">    
+  <association id="142">    
     <bendpoint x="3085" y="1240"/>    
     <bendpoint x="3085" y="1510"/>    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="144" name="items"/>      
-      <multiplicity id="145" minimum="0" maximum="2147483647"/>    
+      <attribute id="143" name="items"/>      
+      <multiplicity id="144" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="33" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="146">    
-    <end type="SOURCE" refId="94"/>    
+  <generalization id="145">    
+    <end type="SOURCE" refId="93"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <realization id="147">    
+  <realization id="146">    
     <bendpoint x="6642" y="2086"/>    
-    <end type="SOURCE" refId="84"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="SOURCE" refId="83"/>    
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <realization id="148">    
+  <realization id="147">    
     <bendpoint x="3148" y="1240"/>    
     <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="TARGET" refId="73"/>  
+  </realization>  
+  <realization id="148">    
+    <bendpoint x="6047" y="2086"/>    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="44"/>  
   </realization>  
   <realization id="149">    
-    <bendpoint x="6047" y="2086"/>    
-    <end type="SOURCE" refId="42"/>    
-    <end type="TARGET" refId="45"/>  
-  </realization>  
-  <realization id="150">    
     <bendpoint x="6404" y="2086"/>    
-    <end type="SOURCE" refId="48"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <generalization id="151">    
-    <end type="SOURCE" refId="48"/>    
+  <generalization id="150">    
+    <end type="SOURCE" refId="47"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <generalization id="152">    
+  <generalization id="151">    
     <end type="SOURCE" refId="20"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="153">    
-    <end type="SOURCE" refId="38"/>    
-    <end type="TARGET" refId="24"/>  
-  </generalization>  
-  <realization id="154">    
+  <realization id="152">    
     <bendpoint x="5524" y="1240"/>    
     <bendpoint x="5524" y="1510"/>    
-    <end type="SOURCE" refId="80"/>    
+    <end type="SOURCE" refId="79"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <realization id="155">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="73"/>  
+  <realization id="153">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="72"/>  
   </realization>  
-  <realization id="156">    
+  <realization id="154">    
     <bendpoint x="5751" y="834"/>    
     <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <generalization id="157">    
+  <generalization id="155">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="158">    
-    <end type="SOURCE" refId="95"/>    
+  <generalization id="156">    
+    <end type="SOURCE" refId="94"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <generalization id="159">    
-    <end type="SOURCE" refId="65"/>    
+  <generalization id="157">    
+    <end type="SOURCE" refId="64"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <realization id="160">    
+  <realization id="158">    
     <bendpoint x="4365" y="1240"/>    
-    <end type="SOURCE" refId="75"/>    
-    <end type="TARGET" refId="74"/>  
-  </realization>  
-  <realization id="161">    
-    <end type="SOURCE" refId="52"/>    
+    <end type="SOURCE" refId="74"/>    
     <end type="TARGET" refId="73"/>  
   </realization>  
-  <realization id="162">    
+  <realization id="159">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="72"/>  
+  </realization>  
+  <realization id="160">    
     <bendpoint x="5112" y="834"/>    
-    <end type="SOURCE" refId="90"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="SOURCE" refId="89"/>    
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <realization id="163">    
+  <realization id="161">    
     <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="83"/>  
+    <end type="TARGET" refId="82"/>  
   </realization>  
-  <generalization id="164">    
-    <end type="SOURCE" refId="97"/>    
+  <generalization id="162">    
+    <end type="SOURCE" refId="96"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="165">    
+  <generalization id="163">    
     <end type="SOURCE" refId="31"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <realization id="166">    
+  <realization id="164">    
     <bendpoint x="6147" y="2086"/>    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <realization id="167">    
+  <realization id="165">    
     <bendpoint x="6523" y="2086"/>    
-    <end type="SOURCE" refId="71"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <realization id="168">    
+  <realization id="166">    
     <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="72"/>  
+    <end type="TARGET" refId="71"/>  
   </realization>  
-  <generalization id="169">    
+  <generalization id="167">    
     <end type="SOURCE" refId="19"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="170">    
+  <generalization id="168">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="77"/>  
+    <end type="TARGET" refId="76"/>  
   </generalization>  
-  <generalization id="171">    
-    <end type="SOURCE" refId="75"/>    
+  <generalization id="169">    
+    <end type="SOURCE" refId="74"/>    
     <end type="TARGET" refId="27"/>  
   </generalization>  
-  <generalization id="172">    
-    <end type="SOURCE" refId="66"/>    
-    <end type="TARGET" refId="57"/>  
+  <generalization id="170">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <association id="173">    
+  <association id="171">    
     <bendpoint x="9012" y="834"/>    
     <bendpoint x="9012" y="1240"/>    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="174" name="weaponType"/>      
-      <multiplicity id="175" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="172" name="weaponType"/>      
+      <multiplicity id="173" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="29" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="176">    
+  <realization id="174">    
     <bendpoint x="5566" y="1510"/>    
-    <end type="SOURCE" refId="52"/>    
+    <end type="SOURCE" refId="51"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <association id="177">    
+  <association id="175">    
     <bendpoint x="2909" y="1240"/>    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="178" name="fightGenerator"/>      
-      <multiplicity id="179" minimum="0" maximum="1"/>    
+      <attribute id="176" name="fightGenerator"/>      
+      <multiplicity id="177" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="72" navigable="true"/>    
+    <end type="TARGET" refId="71" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="180">    
+  <realization id="178">    
     <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="83"/>  
+    <end type="TARGET" refId="82"/>  
+  </realization>  
+  <generalization id="179">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="79"/>  
+  </generalization>  
+  <realization id="180">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
   <generalization id="181">    
-    <end type="SOURCE" refId="57"/>    
-    <end type="TARGET" refId="80"/>  
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="76"/>  
   </generalization>  
   <realization id="182">    
-    <end type="SOURCE" refId="47"/>    
-    <end type="TARGET" refId="74"/>  
-  </realization>  
-  <generalization id="183">    
-    <end type="SOURCE" refId="62"/>    
-    <end type="TARGET" refId="77"/>  
-  </generalization>  
-  <realization id="184">    
     <bendpoint x="3127" y="1240"/>    
     <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <realization id="185">    
+  <realization id="183">    
     <bendpoint x="5545" y="1510"/>    
-    <end type="SOURCE" refId="78"/>    
+    <end type="SOURCE" refId="77"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <realization id="186">    
+  <realization id="184">    
     <bendpoint x="5140" y="1510"/>    
-    <end type="SOURCE" refId="57"/>    
-    <end type="TARGET" refId="83"/>  
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="82"/>  
   </realization>  
-  <generalization id="187">    
-    <end type="SOURCE" refId="89"/>    
-    <end type="TARGET" refId="57"/>  
+  <generalization id="185">    
+    <end type="SOURCE" refId="88"/>    
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <realization id="188">    
+  <realization id="186">    
     <bendpoint x="4612" y="1240"/>    
-    <end type="SOURCE" refId="97"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="SOURCE" refId="96"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <realization id="189">    
+  <realization id="187">    
     <bendpoint x="5650" y="1510"/>    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <association id="190">    
+  <association id="188">    
     <bendpoint x="5709" y="834"/>    
     <bendpoint x="4843" y="1240"/>    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="191" name="abilities"/>      
-      <multiplicity id="192" minimum="0" maximum="2147483647"/>    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="189" name="abilities"/>      
+      <multiplicity id="190" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="74" navigable="true"/>    
+    <end type="TARGET" refId="73" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="193">    
-    <end type="SOURCE" refId="47"/>    
-    <end type="TARGET" refId="75"/>  
+  <generalization id="191">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="74"/>  
   </generalization>  
-  <realization id="194">    
+  <realization id="192">    
     <bendpoint x="5629" y="1510"/>    
-    <end type="SOURCE" refId="64"/>    
+    <end type="SOURCE" refId="63"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <association id="195">    
-    <end type="SOURCE" refId="57" navigable="false">      
-      <attribute id="196" name="type"/>      
-      <multiplicity id="197" minimum="0" maximum="1"/>    
+  <association id="193">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="194" name="type"/>      
+      <multiplicity id="195" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="91" navigable="true"/>    
+    <end type="TARGET" refId="90" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="198">    
-    <end type="SOURCE" refId="84"/>    
+  <generalization id="196">    
+    <end type="SOURCE" refId="83"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <realization id="199">    
+  <realization id="197">    
     <bendpoint x="9745" y="834"/>    
     <bendpoint x="9745" y="1240"/>    
-    <end type="SOURCE" refId="77"/>    
+    <end type="SOURCE" refId="76"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <realization id="200">    
-    <end type="SOURCE" refId="78"/>    
-    <end type="TARGET" refId="73"/>  
+  <realization id="198">    
+    <end type="SOURCE" refId="77"/>    
+    <end type="TARGET" refId="72"/>  
   </realization>  
-  <generalization id="201">    
+  <generalization id="199">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <realization id="202">    
+  <realization id="200">    
     <bendpoint x="6351" y="2086"/>    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <generalization id="203">    
-    <end type="SOURCE" refId="52"/>    
-    <end type="TARGET" refId="80"/>  
+  <generalization id="201">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <generalization id="204">    
-    <end type="SOURCE" refId="71"/>    
+  <generalization id="202">    
+    <end type="SOURCE" refId="70"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <generalization id="205">    
-    <end type="SOURCE" refId="49"/>    
-    <end type="TARGET" refId="75"/>  
+  <generalization id="203">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="74"/>  
   </generalization>  
-  <association id="206">    
+  <association id="204">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="207" name="type"/>      
-      <multiplicity id="208" minimum="0" maximum="1"/>    
+      <attribute id="205" name="type"/>      
+      <multiplicity id="206" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="29" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="209">    
-    <end type="SOURCE" refId="68"/>    
+  <realization id="207">    
+    <end type="SOURCE" refId="67"/>    
     <end type="TARGET" refId="21"/>  
   </realization>  
-  <generalization id="210">    
+  <generalization id="208">    
     <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="57"/>  
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <association id="211">    
+  <association id="209">    
     <bendpoint x="5931" y="834"/>    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="212" name="armor"/>      
-      <multiplicity id="213" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="210" name="armor"/>      
+      <multiplicity id="211" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="57" navigable="true"/>    
+    <end type="TARGET" refId="56" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="214">    
+  <association id="212">    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="215" name="badGuys"/>      
-      <multiplicity id="216" minimum="0" maximum="1"/>    
+      <attribute id="213" name="badGuys"/>      
+      <multiplicity id="214" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="87" navigable="true"/>    
+    <end type="TARGET" refId="86" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="217">    
-    <end type="SOURCE" refId="68" navigable="false">      
-      <attribute id="218" name="map"/>      
-      <multiplicity id="219" minimum="0" maximum="2147483647"/>    
+  <association id="215">    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="216" name="map"/>      
+      <multiplicity id="217" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="220">    
-    <end type="SOURCE" refId="61"/>    
-    <end type="TARGET" refId="77"/>  
+  <generalization id="218">    
+    <end type="SOURCE" refId="60"/>    
+    <end type="TARGET" refId="76"/>  
   </generalization>  
-  <realization id="221">    
-    <end type="SOURCE" refId="89"/>    
+  <realization id="219">    
+    <end type="SOURCE" refId="88"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <realization id="222">    
+  <realization id="220">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <generalization id="223">    
-    <end type="SOURCE" refId="88"/>    
-    <end type="TARGET" refId="80"/>  
+  <generalization id="221">    
+    <end type="SOURCE" refId="87"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <generalization id="224">    
+  <generalization id="222">    
     <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="41"/>  
+    <end type="TARGET" refId="40"/>  
   </generalization>  
-  <realization id="225">    
+  <realization id="223">    
     <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <realization id="226">    
+  <realization id="224">    
     <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="83"/>  
+    <end type="TARGET" refId="82"/>  
   </realization>  
-  <generalization id="227">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="80"/>  
+  <generalization id="225">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="79"/>  
   </generalization>  
-  <realization id="228">    
-    <end type="SOURCE" refId="85"/>    
+  <realization id="226">    
+    <end type="SOURCE" refId="84"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <generalization id="229">    
+  <generalization id="227">    
     <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="77"/>  
+    <end type="TARGET" refId="76"/>  
   </generalization>  
-  <realization id="230">    
+  <realization id="228">    
     <bendpoint x="3106" y="1240"/>    
     <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <generalization id="231">    
+  <generalization id="229">    
     <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="57"/>  
+    <end type="TARGET" refId="56"/>  
   </generalization>  
-  <realization id="232">    
+  <realization id="230">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="28"/>  
   </realization>  
-  <realization id="233">    
+  <realization id="231">    
     <bendpoint x="7099" y="1510"/>    
     <bendpoint x="7099" y="2086"/>    
     <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="45"/>  
+    <end type="TARGET" refId="44"/>  
   </realization>  
-  <realization id="234">    
+  <realization id="232">    
     <bendpoint x="5608" y="1510"/>    
-    <end type="SOURCE" refId="88"/>    
+    <end type="SOURCE" refId="87"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <association id="235">    
-    <end type="SOURCE" refId="77" navigable="false">      
-      <attribute id="236" name="inventory"/>      
-      <multiplicity id="237" minimum="0" maximum="2147483647"/>    
+  <association id="233">    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="234" name="inventory"/>      
+      <multiplicity id="235" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="80" navigable="true"/>    
+    <end type="TARGET" refId="79" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="238">    
-    <end type="SOURCE" refId="69"/>    
-    <end type="TARGET" refId="75"/>  
+  <generalization id="236">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="74"/>  
   </generalization>  
+  <realization id="237">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="72"/>  
+  </realization>  
+  <realization id="238">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="73"/>  
+  </realization>  
   <realization id="239">    
-    <end type="SOURCE" refId="63"/>    
-    <end type="TARGET" refId="73"/>  
-  </realization>  
-  <realization id="240">    
-    <end type="SOURCE" refId="49"/>    
-    <end type="TARGET" refId="74"/>  
-  </realization>  
-  <realization id="241">    
     <bendpoint x="5133" y="834"/>    
-    <end type="SOURCE" refId="82"/>    
-    <end type="TARGET" refId="81"/>  
+    <end type="SOURCE" refId="81"/>    
+    <end type="TARGET" refId="80"/>  
   </realization>  
-  <generalization id="242">    
-    <end type="SOURCE" refId="55"/>    
-    <end type="TARGET" refId="77"/>  
+  <generalization id="240">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="76"/>  
   </generalization>  
+  <realization id="241">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="73"/>  
+  </realization>  
+  <realization id="242">    
+    <end type="SOURCE" refId="87"/>    
+    <end type="TARGET" refId="72"/>  
+  </realization>  
   <realization id="243">    
-    <end type="SOURCE" refId="69"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="72"/>  
   </realization>  
-  <realization id="244">    
-    <end type="SOURCE" refId="88"/>    
-    <end type="TARGET" refId="73"/>  
-  </realization>  
-  <realization id="245">    
-    <end type="SOURCE" refId="64"/>    
-    <end type="TARGET" refId="73"/>  
-  </realization>  
-  <generalization id="246">    
-    <end type="SOURCE" refId="44"/>    
+  <generalization id="244">    
+    <end type="SOURCE" refId="43"/>    
     <end type="TARGET" refId="24"/>  
   </generalization>  
-  <realization id="247">    
+  <realization id="245">    
     <bendpoint x="3169" y="1240"/>    
-    <end type="SOURCE" refId="46"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <realization id="248">    
-    <end type="SOURCE" refId="79"/>    
-    <end type="TARGET" refId="74"/>  
+  <realization id="246">    
+    <end type="SOURCE" refId="78"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <realization id="249">    
+  <realization id="247">    
     <bendpoint x="4591" y="1240"/>    
-    <end type="SOURCE" refId="76"/>    
-    <end type="TARGET" refId="74"/>  
+    <end type="SOURCE" refId="75"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
-  <generalization id="250">    
-    <end type="SOURCE" refId="42"/>    
+  <generalization id="248">    
+    <end type="SOURCE" refId="41"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <generalization id="251">    
-    <end type="SOURCE" refId="85"/>    
+  <generalization id="249">    
+    <end type="SOURCE" refId="84"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <realization id="252">    
-    <end type="SOURCE" refId="66"/>    
-    <end type="TARGET" refId="83"/>  
+  <realization id="250">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="82"/>  
   </realization>  
-  <generalization id="253">    
+  <generalization id="251">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <realization id="254">    
+  <realization id="252">    
     <bendpoint x="5503" y="1510"/>    
-    <end type="SOURCE" refId="57"/>    
+    <end type="SOURCE" refId="56"/>    
     <end type="TARGET" refId="33"/>  
   </realization>  
-  <realization id="255">    
-    <end type="SOURCE" refId="67"/>    
-    <end type="TARGET" refId="74"/>  
+  <realization id="253">    
+    <end type="SOURCE" refId="66"/>    
+    <end type="TARGET" refId="73"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     visibility="true">    

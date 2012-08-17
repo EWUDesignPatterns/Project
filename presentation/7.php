@@ -4,15 +4,8 @@
 <p>Simple Factory used for players characters, monster, and item generation.</p>
 
 <div class='half left'>
-  <img src='images/factory.jpg' class='rounded' />
-  
-  <div class='list'>
-    <p>
-      In future iterations, we could use an Abstract Factory to customize all characters, monsters, and items to specific maps types such as Underwater, Lovecraft, Humorous, etc.  
-    </p>
-  </div>
+  <img src='images/factory.jpg' class='rounded full' />
 </div>
-
 
 <div class='half right'>
   
@@ -36,9 +29,27 @@
       <li>Creates a random item or random potions, weapons, and armor.</li>
     </ul>
   </div>
-    
-  <div class='full' style='padding: 20px 0'>
-    <img src='images/factory_diagram.gif' class='rounded full' />
+
+  <div class='list'>
+    <p>
+      In future iterations, we could use an Abstract Factory to customize all characters, monsters, and items to specific maps types such as Underwater, Lovecraft, Humorous, etc.  
+    </p>
+  </div>
+</div>
+
+<div class='full clear'>
+</div>
+
+<div class='half left'>
+  <img src='images/player_factory.jpg' class='rounded full' />
+</div>
+
+<div class='half right' style='clear: right'>
+  <img src='images/monster_factory.jpg' class='rounded full' />
+</div>
+
+<div class='full'>
+  <img src='images/item_factory.jpg' class='rounded full' />
 </div>
 
 <?php include 'layout/footer.php'; ?>

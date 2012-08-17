@@ -1,6 +1,6 @@
 <?php include 'layout/header.php'; ?>
 
-<h2>States</h2>
+<h2>State and Mediator</h2>
 <p>Used to handle the different player states such as exploring, resting, and fighting.</p>
 
 

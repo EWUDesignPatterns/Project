@@ -5,11 +5,11 @@
 <div>
   <ul>
     <li>Model View Controller</li>
-    <li>State</li>
+    <li>State and Mediator</li>
     <li>Observer</li>
     <li>Factory</li>
     <li>Decorator</li>
-    <li>Mediator</li>
+    <li>Strategy</li>
 </div>
 
 

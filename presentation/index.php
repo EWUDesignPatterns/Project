@@ -5,7 +5,7 @@
 
 <div class='left full'>
 
-  <h3>Team Name</h3>
+  <h3>JAM and Jelly</h3>
   
   <h4>Team members:</h4>
     <ul>

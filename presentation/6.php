@@ -15,7 +15,6 @@
     <h3>Fight Observer</h3>
     <p>Something here?</p>
   </div>
-
     
 </div>
 
