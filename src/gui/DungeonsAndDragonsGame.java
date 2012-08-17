@@ -30,6 +30,7 @@ public class DungeonsAndDragonsGame extends Game
 	protected void playersAttackTurn(IPlayableCharacter player, IParty partyToAttack)
 	{
 		System.out.println(player.getName() + "'s Turn");
+		player.applyStatusEffects();
 		System.out.println("Who should "+ player.getName() + " Attack?");
 		
 		for(int i = 0; i < partyToAttack.getCharacters().size(); i++)
