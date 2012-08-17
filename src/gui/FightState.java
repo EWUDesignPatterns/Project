@@ -41,6 +41,7 @@ public class FightState implements IState, Observer
 		
 		System.out.println("1. Run");
 		System.out.println("2. Attack");
+		System.out.println("3. View Status");
 		
 		int choice = game.nextInt();
 
@@ -67,6 +68,8 @@ public class FightState implements IState, Observer
 					
 					return new MoveCharacterState(game); // Fight over
 				}
+			case 3:
+				System.out.println(game.getParty());
 		}
 		
 		return this;
